@@ -2,19 +2,19 @@
 /**
  * Template functions used for pages.
  *
- * @package storefront
+ * @package et_shop
  */
 
-if ( ! function_exists( 'storefront_page_header' ) ) {
+if ( ! function_exists( 'et_shop_page_header' ) ) {
 	/**
 	 * Display the post header with a link to the single post
 	 * @since 1.0.0
 	 */
-	function storefront_page_header() {
+	function et_shop_page_header() {
 		?>
 		<header class="entry-header">
 			<?php
-			storefront_post_thumbnail( 'full' );
+			et_shop_post_thumbnail( 'full' );
 			the_title( '<h1 class="entry-title" itemprop="name">', '</h1>' );
 			?>
 		</header><!-- .entry-header -->
@@ -22,18 +22,18 @@ if ( ! function_exists( 'storefront_page_header' ) ) {
 	}
 }
 
-if ( ! function_exists( 'storefront_page_content' ) ) {
+if ( ! function_exists( 'et_shop_page_content' ) ) {
 	/**
 	 * Display the post content with a link to the single post
 	 * @since 1.0.0
 	 */
-	function storefront_page_content() {
+	function et_shop_page_content() {
 		?>
 		<div class="entry-content" itemprop="mainContentOfPage">
 			<?php the_content(); ?>
 			<?php
 				wp_link_pages( array(
-					'before' => '<div class="page-links">' . __( 'Pages:', 'storefront' ),
+					'before' => '<div class="page-links">' . __( 'Pages:', 'et_shop' ),
 					'after'  => '</div>',
 				) );
 			?>

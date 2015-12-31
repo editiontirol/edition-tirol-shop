@@ -4,7 +4,7 @@
  * Sets up the welcome screen page, hides the menu item
  * and contains the screen content.
  */
-class Storefront_Welcome {
+class ET_Shop_Welcome {
 
 	/**
 	 * Constructor
@@ -12,13 +12,13 @@ class Storefront_Welcome {
 	 */
 	public function __construct() {
 
-		add_action( 'admin_menu', array( $this, 'storefront_welcome_register_menu' ) );
-		add_action( 'load-themes.php', array( $this, 'storefront_activation_admin_notice' ) );
-		add_action( 'admin_enqueue_scripts', array( $this, 'storefront_welcome_style' ) );
+		add_action( 'admin_menu', array( $this, 'et_shop_welcome_register_menu' ) );
+		add_action( 'load-themes.php', array( $this, 'et_shop_activation_admin_notice' ) );
+		add_action( 'admin_enqueue_scripts', array( $this, 'et_shop_welcome_style' ) );
 
-		add_action( 'storefront_welcome', array( $this, 'storefront_welcome_intro' ), 				10 );
-		add_action( 'storefront_welcome', array( $this, 'storefront_welcome_enhance' ), 			20 );
-		add_action( 'storefront_welcome', array( $this, 'storefront_welcome_contribute' ), 			30 );
+		add_action( 'et_shop_welcome', array( $this, 'et_shop_welcome_intro' ), 				10 );
+		add_action( 'et_shop_welcome', array( $this, 'et_shop_welcome_enhance' ), 			20 );
+		add_action( 'et_shop_welcome', array( $this, 'et_shop_welcome_contribute' ), 			30 );
 
 	} // end constructor
 
@@ -26,11 +26,11 @@ class Storefront_Welcome {
 	 * Adds an admin notice upon successful activation.
 	 * @since 1.0.3
 	 */
-	public function storefront_activation_admin_notice() {
+	public function et_shop_activation_admin_notice() {
 		global $pagenow;
 
 		if ( is_admin() && 'themes.php' == $pagenow && isset( $_GET['activated'] ) ) { // input var okay
-			add_action( 'admin_notices', array( $this, 'storefront_welcome_admin_notice' ), 99 );
+			add_action( 'admin_notices', array( $this, 'et_shop_welcome_admin_notice' ), 99 );
 		}
 	}
 
@@ -38,11 +38,11 @@ class Storefront_Welcome {
 	 * Display an admin notice linking to the welcome screen
 	 * @since 1.0.3
 	 */
-	public function storefront_welcome_admin_notice() {
+	public function et_shop_welcome_admin_notice() {
 		?>
 			<div class="updated notice is-dismissible">
-				<p><?php echo sprintf( esc_html__( 'Thanks for choosing Storefront! You can read hints and tips on how get the most out of your new theme on the %swelcome screen%s.', 'storefront' ), '<a href="' . esc_url( admin_url( 'themes.php?page=storefront-welcome' ) ) . '">', '</a>' ); ?></p>
-				<p><a href="<?php echo esc_url( admin_url( 'themes.php?page=storefront-welcome' ) ); ?>" class="button" style="text-decoration: none;"><?php _e( 'Get started with Storefront', 'storefront' ); ?></a></p>
+				<p><?php echo sprintf( esc_html__( 'Thanks for choosing Edition Tirol Shopdesign! You can read hints and tips on how get the most out of your new theme on the %swelcome screen%s.', 'et_shop' ), '<a href="' . esc_url( admin_url( 'themes.php?page=et_shop-welcome' ) ) . '">', '</a>' ); ?></p>
+				<p><a href="<?php echo esc_url( admin_url( 'themes.php?page=et_shop-welcome' ) ); ?>" class="button" style="text-decoration: none;"><?php _e( 'Get started with Edition Tirol Shopdesign', 'et_shop' ); ?></a></p>
 			</div>
 		<?php
 	}
@@ -52,11 +52,11 @@ class Storefront_Welcome {
 	 * @return void
 	 * @since  1.4.4
 	 */
-	public function storefront_welcome_style( $hook_suffix ) {
-		global $storefront_version;
+	public function et_shop_welcome_style( $hook_suffix ) {
+		global $et_shop_version;
 
-		if ( 'appearance_page_storefront-welcome' == $hook_suffix ) {
-			wp_enqueue_style( 'storefront-welcome-screen', get_template_directory_uri() . '/inc/admin/welcome-screen/css/welcome.css', $storefront_version );
+		if ( 'appearance_page_et_shop-welcome' == $hook_suffix ) {
+			wp_enqueue_style( 'et_shop-welcome-screen', get_template_directory_uri() . '/inc/admin/welcome-screen/css/welcome.css', $et_shop_version );
 			wp_enqueue_style( 'thickbox' );
 			wp_enqueue_script( 'thickbox' );
 		}
@@ -67,15 +67,15 @@ class Storefront_Welcome {
 	 * @see  add_theme_page()
 	 * @since 1.0.0
 	 */
-	public function storefront_welcome_register_menu() {
-		add_theme_page( 'Storefront', 'Storefront', 'activate_plugins', 'storefront-welcome', array( $this, 'storefront_welcome_screen' ) );
+	public function et_shop_welcome_register_menu() {
+		add_theme_page( 'Edition Tirol Shopdesign', 'Edition Tirol Shopdesign', 'activate_plugins', 'et_shop-welcome', array( $this, 'et_shop_welcome_screen' ) );
 	}
 
 	/**
 	 * The welcome screen
 	 * @since 1.0.0
 	 */
-	public function storefront_welcome_screen() {
+	public function et_shop_welcome_screen() {
 		require_once( ABSPATH . 'wp-load.php' );
 		require_once( ABSPATH . 'wp-admin/admin.php' );
 		require_once( ABSPATH . 'wp-admin/admin-header.php' );
@@ -84,11 +84,11 @@ class Storefront_Welcome {
 
 			<?php
 			/**
-			 * @hooked storefront_welcome_intro - 10
-			 * @hooked storefront_welcome_enhance - 20
-			 * @hooked storefront_welcome_contribute - 30
+			 * @hooked et_shop_welcome_intro - 10
+			 * @hooked et_shop_welcome_enhance - 20
+			 * @hooked et_shop_welcome_contribute - 30
 			 */
-			do_action( 'storefront_welcome' ); ?>
+			do_action( 'et_shop_welcome' ); ?>
 
 		</div>
 		<?php
@@ -98,7 +98,7 @@ class Storefront_Welcome {
 	 * Welcome screen intro
 	 * @since 1.0.0
 	 */
-	public function storefront_welcome_intro() {
+	public function et_shop_welcome_intro() {
 		require_once( get_template_directory() . '/inc/admin/welcome-screen/sections/intro.php' );
 	}
 
@@ -107,7 +107,7 @@ class Storefront_Welcome {
 	 * Welcome screen enhance section
 	 * @since 1.5.2
 	 */
-	public function storefront_welcome_enhance() {
+	public function et_shop_welcome_enhance() {
 		require_once( get_template_directory() . '/inc/admin/welcome-screen/sections/enhance.php' );
 	}
 
@@ -115,9 +115,9 @@ class Storefront_Welcome {
 	 * Welcome screen contribute section
 	 * @since 1.5.2
 	 */
-	public function storefront_welcome_contribute() {
+	public function et_shop_welcome_contribute() {
 		require_once( get_template_directory() . '/inc/admin/welcome-screen/sections/contribute.php' );
 	}
 }
 
-$GLOBALS['Storefront_Welcome'] = new Storefront_Welcome();
+$GLOBALS['ET_Shop_Welcome'] = new ET_Shop_Welcome();

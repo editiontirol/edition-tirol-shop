@@ -2,15 +2,15 @@
 /**
  * Template functions used for the site header.
  *
- * @package storefront
+ * @package et_shop
  */
 
-if ( ! function_exists( 'storefront_header_widget_region' ) ) {
+if ( ! function_exists( 'et_shop_header_widget_region' ) ) {
 	/**
 	 * Display header widget region
 	 * @since  1.0.0
 	 */
-	function storefront_header_widget_region() {
+	function et_shop_header_widget_region() {
 		if ( is_active_sidebar( 'header-1' ) ) {
 		?>
 		<div class="header-widget-region" role="complementary">
@@ -23,13 +23,13 @@ if ( ! function_exists( 'storefront_header_widget_region' ) ) {
 	}
 }
 
-if ( ! function_exists( 'storefront_site_branding' ) ) {
+if ( ! function_exists( 'et_shop_site_branding' ) ) {
 	/**
 	 * Display Site Branding
 	 * @since  1.0.0
 	 * @return void
 	 */
-	function storefront_site_branding() {
+	function et_shop_site_branding() {
 		if ( function_exists( 'jetpack_has_site_logo' ) && jetpack_has_site_logo() ) {
 			jetpack_the_site_logo();
 		} else { ?>
@@ -43,16 +43,16 @@ if ( ! function_exists( 'storefront_site_branding' ) ) {
 	}
 }
 
-if ( ! function_exists( 'storefront_primary_navigation' ) ) {
+if ( ! function_exists( 'et_shop_primary_navigation' ) ) {
 	/**
 	 * Display Primary Navigation
 	 * @since  1.0.0
 	 * @return void
 	 */
-	function storefront_primary_navigation() {
+	function et_shop_primary_navigation() {
 		?>
-		<nav id="site-navigation" class="main-navigation" role="navigation" aria-label="<?php esc_html_e( 'Primary Navigation', 'storefront' ); ?>">
-		<button class="menu-toggle" aria-controls="primary-navigation" aria-expanded="false"><?php echo esc_attr( apply_filters( 'storefront_menu_toggle_text', __( 'Navigation', 'storefront' ) ) ); ?></button>
+		<nav id="site-navigation" class="main-navigation" role="navigation" aria-label="<?php esc_html_e( 'Primary Navigation', 'et_shop' ); ?>">
+		<button class="menu-toggle" aria-controls="primary-navigation" aria-expanded="false"><?php echo esc_attr( apply_filters( 'et_shop_menu_toggle_text', __( 'Navigation', 'et_shop' ) ) ); ?></button>
 			<?php
 			wp_nav_menu(
 				array(
@@ -73,15 +73,15 @@ if ( ! function_exists( 'storefront_primary_navigation' ) ) {
 	}
 }
 
-if ( ! function_exists( 'storefront_secondary_navigation' ) ) {
+if ( ! function_exists( 'et_shop_secondary_navigation' ) ) {
 	/**
 	 * Display Secondary Navigation
 	 * @since  1.0.0
 	 * @return void
 	 */
-	function storefront_secondary_navigation() {
+	function et_shop_secondary_navigation() {
 		?>
-		<nav class="secondary-navigation" role="navigation" aria-label="<?php _e( 'Secondary Navigation', 'storefront' ); ?>">
+		<nav class="secondary-navigation" role="navigation" aria-label="<?php _e( 'Secondary Navigation', 'et_shop' ); ?>">
 			<?php
 				wp_nav_menu(
 					array(
@@ -95,16 +95,16 @@ if ( ! function_exists( 'storefront_secondary_navigation' ) ) {
 	}
 }
 
-if ( ! function_exists( 'storefront_skip_links' ) ) {
+if ( ! function_exists( 'et_shop_skip_links' ) ) {
 	/**
 	 * Skip links
 	 * @since  1.4.1
 	 * @return void
 	 */
-	function storefront_skip_links() {
+	function et_shop_skip_links() {
 		?>
-		<a class="skip-link screen-reader-text" href="#site-navigation"><?php _e( 'Skip to navigation', 'storefront' ); ?></a>
-		<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'storefront' ); ?></a>
+		<a class="skip-link screen-reader-text" href="#site-navigation"><?php _e( 'Skip to navigation', 'et_shop' ); ?></a>
+		<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'et_shop' ); ?></a>
 		<?php
 	}
 }

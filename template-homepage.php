@@ -9,7 +9,7 @@
  *
  * Template name: Homepage
  *
- * @package storefront
+ * @package et_shop
  */
 
 get_header(); ?>
@@ -19,12 +19,12 @@ get_header(); ?>
 
 			<?php
 			/**
-			 * @hooked storefront_homepage_content - 10
-			 * @hooked storefront_product_categories - 20
-			 * @hooked storefront_recent_products - 30
-			 * @hooked storefront_featured_products - 40
-			 * @hooked storefront_popular_products - 50
-			 * @hooked storefront_on_sale_products - 60
+			 * @hooked et_shop_homepage_content - 10
+			 * @hooked et_shop_product_categories - 20
+			 * @hooked et_shop_recent_products - 30
+			 * @hooked et_shop_featured_products - 40
+			 * @hooked et_shop_popular_products - 50
+			 * @hooked et_shop_on_sale_products - 60
 			 */
 			do_action( 'homepage' ); ?>
 

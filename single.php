@@ -2,7 +2,7 @@
 /**
  * The template for displaying all single posts.
  *
- * @package storefront
+ * @package et_shop
  */
 
 get_header(); ?>
@@ -13,15 +13,15 @@ get_header(); ?>
 		<?php while ( have_posts() ) : the_post(); ?>
 
 			<?php
-			do_action( 'storefront_single_post_before' );
+			do_action( 'et_shop_single_post_before' );
 
 			get_template_part( 'content', 'single' );
 
 			/**
-			 * @hooked storefront_post_nav - 10
-			 * @hooked storefront_display_comments - 20
+			 * @hooked et_shop_post_nav - 10
+			 * @hooked et_shop_display_comments - 20
 			 */
-			do_action( 'storefront_single_post_after' );
+			do_action( 'et_shop_single_post_after' );
 			?>
 
 		<?php endwhile; // end of the loop. ?>
@@ -29,5 +29,5 @@ get_header(); ?>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
-<?php do_action( 'storefront_sidebar' ); ?>
+<?php do_action( 'et_shop_sidebar' ); ?>
 <?php get_footer(); ?>

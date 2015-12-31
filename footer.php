@@ -4,29 +4,29 @@
  *
  * Contains the closing of the #content div and all content after
  *
- * @package storefront
+ * @package et_shop
  */
 ?>
 
 		</div><!-- .col-full -->
 	</div><!-- #content -->
 
-	<?php do_action( 'storefront_before_footer' ); ?>
+	<?php do_action( 'et_shop_before_footer' ); ?>
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<div class="col-full">
 
 			<?php
 			/**
-			 * @hooked storefront_footer_widgets - 10
-			 * @hooked storefront_credit - 20
+			 * @hooked et_shop_footer_widgets - 10
+			 * @hooked et_shop_credit - 20
 			 */
-			do_action( 'storefront_footer' ); ?>
+			do_action( 'et_shop_footer' ); ?>
 
 		</div><!-- .col-full -->
 	</footer><!-- #colophon -->
 
-	<?php do_action( 'storefront_after_footer' ); ?>
+	<?php do_action( 'et_shop_after_footer' ); ?>
 
 </div><!-- #page -->
 

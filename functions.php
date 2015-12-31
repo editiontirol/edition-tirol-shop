@@ -1,8 +1,8 @@
 <?php
 /**
- * storefront engine room
+ * et_shop engine room
  *
- * @package storefront
+ * @package et_shop
  */
 
 /**

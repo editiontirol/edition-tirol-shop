@@ -1,8 +1,8 @@
 <?php
 /**
- * storefront Theme Customizer display functions
+ * et_shop Theme Customizer display functions
  *
- * @package storefront
+ * @package et_shop
  */
 
 /**
@@ -10,27 +10,27 @@
  *
  * @since 1.0.0
  */
-if ( ! function_exists( 'storefront_add_customizer_css' ) ) {
-	function storefront_add_customizer_css() {
-		$accent_color 					= storefront_sanitize_hex_color( get_theme_mod( 'storefront_accent_color', apply_filters( 'storefront_default_accent_color', '#96588a' ) ) );
-		$header_background_color 		= storefront_sanitize_hex_color( get_theme_mod( 'storefront_header_background_color', apply_filters( 'storefront_default_header_background_color', '#2c2d33' ) ) );
-		$header_link_color 				= storefront_sanitize_hex_color( get_theme_mod( 'storefront_header_link_color', apply_filters( 'storefront_default_header_link_color', '#ffffff' ) ) );
-		$header_text_color 				= storefront_sanitize_hex_color( get_theme_mod( 'storefront_header_text_color', apply_filters( 'storefront_default_header_text_color', '#9aa0a7' ) ) );
+if ( ! function_exists( 'et_shop_add_customizer_css' ) ) {
+	function et_shop_add_customizer_css() {
+		$accent_color 					= et_shop_sanitize_hex_color( get_theme_mod( 'et_shop_accent_color', apply_filters( 'et_shop_default_accent_color', '#96588a' ) ) );
+		$header_background_color 		= et_shop_sanitize_hex_color( get_theme_mod( 'et_shop_header_background_color', apply_filters( 'et_shop_default_header_background_color', '#2c2d33' ) ) );
+		$header_link_color 				= et_shop_sanitize_hex_color( get_theme_mod( 'et_shop_header_link_color', apply_filters( 'et_shop_default_header_link_color', '#ffffff' ) ) );
+		$header_text_color 				= et_shop_sanitize_hex_color( get_theme_mod( 'et_shop_header_text_color', apply_filters( 'et_shop_default_header_text_color', '#9aa0a7' ) ) );
 
-		$footer_background_color 		= storefront_sanitize_hex_color( get_theme_mod( 'storefront_footer_background_color', apply_filters( 'storefront_default_footer_background_color', '#f3f3f3' ) ) );
-		$footer_link_color 				= storefront_sanitize_hex_color( get_theme_mod( 'storefront_footer_link_color', apply_filters( 'storefront_default_footer_link_color', '#96588a' ) ) );
-		$footer_heading_color 			= storefront_sanitize_hex_color( get_theme_mod( 'storefront_footer_heading_color', apply_filters( 'storefront_default_footer_heading_color', '#494c50' ) ) );
-		$footer_text_color 				= storefront_sanitize_hex_color( get_theme_mod( 'storefront_footer_text_color', apply_filters( 'storefront_default_footer_text_color', '#61656b' ) ) );
+		$footer_background_color 		= et_shop_sanitize_hex_color( get_theme_mod( 'et_shop_footer_background_color', apply_filters( 'et_shop_default_footer_background_color', '#f3f3f3' ) ) );
+		$footer_link_color 				= et_shop_sanitize_hex_color( get_theme_mod( 'et_shop_footer_link_color', apply_filters( 'et_shop_default_footer_link_color', '#96588a' ) ) );
+		$footer_heading_color 			= et_shop_sanitize_hex_color( get_theme_mod( 'et_shop_footer_heading_color', apply_filters( 'et_shop_default_footer_heading_color', '#494c50' ) ) );
+		$footer_text_color 				= et_shop_sanitize_hex_color( get_theme_mod( 'et_shop_footer_text_color', apply_filters( 'et_shop_default_footer_text_color', '#61656b' ) ) );
 
-		$text_color 					= storefront_sanitize_hex_color( get_theme_mod( 'storefront_text_color', apply_filters( 'storefront_default_text_color', '#60646c' ) ) );
-		$heading_color 					= storefront_sanitize_hex_color( get_theme_mod( 'storefront_heading_color', apply_filters( 'storefront_default_heading_color', '#484c51' ) ) );
-		$button_background_color 		= storefront_sanitize_hex_color( get_theme_mod( 'storefront_button_background_color', apply_filters( 'storefront_default_button_background_color', '#60646c' ) ) );
-		$button_text_color 				= storefront_sanitize_hex_color( get_theme_mod( 'storefront_button_text_color', apply_filters( 'storefront_default_button_text_color', '#ffffff' ) ) );
-		$button_alt_background_color 	= storefront_sanitize_hex_color( get_theme_mod( 'storefront_button_alt_background_color', apply_filters( 'storefront_default_button_alt_background_color', '#96588a' ) ) );
-		$button_alt_text_color 			= storefront_sanitize_hex_color( get_theme_mod( 'storefront_button_alt_text_color', apply_filters( 'storefront_default_button_alt_text_color', '#ffffff' ) ) );
+		$text_color 					= et_shop_sanitize_hex_color( get_theme_mod( 'et_shop_text_color', apply_filters( 'et_shop_default_text_color', '#60646c' ) ) );
+		$heading_color 					= et_shop_sanitize_hex_color( get_theme_mod( 'et_shop_heading_color', apply_filters( 'et_shop_default_heading_color', '#484c51' ) ) );
+		$button_background_color 		= et_shop_sanitize_hex_color( get_theme_mod( 'et_shop_button_background_color', apply_filters( 'et_shop_default_button_background_color', '#60646c' ) ) );
+		$button_text_color 				= et_shop_sanitize_hex_color( get_theme_mod( 'et_shop_button_text_color', apply_filters( 'et_shop_default_button_text_color', '#ffffff' ) ) );
+		$button_alt_background_color 	= et_shop_sanitize_hex_color( get_theme_mod( 'et_shop_button_alt_background_color', apply_filters( 'et_shop_default_button_alt_background_color', '#96588a' ) ) );
+		$button_alt_text_color 			= et_shop_sanitize_hex_color( get_theme_mod( 'et_shop_button_alt_text_color', apply_filters( 'et_shop_default_button_alt_text_color', '#ffffff' ) ) );
 
-		$brighten_factor 				= apply_filters( 'storefront_brighten_factor', 25 );
-		$darken_factor 					= apply_filters( 'storefront_darken_factor', -25 );
+		$brighten_factor 				= apply_filters( 'et_shop_brighten_factor', 25 );
+		$darken_factor 					= apply_filters( 'et_shop_darken_factor', -25 );
 
 		$style 							= '
 		.main-navigation ul li a,
@@ -42,7 +42,7 @@ if ( ! function_exists( 'storefront_add_customizer_css' ) ) {
 
 		.main-navigation ul li a:hover,
 		.site-title a:hover {
-			color: ' . storefront_adjust_color_brightness( $header_link_color, $darken_factor ) . ';
+			color: ' . et_shop_adjust_color_brightness( $header_link_color, $darken_factor ) . ';
 		}
 
 		.site-header,
@@ -104,8 +104,8 @@ if ( ! function_exists( 'storefront_add_customizer_css' ) ) {
 		}
 
 		button:hover, input[type="button"]:hover, input[type="reset"]:hover, input[type="submit"]:hover, .button:hover, .added_to_cart:hover, .widget-area .widget a.button:hover, .site-header-cart .widget_shopping_cart a.button:hover {
-			background-color: ' . storefront_adjust_color_brightness( $button_background_color, $darken_factor ) . ';
-			border-color: ' . storefront_adjust_color_brightness( $button_background_color, $darken_factor ) . ';
+			background-color: ' . et_shop_adjust_color_brightness( $button_background_color, $darken_factor ) . ';
+			border-color: ' . et_shop_adjust_color_brightness( $button_background_color, $darken_factor ) . ';
 			color: ' . $button_text_color . ';
 		}
 
@@ -116,8 +116,8 @@ if ( ! function_exists( 'storefront_add_customizer_css' ) ) {
 		}
 
 		button.alt:hover, input[type="button"].alt:hover, input[type="reset"].alt:hover, input[type="submit"].alt:hover, .button.alt:hover, .added_to_cart.alt:hover, .widget-area .widget a.button.alt:hover, .added_to_cart:hover {
-			background-color: ' . storefront_adjust_color_brightness( $button_alt_background_color, $darken_factor ) . ';
-			border-color: ' . storefront_adjust_color_brightness( $button_alt_background_color, $darken_factor ) . ';
+			background-color: ' . et_shop_adjust_color_brightness( $button_alt_background_color, $darken_factor ) . ';
+			border-color: ' . et_shop_adjust_color_brightness( $button_alt_background_color, $darken_factor ) . ';
 			color: ' . $button_alt_text_color . ';
 		}
 
@@ -140,7 +140,7 @@ if ( ! function_exists( 'storefront_add_customizer_css' ) ) {
 			}
 
 			.secondary-navigation ul.menu a:hover {
-				color: ' . storefront_adjust_color_brightness( $header_text_color, $brighten_factor ) . ';
+				color: ' . et_shop_adjust_color_brightness( $header_text_color, $brighten_factor ) . ';
 			}
 
 			.main-navigation ul.menu ul {
@@ -160,7 +160,7 @@ if ( ! function_exists( 'storefront_add_customizer_css' ) ) {
 
 		a.cart-contents:hover,
 		.site-header-cart .widget_shopping_cart a:hover {
-			color: ' . storefront_adjust_color_brightness( $header_link_color, $darken_factor ) . ';
+			color: ' . et_shop_adjust_color_brightness( $header_link_color, $darken_factor ) . ';
 		}
 
 		.site-header-cart .widget_shopping_cart {
@@ -203,7 +203,7 @@ if ( ! function_exists( 'storefront_add_customizer_css' ) ) {
 			}
 		}';
 
-		wp_add_inline_style( 'storefront-style', $style );
-		wp_add_inline_style( 'storefront-woocommerce-style', $woocommerce_style );
+		wp_add_inline_style( 'et_shop-style', $style );
+		wp_add_inline_style( 'et_shop-woocommerce-style', $woocommerce_style );
 	}
 }

@@ -1,8 +1,8 @@
 <?php
 /**
- * storefront engine room
+ * et_shop engine room
  *
- * @package storefront
+ * @package et_shop
  */
 
 /**
@@ -31,7 +31,7 @@ require get_template_directory() . '/inc/functions/extras.php';
 /**
  * Customizer additions.
  */
-if ( is_storefront_customizer_enabled() ) {
+if ( is_et_shop_customizer_enabled() ) {
 	require get_template_directory() . '/inc/customizer/hooks.php';
 	require get_template_directory() . '/inc/customizer/controls.php';
 	require get_template_directory() . '/inc/customizer/display.php';

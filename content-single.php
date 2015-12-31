@@ -1,6 +1,6 @@
 <?php
 /**
- * @package storefront
+ * @package et_shop
  */
 ?>
 
@@ -8,11 +8,11 @@
 
 	<?php
 	/**
-	 * @hooked storefront_post_header - 10
-	 * @hooked storefront_post_meta - 20
-	 * @hooked storefront_post_content - 30
+	 * @hooked et_shop_post_header - 10
+	 * @hooked et_shop_post_meta - 20
+	 * @hooked et_shop_post_content - 30
 	 */
-	do_action( 'storefront_single_post' );
+	do_action( 'et_shop_single_post' );
 	?>
 
 </article><!-- #post-## -->

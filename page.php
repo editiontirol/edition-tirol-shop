@@ -7,7 +7,7 @@
  * and that other 'pages' on your WordPress site will use a
  * different template.
  *
- * @package storefront
+ * @package et_shop
  */
 
 get_header(); ?>
@@ -18,16 +18,16 @@ get_header(); ?>
 			<?php while ( have_posts() ) : the_post(); ?>
 
 				<?php
-				do_action( 'storefront_page_before' );
+				do_action( 'et_shop_page_before' );
 				?>
 
 				<?php get_template_part( 'content', 'page' ); ?>
 
 				<?php
 				/**
-				 * @hooked storefront_display_comments - 10
+				 * @hooked et_shop_display_comments - 10
 				 */
-				do_action( 'storefront_page_after' );
+				do_action( 'et_shop_page_after' );
 				?>
 
 			<?php endwhile; // end of the loop. ?>
@@ -35,5 +35,5 @@ get_header(); ?>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
-<?php do_action( 'storefront_sidebar' ); ?>
+<?php do_action( 'et_shop_sidebar' ); ?>
 <?php get_footer(); ?>

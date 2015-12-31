@@ -2,7 +2,7 @@
 /**
  * The template for displaying 404 pages (not found).
  *
- * @package storefront
+ * @package et_shop
  */
 
 get_header(); ?>
@@ -16,10 +16,10 @@ get_header(); ?>
 				<div class="page-content">
 
 					<header class="page-header">
-						<h1 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'storefront' ); ?></h1>
+						<h1 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'et_shop' ); ?></h1>
 					</header><!-- .page-header -->
 
-					<p><?php esc_html_e( 'Nothing was found at this location. Try searching, or check out the links below.', 'storefront' ); ?></p>
+					<p><?php esc_html_e( 'Nothing was found at this location. Try searching, or check out the links below.', 'et_shop' ); ?></p>
 
 					<?php
 					if ( is_woocommerce_activated() ) {
@@ -36,13 +36,13 @@ get_header(); ?>
 
 							echo '<div class="col-1">';
 
-								storefront_promoted_products();
+								et_shop_promoted_products();
 
 							echo '</div>';
 
 							echo '<div class="col-2">';
 
-								echo '<h2>' . esc_html__( 'Product Categories', 'storefront' ) . '</h2>';
+								echo '<h2>' . esc_html__( 'Product Categories', 'et_shop' ) . '</h2>';
 
 								the_widget( 'WC_Widget_Product_Categories', array(
 															'count'		=> 1,
@@ -51,9 +51,9 @@ get_header(); ?>
 
 						echo '</div>';
 
-						echo '<h2>' . esc_html__( 'Popular Products', 'storefront' ) . '</h2>';
+						echo '<h2>' . esc_html__( 'Popular Products', 'et_shop' ) . '</h2>';
 
-						echo storefront_do_shortcode( 'best_selling_products', array(
+						echo et_shop_do_shortcode( 'best_selling_products', array(
 															'per_page' 	=> 4,
 															'columns'	=> 4,
 														) );
