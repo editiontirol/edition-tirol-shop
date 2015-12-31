@@ -1,0 +1,35 @@
+exclude:
+  - 'node_modules/*'
+
+linters:
+
+  BorderZero:
+    convention: none
+
+  IdSelector:
+    enabled: false
+
+  ImportantRule:
+    enabled: false
+
+  NestingDepth:
+    enabled: false
+
+  PropertySpelling:
+    extra_properties:
+      - '*vertical-align'
+
+  QualifyingElement:
+    allow_element_with_attribute:
+      - 'title'
+      - 'type'
+      - 'disabled'
+
+  SelectorDepth:
+    enabled: false
+
+  SelectorFormat:
+    enabled: false
+
+  SpaceBeforeBrace:
+    allow_single_line_padding: true

@@ -1,0 +1,1 @@
+excludeInFolderSearch = "{$excludeInFolderSearch,$extraExcludes,.git,.sass-cache,node_modules}"
