@@ -164,12 +164,12 @@ table.shop_table_responsive {
 /**
  * Products
  */
-ul.products {
+.products {
   margin-left: 0;
   clear: both;
   @include clearfix;
 
-  li.product {
+  .product {
     list-style: none;
     margin-left: 0;
     margin-bottom: 4.236em;
@@ -218,9 +218,35 @@ ul.products {
   }
 }
 
-/**
- * Single Product
- */
+.product-image {
+  margin-bottom: 1em;
+}
+
+.woocommerce-main-image {
+  margin-bottom: 0;
+}
+
+.woocommerce-main-image,
+.product-image {
+  display: block;
+  height: 0;
+  padding-bottom: 100%;
+
+  img {
+    margin: 0 auto;
+    max-width: 100%;
+    max-height: 100%;
+  }
+}
+
+// PrettyPhoto Ajax Loader Animation
+@keyframes spin {
+    from {transform:rotate(0deg);}
+    to {transform:rotate(360deg);}
+}
+
+// Single Product
+
 .single-product {
   div.product {
     @include clearfix;
@@ -234,10 +260,6 @@ ul.products {
     }
 
     .images {
-      .woocommerce-main-image {
-        margin-bottom: 1.618em;
-        display: block;
-      }
 
       .thumbnails {
         a.zoom {
@@ -405,7 +427,7 @@ a.reset_variations {
         padding-bottom: 1.618em;
       }
 
-      ul.children {
+      .children {
         border-top: 1px solid $color_border;
         @include span(last 5 of 6);
         padding-top: 2.618em;
@@ -928,11 +950,9 @@ form.checkout {
   }
 }
 
-/**
- * My Account
- */
+// My Account
 
-ul.order_details {
+.order_details {
   @include clearfix;
   list-style: none;
   border: 1px solid $color_border;
@@ -958,7 +978,7 @@ ul.order_details {
   }
 }
 
-ul.digital-downloads {
+.digital-downloads {
   list-style: none;
   margin-left: 0;
 
@@ -1178,7 +1198,7 @@ p.stars {
   border-width: 1px 0;
   padding: 1em 0;
 
-  ul.tabs {
+  .tabs {
     list-style: none;
     margin-left: 0;
     text-align: center;
@@ -1419,11 +1439,9 @@ dl.variation {
     }
   }
 
-  /**
-   * Reset mobile product styles
-   */
-  ul.products {
-    li.product {
+  // Reset mobile product styles
+  .products {
+    .product {
       clear: none;
       width: 100%;
       float: left;
@@ -1447,8 +1465,8 @@ dl.variation {
   .et_shop-full-width-content {
     .site-main {
       .columns-1 {
-        ul.products {
-          li.product {
+        .products {
+          .product {
             width: 100%;
             margin-right: 0;
             float: none;
@@ -1457,24 +1475,24 @@ dl.variation {
       }
 
       .columns-2 {
-        ul.products {
-          li.product {
+        .products {
+          .product {
             @include span(6 of 12);
           }
         }
       }
 
       .columns-3 {
-        ul.products {
-          li.product {
+        .products {
+          .product {
             @include span(4 of 12);
           }
         }
       }
 
       .columns-4 {
-        ul.products {
-          li.product {
+        .products {
+          .product {
             @include span(3 of 12);
           }
         }
@@ -1482,8 +1500,8 @@ dl.variation {
 
       // The grid wont work for 5 columns :-(
       .columns-5 {
-        ul.products {
-          li.product {
+        .products {
+          .product {
             width: 16.9%;
             margin-right: 3.8%;
           }
@@ -1492,13 +1510,11 @@ dl.variation {
     }
   }
 
-  /**
-   * Main content area (adjacent to sidebar) product layout
-   */
+  // Main content area (adjacent to sidebar) product layout
   .site-main {
     .columns-1 {
-      ul.products {
-        li.product {
+      .products {
+        .product {
           width: 100%;
           margin-right: 0;
           float: none;
@@ -1508,8 +1524,8 @@ dl.variation {
 
     // The grid wont work for 2 columns :-(
     .columns-2 {
-      ul.products {
-        li.product {
+      .products {
+        .product {
           width: 48%;
           margin-right: 3.8%;
         }
@@ -1517,8 +1533,8 @@ dl.variation {
     }
 
     .columns-3 {
-      ul.products {
-        li.product {
+      .products {
+        .product {
           @include span(3 of 9);
         }
       }
@@ -1526,8 +1542,8 @@ dl.variation {
 
     // The grid wont work for 4 columns :-(
     .columns-4 {
-      ul.products {
-        li.product {
+      .products {
+        .product {
           width: 22.05%;
           margin-right: 3.8%;
         }
@@ -1536,16 +1552,16 @@ dl.variation {
 
     // The grid wont work for 5 columns :-(
     .columns-5 {
-      ul.products {
-        li.product {
+      .products {
+        .product {
           width: 16.9%;
           margin-right: 3.8%;
         }
       }
     }
 
-    ul.products {
-      li.product {
+    .products {
+      .product {
         @include span(3 of 9);
       }
     }
@@ -1625,8 +1641,8 @@ dl.variation {
 
     .related,
     .upsells {
-      ul.products {
-        li.product {
+      .products {
+        .product {
           @include span(4 of 12);
         }
       }
@@ -1749,8 +1765,8 @@ dl.variation {
     .cross-sells {
       @include span(4 of 9);
 
-      ul.products {
-        li.product {
+      .products {
+        .product {
           @include span(2 of 4);
         }
       }
@@ -1773,8 +1789,8 @@ dl.variation {
       .cross-sells {
         @include span(6 of 12);
 
-        ul.products {
-            li.product {
+        .products {
+            .product {
               @include span(3 of 6);
             }
           }
@@ -1949,7 +1965,7 @@ dl.variation {
 
   .et_shop-full-width-content {
     .woocommerce-tabs {
-      ul.tabs {
+      .tabs {
         @include span(4 of 12);
       }
 
@@ -1966,7 +1982,7 @@ dl.variation {
     padding-top: 2.618em;
     padding-bottom: 2.618em;
 
-    ul.tabs {
+    .tabs {
       @include span(3 of 9);
         text-align: left;
 

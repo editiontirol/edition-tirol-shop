@@ -1,4 +1,4 @@
-/* Theme Name:     Edition Tirol Shopdesign
+/* Theme Name:     Edition Tirol Shop Design
    Theme URI:      http://edition.tirol
    Author:         Markus Reiter
    Author URI:     http://reitermark.us
@@ -365,7 +365,7 @@ body {
 }
 
 .site-footer a:not(.button) {
-  color: #fdc800;
+  color: #9e76c0;
 }
 
 .site-info {
@@ -677,13 +677,13 @@ img {
 }
 
 a {
-  color: #fdc800;
+  color: #9e76c0;
   font-weight: 700;
   text-decoration: none;
 }
 
 a:focus {
-  outline: 1px solid #fdc800;
+  outline: 1px solid #9e76c0;
 }
 
 .et_shop-cute * {
@@ -1003,7 +1003,7 @@ button:focus,
 [type='submit']:focus,
 .button:focus,
 .added_to_cart:focus {
-  outline: 2px solid #fdc800;
+  outline: 2px solid #9e76c0;
 }
 
 button.added:after,
@@ -1668,8 +1668,8 @@ video {
 
 .pagination .page-numbers li .page-numbers.current,
 .woocommerce-pagination .page-numbers li .page-numbers.current {
-  background-color: #fdc800;
-  border-color: #fdc800;
+  background-color: #9e76c0;
+  border-color: #9e76c0;
   color: #fff;
   font-weight: 700;
 }
@@ -1982,7 +1982,7 @@ video {
 }
 
 .widget-area .widget a:hover {
-  color: #fdc800;
+  color: #9e76c0;
 }
 
 .header-widget-region .widget {

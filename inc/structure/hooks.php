@@ -1,9 +1,4 @@
 <?php
-/**
- * et_shop hooks
- *
- * @package et_shop
- */
 
 // General
 add_action( 'after_setup_theme',       'et_shop_setup' );

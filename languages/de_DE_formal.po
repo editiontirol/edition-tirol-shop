@@ -1,0 +1,275 @@
+# Copyright (C) 2015 WooThemes
+# This file is distributed under the GNU General Public License v2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Edition Tirol Shopdesign 1.5.3\n"
+"Report-Msgid-Bugs-To: https://github.com/woothemes/et_shop/issues\n"
+"POT-Creation-Date: 2016-01-02 06:14+0100\n"
+"PO-Revision-Date: 2016-01-02 06:17+0100\n"
+"Last-Translator: \n"
+"Language-Team: EMAIL@ADDRESS\n"
+"Language: de_DE\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.5\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: 404.php:19
+msgid "Oops! That page can&rsquo;t be found."
+msgstr "Upps ... die Seite konnte leider nicht gefunden werden."
+
+#: 404.php:22
+msgid ""
+"Nothing was found at this location. Try searching, or check out the links "
+"below."
+msgstr ""
+"Keine Einträge gefunden. Bitte nutzen Sie die Suche oder besuchen Sie die "
+"unten stehenden Links."
+
+#: 404.php:45 inc/structure/template-tags.php:26
+msgid "Product Categories"
+msgstr "Produktkategorien"
+
+#: 404.php:54
+msgid "Popular Products"
+msgstr "Beliebte Artikel"
+
+#: comments.php:26
+#, php-format
+msgctxt "comments title"
+msgid "One thought on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgstr[0] "Ein Gedanke zu &ldquo;%2$s&rdquo;"
+msgstr[1] "%1$s Gedanken zu &ldquo;%2$s&rdquo;"
+
+#: comments.php:33 comments.php:51
+msgid "Comment navigation"
+msgstr "Kommentarnavigation"
+
+#: comments.php:34 comments.php:52
+msgid "&larr; Older Comments"
+msgstr "&larr; Ältere Kommentare"
+
+#: comments.php:35 comments.php:53
+msgid "Newer Comments &rarr;"
+msgstr "Neuere Kommentare &rarr;"
+
+#: comments.php:60
+msgid "Comments are closed."
+msgstr "Die Kommentarfunktion ist deaktiviert."
+
+#: content-none.php:13
+msgid "Nothing Found"
+msgstr "Es wurde nichts gefunden."
+
+#: content-none.php:19
+#, php-format
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+"Bereit, Ihren ersten Artikel zu veröffentlichen? <a href=„%1$s“>Starten Sie "
+"hier</a>."
+
+#: content-none.php:23
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+"Leider keine Übereinstimmung mit Ihrem Suchbegriff. Versuchen Sie es noch "
+"einmal mit einem anderen Suchwort."
+
+#: content-none.php:28
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr ""
+"Upps … die Seite konnte leider nicht gefunden werden. Versuchen Sie es noch "
+"einmal mit einem anderen Suchbegriff."
+
+#: inc/functions/setup.php:60
+msgid "Primary Menu"
+msgstr "Hauptmenü"
+
+#: inc/functions/setup.php:61
+msgid "Secondary Menu"
+msgstr "Sekundäres Menü"
+
+#: inc/functions/setup.php:62
+msgid "Handheld Menu"
+msgstr "Mobilmenü"
+
+#: inc/functions/setup.php:104
+msgid "Sidebar"
+msgstr "Seitenleiste"
+
+#: inc/functions/setup.php:114
+msgid "Header"
+msgstr "Header-Gruppe (Titel und Untertitel)"
+
+#: inc/functions/setup.php:127
+#, php-format
+msgid "Footer %d"
+msgstr "Footer %d"
+
+#: inc/functions/setup.php:129
+#, php-format
+msgid "Widgetized Footer Region %d."
+msgstr "Footerbereich mit Widgets %d."
+
+#: inc/structure/comments.php:43
+msgid "Your comment is awaiting moderation."
+msgstr "Dein Kommentar muss noch freigegeben werden."
+
+#: inc/structure/comments.php:59
+msgid "Edit"
+msgstr "Bearbeiten"
+
+#: inc/structure/footer.php:38
+#, php-format
+msgid "%1$s designed by %2$s."
+msgstr "%1$s entwickelt von %2$s."
+
+#: inc/structure/header.php:54
+msgid "Primary Navigation"
+msgstr "Hauptnavigation"
+
+#: inc/structure/header.php:55
+msgid "Navigation"
+msgstr "Navigation"
+
+#: inc/structure/header.php:84
+msgid "Secondary Navigation"
+msgstr "Sekundärnavigation"
+
+#: inc/structure/header.php:106
+msgid "Skip to navigation"
+msgstr "Weiter zur Navigation"
+
+#: inc/structure/header.php:107
+msgid "Skip to content"
+msgstr "Zum Inhalt springen"
+
+#: inc/structure/page.php:36 inc/structure/post.php:51
+msgid "Pages:"
+msgstr "Seiten:"
+
+#: inc/structure/post.php:45
+#, php-format
+msgid "Continue reading %s"
+msgstr "Weiterlesen %s"
+
+#: inc/structure/post.php:72 inc/structure/post.php:85
+msgid ", "
+msgstr ", "
+
+#: inc/structure/post.php:77
+msgid "Categories: "
+msgstr "Kategorien: "
+
+#: inc/structure/post.php:90
+msgid "Tags: "
+msgstr "Schlagwörter: "
+
+#: inc/structure/post.php:99
+msgid "Leave a comment"
+msgstr "Kommentar schreiben"
+
+#: inc/structure/post.php:99
+msgid "1 Comment"
+msgstr "1 Kommentar"
+
+#: inc/structure/post.php:99
+msgid "% Comments"
+msgstr "% Kommentare"
+
+#: inc/structure/post.php:115
+msgctxt "Next post"
+msgid "Next"
+msgstr "Weiter"
+
+#: inc/structure/post.php:116
+msgctxt "Previous post"
+msgid "Previous"
+msgstr "Zurück"
+
+#: inc/structure/post.php:154
+#, php-format
+msgctxt "post date"
+msgid "Posted on %s"
+msgstr "Veröffentlicht am %s"
+
+#: inc/structure/post.php:159
+#, php-format
+msgctxt "post author"
+msgid "by %s"
+msgstr "von %s"
+
+#: inc/structure/template-tags.php:65
+msgid "Recent Products"
+msgstr "Aktuelle Produkte"
+
+#: inc/structure/template-tags.php:103 inc/woocommerce/template-tags.php:144
+msgid "Featured Products"
+msgstr "Empfohlene Produkte"
+
+#: inc/structure/template-tags.php:142
+msgid "Top Rated Products"
+msgstr "Bestbewertete Produkte"
+
+#: inc/structure/template-tags.php:179
+msgid "On Sale"
+msgstr "Im Angebot"
+
+#: inc/woocommerce/template-tags.php:18
+msgid "View your shopping cart"
+msgstr "Warenkorb anzeigen"
+
+#: inc/woocommerce/template-tags.php:19
+#, php-format
+msgid "%d item"
+msgid_plural "%d items"
+msgstr[0] "%d Artikel"
+msgstr[1] "%d Artikel"
+
+#: inc/woocommerce/template-tags.php:152
+msgid "On Sale Now"
+msgstr "Jetzt reduziert"
+
+#: inc/woocommerce/template-tags.php:160
+msgid "New In Store"
+msgstr "Neu im Shop"
+
+#: search.php:16
+#, php-format
+msgid "Search Results for: %s"
+msgstr "Suchergebnisse für: %s"
+
+#. Theme Name of the plugin/theme
+msgid "Edition Tirol Shop Design"
+msgstr "Edition Tirol Shopdesign"
+
+#. Theme URI of the plugin/theme
+msgid "http://edition.tirol"
+msgstr "http://edition.tirol"
+
+#. Description of the plugin/theme
+msgid "Custom Design for the Edition Tirol Online Shop"
+msgstr "Individuelles Design für den „Edition Tirol“-Onlineshop"
+
+#. Author of the plugin/theme
+msgid "Markus Reiter"
+msgstr "Markus Reiter"
+
+#. Author URI of the plugin/theme
+msgid "http://reitermark.us"
+msgstr "http://reitermark.us"
+
+#~ msgid "© "
+#~ msgstr "© "
+
+#~ msgid "Edition Tirol Shopdesign"
+#~ msgstr "Edition Tirol Shopdesign"
+
+#~ msgid "<cite class=\"fn\">%s</cite>"
+#~ msgstr "<cite class=\"fn\">%s</cite>"

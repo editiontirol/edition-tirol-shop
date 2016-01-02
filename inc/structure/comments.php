@@ -37,7 +37,7 @@ if ( ! function_exists( 'et_shop_comment' ) ) {
     <div class="comment-meta commentmetadata">
       <div class="comment-author vcard">
       <?php echo get_avatar( $comment, 128 ); ?>
-      <?php printf( __( '<cite class="fn">%s</cite>', 'et_shop' ), get_comment_author_link() ); ?>
+      <?php printf('<cite class="fn">%s</cite>', get_comment_author_link()); ?>
       </div>
       <?php if ( '0' == $comment->comment_approved ) : ?>
         <em class="comment-awaiting-moderation"><?php _e( 'Your comment is awaiting moderation.', 'et_shop' ); ?></em>

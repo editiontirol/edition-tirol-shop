@@ -10,7 +10,7 @@
 @import '../../../sass/utils/mixins';
 
 .widget_layered_nav {
-  ul.colors {
+  .colors {
     li {
       a {
         display: block;
@@ -37,7 +37,7 @@
     }
   }
 
-  ul.checkboxes {
+  .checkboxes {
     li {
       input {
         margin-right: .618em;
@@ -45,7 +45,7 @@
     }
   }
 
-  ul.sizes {
+  .sizes {
     li {
       a {
         opacity: 1;
@@ -80,9 +80,9 @@
     }
   }
 
-  ul.colors,
-  ul.checkboxes,
-  ul.sizes {
+  .colors,
+  .checkboxes,
+  .sizes {
     li {
       &.chosen {
         &:before {

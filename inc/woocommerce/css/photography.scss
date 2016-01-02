@@ -22,8 +22,8 @@
       }
     }
 
-    .site-main ul.products {
-      li.product-type-photography {
+    .site-main .products {
+      .product-type-photography {
         @include clearfix;
         text-align: left;
 

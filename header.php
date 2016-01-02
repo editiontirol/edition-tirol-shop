@@ -28,7 +28,6 @@
       <?php
       /**
        * @hooked et_shop_skip_links - 0
-       * @hooked et_shop_social_icons - 10
        * @hooked et_shop_site_branding - 20
        * @hooked et_shop_secondary_navigation - 30
        * @hooked et_shop_product_search - 40

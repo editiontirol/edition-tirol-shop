@@ -82,13 +82,13 @@ if ( ! function_exists( 'et_shop_post_meta' ) ) {
 
       <?php
       /* translators: used between list items, there is a space after the comma */
-      $tags_list = get_the_tag_list( '', __( ', ', 'et_shop' ) );
+      $tags_list = get_the_tag_list('', __(', ', 'et_shop'));
 
       if ( $tags_list ) : ?>
         <span class="tags-links">
           <?php
-          echo '<span class="screen-reader-text">' . esc_attr( __( 'Tags: ', 'et_shop' ) ) . '</span>';
-          echo wp_kses_post( $tags_list );
+          echo '<span class="screen-reader-text">'.esc_attr(__('Tags: ', 'et_shop')).'</span>';
+          echo wp_kses_post($tags_list);
           ?>
         </span>
       <?php endif; // End if $tags_list ?>

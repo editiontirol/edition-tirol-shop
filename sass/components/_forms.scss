@@ -41,11 +41,11 @@ button,
   &.cta,
   &.alt,
   &.add_to_cart_button {
-    background-color: $color-links;
-    border-color: $color-links;
+    background-color: $edelgelb;
+    border-color: $edelgelb;
 
     &:hover {
-      background-color: darken($color-links, 5%);
+      background-color: darken($edelgelb, 5%);
     }
   }
 

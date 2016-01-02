@@ -1,17 +1,13 @@
-/**
- * WooCommerce Brands
- */
+// WooCommerce Brands
 
-/**
- * Imports
- */
+// Imports
 @import 'bourbon';
 @import '../../../sass/utils/variables';
 @import '../../../sass/utils/mixins';
 
 .header-widget-region {
   .widget_brand_thumbnails {
-    ul.brand-thumbnails {
+    .brand-thumbnails {
       @include clearfix;
       text-align: center;
 

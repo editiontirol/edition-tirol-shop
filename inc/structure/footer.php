@@ -1,6 +1,5 @@
 <?php
 
-
 function et_shop_footer_widgets() {
 
   $max_widgets = 4;
@@ -23,7 +22,8 @@ function et_shop_footer_widgets() {
             <?php dynamic_sidebar('footer-'.intval($i)); ?>
           </section><?php
         }
-      } ?>
+      }
+      ?>
     </section><?php
   }
 }
@@ -35,8 +35,7 @@ function et_shop_credit() {
     echo esc_html('© '.get_bloginfo('name').date(' Y'));
 
     if(apply_filters('et_shop_credit_link', true)) {
-      printf('<br />'.__('%1$s designed by %2$s.', 'et_shop' ), 'Edition Tirol Shopdesign', '<a href="http://reitermark.us" rel="designer">Markus Reiter</a>');
+      printf('<br />'.esc_html__('%1$s designed by %2$s.', 'et_shop' ), 'Edition Tirol Shopdesign', '<a href="http://reitermark.us" rel="designer">Markus Reiter</a>');
     } ?>
-  </div>
-  <?php
+  </div><?php
 }

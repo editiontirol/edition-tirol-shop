@@ -119,7 +119,7 @@
             }
           }
 
-          ul.children {
+          .children {
             li {
               margin-bottom: 1.618em;
             }
@@ -133,7 +133,7 @@
         padding-top: 1.618em;
       }
 
-      ul.children + .form-contribution_comment {
+      .children + .form-contribution_comment {
         border-top: 0;
         padding-top: 0;
       }

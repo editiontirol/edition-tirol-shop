@@ -90,14 +90,14 @@
 }
 .woocommerce #reviews #comments ol.commentlist li .contribution-actions a,
 .woocommerce-page #reviews #comments ol.commentlist li .contribution-actions a {
-  color: #fdc800;
+  color: #9e76c0;
 }
 .woocommerce #reviews #comments ol.commentlist li .contribution-actions a.done,
 .woocommerce-page #reviews #comments ol.commentlist li .contribution-actions a.done {
   opacity: 0.5;
 }
-.woocommerce #reviews #comments ol.commentlist li ul.children li,
-.woocommerce-page #reviews #comments ol.commentlist li ul.children li {
+.woocommerce #reviews #comments ol.commentlist li .children li,
+.woocommerce-page #reviews #comments ol.commentlist li .children li {
   margin-bottom: 1.618em;
 }
 .woocommerce #reviews #comments .form-contribution_comment,
@@ -108,8 +108,8 @@
   margin-bottom: 3.631em;
   padding-top: 1.618em;
 }
-.woocommerce #reviews #comments ul.children + .form-contribution_comment,
-.woocommerce-page #reviews #comments ul.children + .form-contribution_comment {
+.woocommerce #reviews #comments .children + .form-contribution_comment,
+.woocommerce-page #reviews #comments .children + .form-contribution_comment {
   border-top: 0;
   padding-top: 0;
 }

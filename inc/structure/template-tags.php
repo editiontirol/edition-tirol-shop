@@ -1,11 +1,4 @@
 <?php
-/**
- * Custom template tags for this theme.
- *
- * Eventually, some of the functionality here could be replaced by core features.
- *
- * @package et_shop
- */
 
 if ( ! function_exists( 'et_shop_product_categories' ) ) {
   /**
@@ -163,12 +156,9 @@ if ( ! function_exists( 'et_shop_popular_products' ) ) {
 }
 
 if ( ! function_exists( 'et_shop_on_sale_products' ) ) {
-  /**
-   * Display On Sale Products
-   * Hooked into the `homepage` action in the homepage template
-   * @since  1.0.0
-   * @return void
-   */
+
+  // Display On Sale Products
+  // Hooked into the `homepage` action in the homepage template
   function et_shop_on_sale_products( $args ) {
 
     if ( is_woocommerce_activated() ) {
@@ -231,16 +221,12 @@ if ( ! function_exists( 'et_shop_social_icons' ) ) {
   }
 }
 
-if ( ! function_exists( 'et_shop_get_sidebar' ) ) {
-  /**
-   * Display et_shop sidebar
-   * @uses get_sidebar()
-   * @since 1.0.0
-   */
-  function et_shop_get_sidebar() {
-    get_sidebar();
-  }
+
+// Display et_shop sidebar
+function et_shop_get_sidebar() {
+  get_sidebar();
 }
+
 
 if ( ! function_exists( 'et_shop_post_thumbnail' ) ) {
   /**

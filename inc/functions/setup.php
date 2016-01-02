@@ -16,7 +16,7 @@ if ( ! isset( $content_width ) ) {
  * Assign the Edition Tirol Shopdesign version to a var
  */
 $theme           = wp_get_theme( 'et_shop' );
-$et_shop_version   = $theme['Version'];
+$et_shop_version = $theme['Version'];
 
 if ( ! function_exists( 'et_shop_setup' ) ) :
   /**

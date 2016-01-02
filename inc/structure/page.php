@@ -1,15 +1,7 @@
 <?php
-/**
- * Template functions used for pages.
- *
- * @package et_shop
- */
 
 if ( ! function_exists( 'et_shop_page_header' ) ) {
-  /**
-   * Display the post header with a link to the single post
-   * @since 1.0.0
-   */
+  // Display the post header with a link to the single post
   function et_shop_page_header() {
     ?>
     <header class="entry-header">
@@ -23,10 +15,7 @@ if ( ! function_exists( 'et_shop_page_header' ) ) {
 }
 
 if ( ! function_exists( 'et_shop_page_content' ) ) {
-  /**
-   * Display the post content with a link to the single post
-   * @since 1.0.0
-   */
+  // Display the post content with a link to the single post
   function et_shop_page_content() {
     ?>
     <div class="entry-content" itemprop="mainContentOfPage">

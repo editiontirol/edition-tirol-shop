@@ -1,9 +1,4 @@
 <?php
-/**
- * Template functions used for the site header.
- *
- * @package et_shop
- */
 
 if ( ! function_exists( 'et_shop_header_widget_region' ) ) {
   /**

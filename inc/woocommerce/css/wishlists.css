@@ -50,12 +50,12 @@
   border-bottom-color: rgba(0, 0, 0, 0.1);
 }
 
-.wl-tab-wrap ul.tabs,
+.wl-tab-wrap .tabs,
 .wl-tab-wrap .panel {
   width: 100%;
   margin: 0;
 }
-.wl-tab-wrap ul.tabs li:after {
+.wl-tab-wrap .tabs li:after {
   display: none !important;
 }
 
