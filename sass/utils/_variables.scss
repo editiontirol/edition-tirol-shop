@@ -3,27 +3,69 @@
 // yourself. This means that changes that should be small, such as tweaking the
 // coloring or the sizing, can be done in one place, not all over the stylesheet.
 
-$base-font: 		"Helvetica Neue", sans-serif;
-$header-font: 		$base-font;
+$base-font:   'Helvetica Neue', Helvetica, sans-serif;
+$header-font: $base-font;
+
+// color functions
+
+@function darken-by-a-quarter($color) {
+  @return darken($color, 25%);
+}
+
+@function darken-by-a-third($color) {
+  @return darken($color, 100% / 3); // 33.3%
+}
+
+@function darken-by-half($color) {
+  @return darken($color, 50%);
+}
+
+// default colors
+$white:  #fff;
+$black:  #000;
+$silver: #c0c0c0;
+$yellow: #ff0;
+
+
+// custom colors http://name-of-color.com
+$alabaster:     #fcfcfc;
+$cinnabar:      #e34234;
+$concrete:      #f3f3f3;
+$edelgelb:      #fdc800;
+$edelweiss:     #fffced;
+$manatee:       #9aa0a7;
+$mercury:       #e5e5e5;
+$salem:         #0f834d;
+$seashell:      #f1f1f1;
+$shakespeare:   #3d9cd2;
+$shalimar:      #fff9c0;
+$shark:         #2c2d33;
+$shuttle-gray:  #60646c;
+$strikemaster:  #96588a;
 
 // base color scheme
-$body-background: 	#FCFCFC;
-$color_body: 		#60646c;
-$color_links: 		#96588a;
-$color_border:		rgba(0,0,0,0.1);
-$error: 			#e2401c;
-$success: 			#0f834d;
-$info: 				#3D9CD2;
-$vspacing: 			1.618em;
+$header-background:    $shark;
+$header-color:         $manatee;
+$body-background:      $alabaster;
+$color-body:           $shuttle-gray;
+$color-links:          $edelgelb;
+$color-border:         transparentize($black, .9);
+$error:                $cinnabar;
+$success:              $salem;
+$info:                 $shakespeare;
+$vspacing:             1.618em;
+$footer-background:    $concrete;
+$footer-text-color:    darken-by-a-third($concrete);
+$footer-heading-color: darken-by-a-quarter($concrete);
 
 $susy: (
-	columns: 12,
-	gutters: 1,
-	math: fluid,
-	output: float,
-	gutter-position: after,
+  columns: 12,
+  gutters: 1,
+  math: fluid,
+  output: float,
+  gutter-position: after,
 
-	use-custom: (
-		box-sizing: false
-	)
+  use-custom: (
+    box-sizing: false
+  )
 );

@@ -6,6 +6,9 @@ linters:
   BorderZero:
     convention: none
 
+  Comment:
+    allowed: '.*Theme Name'
+
   IdSelector:
     enabled: false
 

@@ -1,225 +1,223 @@
-/**
- * Comments
- */
+// Comments
 
 #comments {
-	padding-top: 2.618em;
-
-	.comments-title {
-		border-bottom: 1px dotted $color_border;
-		padding-bottom: .53em;
-		margin-bottom: 1.618em;
-	}
-
-	.comment-list {
-		list-style: none;
-		margin-left: 0;
-
-		.comment-body {
-			@include clearfix;
-		}
-
-		.comment-content {
-			padding-bottom: 1.618em;
-			margin-bottom: 1.618em;
-		}
-
-		.comment-meta {
-			.avatar {
-				margin-bottom: 1em;
-				max-width: 32px;
-				height: auto;
-			}
-
-			a.comment-date {
-				opacity: 0.8;
-				font-size: .857em;
-
-				&:hover {
-					color: $color_body;
-				}
-			}
-
-			cite {
-				font-style: normal;
-				clear: both;
-				display: block;
-			}
-		}
-
-		.bypostauthor {
-			> .comment-body cite {
-				&:after {
-					font-family: "FontAwesome";
-					font-weight: 400;
-					margin-left: .53em;
-					content: "\f097";
-				}
-			}
-		}
-
-		.reply {
-			@include clearfix;
-			font-size: .857em;
-			margin-bottom: 1.618em;
-
-			.comment-edit-link {
-				border-left: 1px solid $color_border;
-			}
-
-			a {
-				color: $color_body;
-				background-color: rgba(0,0,0,0.025);
-				padding: .53em 1em;
-				float: left;
-
-				&:hover {
-					background-color: rgba(0,0,0,0.05);
-				}
-			}
-		}
-
-		.children {
-			list-style: none;
-		}
-	}
+  padding-top: 2.618em;
 }
+
+.comments-title {
+  border-bottom: 1px dotted $color-border;
+  margin-bottom: 1.618em;
+  padding-bottom: .53em;
+}
+
+.comment-list {
+  list-style: none;
+  margin-left: 0;
+
+  .comment-body {
+    @extend %clearfix;
+  }
+
+  .comment-content {
+    margin-bottom: 1.618em;
+    padding-bottom: 1.618em;
+  }
+
+  .comment-meta {
+    .avatar {
+      height: auto;
+      margin-bottom: 1em;
+      max-width: 32px;
+    }
+
+    .comment-date {
+      font-size: .857em;
+      opacity: .8;
+
+      &:hover {
+        color: $color-body;
+      }
+    }
+
+    cite {
+      clear: both;
+      display: block;
+      font-style: normal;
+    }
+  }
+
+  .bypostauthor {
+    > .comment-body cite {
+      &:after {
+        content: '\f097';
+        font-family: FontAwesome;
+        font-weight: 400;
+        margin-left: .53em;
+      }
+    }
+  }
+
+  .reply {
+    @extend %clearfix;
+    font-size: .857em;
+    margin-bottom: 1.618em;
+
+    .comment-edit-link {
+      border-left: 1px solid $color-border;
+    }
+
+    a {
+      background-color: rgba(0, 0, 0, .025);
+      color: $color-body;
+      float: left;
+      padding: .53em 1em;
+
+      &:hover {
+        background-color: rgba(0, 0, 0, .05);
+      }
+    }
+  }
+
+  .children {
+    list-style: none;
+  }
+}
+
 
 .comment-content a {
-	word-wrap: break-word;
+  word-wrap: break-word;
 }
 
-.bypostauthor {}
-
 #respond {
-	margin-bottom: 4.236em;
-	clear: both;
-	padding: 1.618em;
-	background-color: rgba(0,0,0,0.0125);
-	border-top: .236em solid rgba(0,0,0,0.025);
+  background-color: rgba(0, 0, 0, .0125);
+  border-top: .236em solid rgba(0, 0, 0, .025);
+  clear: both;
+  margin-bottom: 4.236em;
+  padding: 1.618em;
 
-	.comment-form-author,
-	.comment-form-email,
-	.comment-form-url {
-		input {
-			width: 100%;
-		}
-	}
+  .comment-form-author,
+  .comment-form-email,
+  .comment-form-url {
+    input {
+      width: 100%;
+    }
+  }
 
-	.form-submit,
-	form {
-		margin-bottom: 0;
-	}
+  .form-submit,
+  form {
+    margin-bottom: 0;
+  }
 }
 
 
 @media screen and (min-width: 768px) {
-	.comment-list {
-		@include clearfix;
+  .comment-list {
+    @include clearfix;
 
-		.comment {
-			clear: both;
-		}
+    .comment {
+      clear: both;
+    }
 
-		.comment-meta {
-			@include span(2 of 9);
+    .comment-meta {
+      @include span(2 of 9);
 
-			.avatar {
-				@include span(1 of 1);
-			}
-		}
+      .avatar {
+        @include span(1 of 1);
+      }
+    }
 
-		.comment-content {
-			padding-bottom: 3.631em;
-			margin-bottom: 3.631em;
-		}
+    .comment-content {
+      margin-bottom: 3.631em;
+      padding-bottom: 3.631em;
+    }
 
-		.comment-content,
-		#respond {
-			@include span(last 7 of 9);
-		}
+    .comment-content,
+    #respond {
+      @include span(last 7 of 9);
+    }
 
-		#respond {
-			float: right;
-			.comment-form-author,
-			.comment-form-email,
-			.comment-form-url {
-				width: 100%;
-				margin-right: 0;
-			}
-		}
+    #respond {
+      float: right;
 
-		.reply {
-			clear: both;
-		}
+      .comment-form-author,
+      .comment-form-email,
+      .comment-form-url {
+        margin-right: 0;
+        width: 100%;
+      }
+    }
 
-		ol.children {
-			@include span(last 8 of 9);
-			list-style: none;
+    .reply {
+      clear: both;
+    }
 
-			.comment-meta {
-				@include span(2 of 8);
-			}
+    .children {
+      @include span(last 8 of 9);
+      list-style: none;
 
-			.comment-content,
-			#respond {
-				@include span(last 6 of 8);
-			}
+      .comment-meta {
+        @include span(2 of 8);
+      }
 
-			ol.children {
-				@include span(last 7 of 8);
+      .comment-content,
+      #respond {
+        @include span(last 6 of 8);
+      }
 
-				.comment-meta {
-					@include span(2 of 7);
-				}
+      .children {
+        @include span(last 7 of 8);
 
-				.comment-content,
-				#respond {
-					@include span(last 5 of 7);
-				}
+        .comment-meta {
+          @include span(2 of 7);
+        }
 
-				ol.children {
-					@include span(last 6 of 7);
+        .comment-content,
+        #respond {
+          @include span(last 5 of 7);
+        }
 
-					.comment-meta {
-						@include span(2 of 6);
-					}
+        .children {
+          @include span(last 6 of 7);
 
-					.comment-content,
-					#respond {
-						@include span(last 4 of 6);
-					}
+          .comment-meta {
+            @include span(2 of 6);
+          }
 
-					ol.children {
-						@include span(last 5 of 6);
+          .comment-content,
+          #respond {
+            @include span(last 4 of 6);
+          }
 
-						.comment-meta {
-							@include span(2 of 5);
-						}
+          .children {
+            @include span(last 5 of 6);
 
-						.comment-content,
-						#respond {
-							@include span(last 3 of 5);
-						}
-					}
-				}
-			}
-		}
-	}
+            .comment-meta {
+              @include span(2 of 5);
+            }
 
-	#respond {
-		.comment-form-author,
-		.comment-form-email,
-		.comment-form-url {
-			@include span(3 of 9);
-		}
+            .comment-content,
+            #respond {
+              @include span(last 3 of 5);
+            }
+          }
+        }
+      }
+    }
+  }
 
-		.comment-form-url {
-			@include last;
-		}
+  #respond {
+    .comment-form-author,
+    .comment-form-email,
+    .comment-form-url {
+      @include span(3 of 9);
+    }
 
-		.comment-form-comment {
-			clear: both;
-		}
-	}
+    .comment-form-url {
+      @include last;
+    }
+
+    .comment-form-comment {
+      clear: both;
+    }
+  }
 }

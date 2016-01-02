@@ -1,9 +1,10 @@
-/**
- * Post Formats
- */
+// Post Formats
 
-.blog .format-aside, .archive .format-aside {
-	.entry-title {
-		display: none;
-	}
+.blog,
+.archive {
+  .format-aside {
+    .entry-title {
+      display: none;
+    }
+  }
 }

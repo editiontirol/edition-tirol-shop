@@ -1,71 +1,73 @@
 %clearfix {
-    &:before, &:after {
-        content: "";
-        display: table;
-    }
-    &:after {
-        clear: both;
-    }
+  &:before,
+  &:after {
+    content: '';
+    display: table;
+  }
+
+  &:after {
+    clear: both;
+  }
 }
 
-@mixin hoverActiveFocus() {
-    &:hover, &:active, &:focus {
-        @content;
-    }
+@mixin hover-active-focus() {
+  &:hover,
+  &:active,
+  &:focus {
+    @content;
+  }
 }
 
-@mixin screen-reader-text() {
-    clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
-    clip: rect(1px, 1px, 1px, 1px);
-    position: absolute !important;
+%screen-reader-text {
+  clip: rect(1px, 1px, 1px, 1px);
+  position: absolute !important;
 }
 
-@mixin message($glyph: "\f05a", $color: $info)
-{
-    padding: 1em 1.618em 1em 3.631em;
-    background: rgba( $color, .7 );
-    margin-bottom: 2.618em;
-    font-weight: normal;
-    position: relative;
-    color: #fff;
+@mixin message($glyph: '\f05a', $color: $info) {
+  padding: 1em 1.618em 1em 3.631em;
+  background: rgba($color, .7);
+  margin-bottom: 2.618em;
+  font-weight: normal;
+  position: relative;
+  color: $white;
+  text-shadow: none;
+
+  &:before {
+    background: rgba(darken($color, 3%), .7);
+    bottom: 0;
+    color: $white;
+    content: $glyph;
+    font-family: FontAwesome;
+    font-weight: normal !important;
+    left: 0;
+    padding: 1em .618em;
+    position: absolute;
+    text-align: center;
     text-shadow: none;
+    top: 0;
+    width: 2.618em;
+  }
 
-    &:before {
-        font-family: 'FontAwesome';
-        content: $glyph;
-        color: #fff;
-        position: absolute;
-        top: 0;
-        left: 0;
-        bottom: 0;
-        width: 2.618em;
-        background: rgba( darken( $color, 3% ), .7 );
-        text-align: center;
-        padding: 1em .618em;
-        font-weight: normal !important;
-        text-shadow: none;
+  a {
+    color: $white;
+    text-decoration: underline;
+
+    &:hover {
+      color: $white;
+      text-decoration: none;
     }
+  }
 
-    a {
-        color: #fff;
-        text-decoration: underline;
+  .button {
+    background: $white;
+    color: $color;
+    font-size: .857em;
+    padding: .202em .618em;
 
-        &:hover {
-            color: #fff;
-            text-decoration: none;
-        }
+    &:hover,
+    &:active {
+      background: rgba($white, .8);
+      color: $color;
     }
-
-    a.button {
-        background: #fff;
-        color: $color;
-        font-size: .857em;
-        padding: .202em .618em;
-
-        &:hover,
-        &:active {
-            background: rgba(#fff,.8);
-            color: $color;
-        }
-    }
+  }
 }
