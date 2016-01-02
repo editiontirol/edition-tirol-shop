@@ -145,8 +145,6 @@ function et_shop_scripts() {
 
 	wp_enqueue_style( 'et_shop-style', get_template_directory_uri() . '/style.css', '', $et_shop_version );
 
-	wp_style_add_data( 'et_shop-style', 'rtl', 'replace' );
-
 	wp_enqueue_script( 'et_shop-navigation', get_template_directory_uri() . '/js/navigation.min.js', array( 'jquery' ), '20120206', true );
 
 	wp_enqueue_script( 'et_shop-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.min.js', array(), '20130115', true );

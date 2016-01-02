@@ -86,7 +86,6 @@ function et_shop_woocommerce_scripts() {
 	global $et_shop_version;
 
 	wp_enqueue_style( 'et_shop-woocommerce-style', get_template_directory_uri() . '/inc/woocommerce/css/woocommerce.css', $et_shop_version );
-	wp_style_add_data( 'et_shop-woocommerce-style', 'rtl', 'replace' );
 }
 
 /**
