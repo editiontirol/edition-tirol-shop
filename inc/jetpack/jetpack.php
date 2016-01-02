@@ -16,4 +16,4 @@ function et_shop_jetpack_setup() {
     'footer'    => 'page',
   ) );
 }
-add_action( 'after_setup_theme', 'et_shop_jetpack_setup' );
+add_action('after_setup_theme', 'et_shop_jetpack_setup');

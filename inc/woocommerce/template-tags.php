@@ -12,11 +12,11 @@
  * @return array           Settings
  * @since  1.0.0
  */
-if ( ! function_exists( 'et_shop_cart_link' ) ) {
+if (! function_exists('et_shop_cart_link')) {
   function et_shop_cart_link() {
     ?>
-      <a class="cart-contents" href="<?php echo esc_url( WC()->cart->get_cart_url() ); ?>" title="<?php _e( 'View your shopping cart', 'et_shop' ); ?>">
-        <span class="amount"><?php echo wp_kses_data( WC()->cart->get_cart_subtotal() ); ?></span> <span class="count"><?php echo wp_kses_data( sprintf( _n( '%d item', '%d items', WC()->cart->get_cart_contents_count(), 'et_shop' ), WC()->cart->get_cart_contents_count() ) );?></span>
+      <a class="cart-contents" href="<?php echo esc_url(WC()->cart->get_cart_url() ); ?>" title="<?php _e( 'View your shopping cart', 'et_shop'); ?>">
+        <span class="amount"><?php echo wp_kses_data(WC()->cart->get_cart_subtotal() ); ?></span> <span class="count"><?php echo wp_kses_data(sprintf(_n( '%d item', '%d items', WC()->cart->get_cart_contents_count(), 'et_shop'), WC()->cart->get_cart_contents_count()));?></span>
       </a>
     <?php
   }
@@ -28,11 +28,11 @@ if ( ! function_exists( 'et_shop_cart_link' ) ) {
  * @uses  is_woocommerce_activated() check if WooCommerce is activated
  * @return void
  */
-if ( ! function_exists( 'et_shop_product_search' ) ) {
+if (! function_exists('et_shop_product_search')) {
   function et_shop_product_search() {
-    if ( is_woocommerce_activated() ) { ?>
+    if (is_woocommerce_activated()) { ?>
       <div class="site-search">
-        <?php the_widget( 'WC_Widget_Product_Search', 'title=' ); ?>
+        <?php the_widget('WC_Widget_Product_Search', 'title='); ?>
       </div>
     <?php
     }
@@ -45,21 +45,21 @@ if ( ! function_exists( 'et_shop_product_search' ) ) {
  * @uses  is_woocommerce_activated() check if WooCommerce is activated
  * @return void
  */
-if ( ! function_exists( 'et_shop_header_cart' ) ) {
+if (! function_exists('et_shop_header_cart')) {
   function et_shop_header_cart() {
-    if ( is_woocommerce_activated() ) {
-      if ( is_cart() ) {
+    if (is_woocommerce_activated()) {
+      if (is_cart()) {
         $class = 'current-menu-item';
       } else {
         $class = '';
       }
     ?>
     <ul class="site-header-cart menu">
-      <li class="<?php echo esc_attr( $class ); ?>">
+      <li class="<?php echo esc_attr($class); ?>">
         <?php et_shop_cart_link(); ?>
       </li>
       <li>
-        <?php the_widget( 'WC_Widget_Cart', 'title=' ); ?>
+        <?php the_widget('WC_Widget_Cart', 'title='); ?>
       </li>
     </ul>
     <?php
@@ -74,9 +74,9 @@ if ( ! function_exists( 'et_shop_header_cart' ) ) {
  * @return  void
  * @uses    woocommerce_upsell_display()
  */
-if ( ! function_exists( 'et_shop_upsell_display' ) ) {
+if (! function_exists('et_shop_upsell_display')) {
   function et_shop_upsell_display() {
-    woocommerce_upsell_display( -1, 3 );
+    woocommerce_upsell_display(-1, 3);
   }
 }
 
@@ -104,8 +104,8 @@ function et_shop_sorting_wrapper_close() {
  * @uses    do_shortcode
  */
 function et_shop_shop_messages() {
-  if ( ! is_checkout() ) {
-    echo wp_kses_post( et_shop_do_shortcode( 'woocommerce_messages' ) );
+  if (! is_checkout()) {
+    echo wp_kses_post(et_shop_do_shortcode('woocommerce_messages'));
   }
 }
 
@@ -116,9 +116,9 @@ function et_shop_shop_messages() {
  * determine whether or not to display the pagination.
  * @since 1.4.4
  */
-if ( ! function_exists( 'et_shop_woocommerce_pagination' ) ) {
+if (! function_exists('et_shop_woocommerce_pagination')) {
   function et_shop_woocommerce_pagination() {
-    if ( woocommerce_products_will_display() ) {
+    if (woocommerce_products_will_display()) {
       woocommerce_pagination();
     }
   }
@@ -135,29 +135,29 @@ if ( ! function_exists( 'et_shop_woocommerce_pagination' ) ) {
  * @uses  et_shop_do_shortcode()
  * @return void
  */
-if ( ! function_exists( 'et_shop_promoted_products' ) ) {
-  function et_shop_promoted_products( $per_page = '2', $columns = '2', $recent_fallback = true ) {
-    if ( is_woocommerce_activated() ) { 
+if (! function_exists('et_shop_promoted_products')) {
+  function et_shop_promoted_products($per_page = '2', $columns = '2', $recent_fallback = true) {
+    if (is_woocommerce_activated()) { 
 
-      if ( wc_get_featured_product_ids() ) {
+      if (wc_get_featured_product_ids()) {
 
-        echo '<h2>' . esc_html__( 'Featured Products', 'et_shop' ) . '</h2>';
+        echo '<h2>' . esc_html__('Featured Products', 'et_shop') . '</h2>';
 
         echo et_shop_do_shortcode( 'featured_products', array(
                       'per_page'   => $per_page,
                       'columns'  => $columns,
                     ) );
-      } elseif ( wc_get_product_ids_on_sale() ) {
+      } elseif (wc_get_product_ids_on_sale()) {
 
-        echo '<h2>' . esc_html__( 'On Sale Now', 'et_shop' ) . '</h2>';
+        echo '<h2>' . esc_html__('On Sale Now', 'et_shop') . '</h2>';
 
         echo et_shop_do_shortcode( 'sale_products', array(
                       'per_page'   => $per_page,
                       'columns'  => $columns,
                     ) );
-      } elseif ( $recent_fallback ) {
+      } elseif ($recent_fallback) {
 
-        echo '<h2>' . esc_html__( 'New In Store', 'et_shop' ) . '</h2>';
+        echo '<h2>' . esc_html__('New In Store', 'et_shop') . '</h2>';
 
         echo et_shop_do_shortcode( 'recent_products', array(
                       'per_page'   => $per_page,

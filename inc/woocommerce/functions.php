@@ -11,7 +11,7 @@
  * @since   1.0.0
  * @return  void
  */
-if ( ! function_exists( 'et_shop_before_content' ) ) {
+if (! function_exists('et_shop_before_content')) {
   function et_shop_before_content() {
     ?>
     <div id="primary" class="content-area">
@@ -26,13 +26,13 @@ if ( ! function_exists( 'et_shop_before_content' ) ) {
  * @since   1.0.0
  * @return  void
  */
-if ( ! function_exists( 'et_shop_after_content' ) ) {
+if (! function_exists('et_shop_after_content')) {
   function et_shop_after_content() {
     ?>
       </main><!-- #main -->
     </div><!-- #primary -->
 
-    <?php do_action( 'et_shop_sidebar' );
+    <?php do_action('et_shop_sidebar');
   }
 }
 
@@ -42,7 +42,7 @@ if ( ! function_exists( 'et_shop_after_content' ) ) {
  * @since  1.0.0
  */
 function et_shop_loop_columns() {
-  return apply_filters( 'et_shop_loop_columns', 3 ); // 3 products per row
+  return apply_filters('et_shop_loop_columns', 3); // 3 products per row
 }
 
 /**
@@ -50,8 +50,8 @@ function et_shop_loop_columns() {
  * @param  array $classes
  * @return array $classes modified to include 'woocommerce-active' class
  */
-function et_shop_woocommerce_body_class( $classes ) {
-  if ( is_woocommerce_activated() ) {
+function et_shop_woocommerce_body_class($classes) {
+  if (is_woocommerce_activated()) {
     $classes[] = 'woocommerce-active';
   }
 
@@ -64,8 +64,8 @@ function et_shop_woocommerce_body_class( $classes ) {
  * @param  array $fragments Fragments to refresh via AJAX
  * @return array            Fragments to refresh via AJAX
  */
-if ( ! function_exists( 'et_shop_cart_link_fragment' ) ) {
-  function et_shop_cart_link_fragment( $fragments ) {
+if (! function_exists('et_shop_cart_link_fragment')) {
+  function et_shop_cart_link_fragment($fragments) {
     global $woocommerce;
 
     ob_start();
@@ -85,7 +85,7 @@ if ( ! function_exists( 'et_shop_cart_link_fragment' ) ) {
 function et_shop_woocommerce_scripts() {
   global $et_shop_version;
 
-  wp_enqueue_style( 'et_shop-woocommerce-style', get_template_directory_uri() . '/inc/woocommerce/css/woocommerce.css', $et_shop_version );
+  wp_enqueue_style('et_shop-woocommerce-style', get_template_directory_uri() . '/inc/woocommerce/css/woocommerce.css', $et_shop_version);
 }
 
 /**
@@ -94,7 +94,7 @@ function et_shop_woocommerce_scripts() {
  * @since 1.0.0
  * @return  array $args related products args
  */
-function et_shop_related_products_args( $args ) {
+function et_shop_related_products_args($args) {
   $args = apply_filters( 'et_shop_related_products_args', array(
     'posts_per_page' => 3,
     'columns'        => 3,
@@ -109,7 +109,7 @@ function et_shop_related_products_args( $args ) {
  * @since  1.0.0
  */
 function et_shop_thumbnail_columns() {
-  return intval( apply_filters( 'et_shop_product_thumbnail_columns', 4 ) );
+  return intval(apply_filters('et_shop_product_thumbnail_columns', 4));
 }
 
 /**
@@ -118,7 +118,7 @@ function et_shop_thumbnail_columns() {
  * @since  1.0.0
  */
 function et_shop_products_per_page() {
-  return intval( apply_filters( 'et_shop_products_per_page', 12 ) );
+  return intval(apply_filters('et_shop_products_per_page', 12));
 }
 
 /**
@@ -126,6 +126,6 @@ function et_shop_products_per_page() {
  * @var  $extension main extension class name
  * @return boolean
  */
-function is_woocommerce_extension_activated( $extension = 'WC_Bookings' ) {
-  return class_exists( $extension ) ? true : false;
+function is_woocommerce_extension_activated($extension = 'WC_Bookings') {
+  return class_exists($extension) ? true : false;
 }

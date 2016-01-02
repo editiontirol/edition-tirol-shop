@@ -13,11 +13,11 @@
 
   <?php do_action('et_shop_before_footer'); ?>
 
-  <footer id="colophon" class="site-footer" role="contentinfo">
+  <footer class="site-footer" role="contentinfo">
     <div class="col-full">
     <?php do_action('et_shop_footer'); ?>
     </div><!-- .col-full -->
-  </footer><!-- #colophon -->
+  </footer><!-- .site-footer -->
 
   <?php do_action('et_shop_after_footer'); ?>
 

@@ -26,7 +26,7 @@ get_header(); ?>
        * @hooked et_shop_popular_products - 50
        * @hooked et_shop_on_sale_products - 60
        */
-      do_action( 'homepage' ); ?>
+      do_action('homepage'); ?>
 
     </main><!-- #main -->
   </div><!-- #primary -->
