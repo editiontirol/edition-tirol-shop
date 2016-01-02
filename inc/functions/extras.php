@@ -8,15 +8,6 @@
  */
 
 /**
- * Check whether the Edition Tirol Shopdesign Customizer settings ar enabled
- * @return boolean
- * @since  1.1.2
- */
-function is_et_shop_customizer_enabled() {
-	return apply_filters( 'et_shop_customizer_enabled', true );
-}
-
-/**
  * Get our wp_nav_menu() fallback, wp_page_menu(), to show a home link.
  *
  * @param array $args Configuration arguments.

@@ -84,7 +84,5 @@ if ( defined( 'WC_VERSION' ) && version_compare( WC_VERSION, '2.3', '>=' ) ) {
 /**
  * Integrations
  * @see  et_shop_woocommerce_integrations_scripts()
- * @see  et_shop_add_bookings_customizer_css()
  */
 add_action( 'wp_enqueue_scripts', 						'et_shop_woocommerce_integrations_scripts' );
-add_action( 'wp_enqueue_scripts', 						'et_shop_add_integrations_customizer_css' );
