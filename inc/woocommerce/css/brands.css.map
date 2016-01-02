@@ -1,7 +1,7 @@
 {
 "version": 3,
 "mappings": "AASI,gEAAkB;EAEhB,UAAU,EAAE,MAAM;;ACQtB,uEAAS;EACP,KAAK,EAAE,IAAI;EACX,OAAO,EAAE,EAAE;EACX,OAAO,EAAE,KAAK;;ADTZ,mEAAG;EACD,OAAO,EAAE,YAAY;EACrB,KAAK,EAAE,eAAe;EACtB,KAAK,EAAE,eAAe;EACtB,aAAa,EAAE,YAAY;;AAE3B,uEAAI;EACF,UAAU,EAAE,IAAI;EAChB,KAAK,EAAE,IAAI;EACX,OAAO,EAAE,KAAK",
-"sources": ["brands.scss","../../../../../../../../../../../../../../usr/local/lib/ruby/gems/2.3.0/gems/bourbon-4.2.6/app/assets/stylesheets/addons/_clearfix.scss"],
+"sources": ["brands.scss","../../../node_modules/bourbon/app/assets/stylesheets/addons/_clearfix.scss"],
 "names": [],
 "file": "brands.css"
 }

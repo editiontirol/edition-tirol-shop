@@ -45,6 +45,7 @@
   padding: 0;
 
   .cart-contents {
+    color: $edelgelb;
     display: block;
     height: 2.244em;
     width: 2.244em;
@@ -224,19 +225,6 @@ table.shop_table_responsive {
 
 .woocommerce-main-image {
   margin-bottom: 0;
-}
-
-.woocommerce-main-image,
-.product-image {
-  display: block;
-  height: 0;
-  padding-bottom: 100%;
-
-  img {
-    margin: 0 auto;
-    max-width: 100%;
-    max-height: 100%;
-  }
 }
 
 // PrettyPhoto Ajax Loader Animation
@@ -459,9 +447,7 @@ a.reset_variations {
   }
 }
 
-/**
- * Widgets
- */
+// Widgets
 .product_list_widget {
   list-style: none;
   margin-left: 0;
@@ -483,8 +469,9 @@ a.reset_variations {
   }
 
   a {
+    &,
     &:hover {
-      color: $color_links;
+      color: $white;
     }
   }
 }
@@ -1189,8 +1176,10 @@ p.stars {
 }
 
 .et_shop-sorting {
+  background-color: $color-border;
   font-size: .857em;
   margin-bottom: 2.618em;
+  padding: 2em;
 }
 
 .woocommerce-tabs {
@@ -1319,6 +1308,10 @@ p.no-comments {
   background-color: $error;
 }
 
+.woocommerce-result-count {
+  margin-bottom: 0;
+}
+
 dl.variation {
   font-size: .857em;
 
@@ -1327,9 +1320,7 @@ dl.variation {
   }
 }
 
-/**
- * Homepage
- */
+// Homepage
 .et_shop-product-section {
   border-bottom: 3px solid rgba(0,0,0,0.025);
   margin-bottom: 4.236em;
@@ -1344,9 +1335,8 @@ dl.variation {
 }
 
 @media screen and (min-width: 768px) {
-  /**
-   * Responsive tables
-   */
+
+  // Responsive tables
   table.shop_table_responsive {
     thead {
       display: table-header-group;
@@ -1369,9 +1359,7 @@ dl.variation {
     }
   }
 
-  /**
-   * Header Elements
-   */
+  // Header Elements
   .site-header-cart {
     position: relative;
 
@@ -1457,9 +1445,20 @@ dl.variation {
     }
   }
 
-  /**
-   * Full width content area product layout
-   */
+  .woocommerce-main-image,
+  .product-image {
+    display: block;
+    height: 0;
+    padding-bottom: 100%;
+
+    img {
+      margin: 0 auto;
+      max-width: 100%;
+      max-height: 100%;
+    }
+  }
+
+  // Full width content area product layout
   .page-template-template-fullwidth-php,
   .page-template-template-homepage-php,
   .et_shop-full-width-content {
@@ -1656,6 +1655,7 @@ dl.variation {
   .et_shop-sorting {
     @include clearfix;
     margin-bottom: 2.618em;
+    padding: 1em 2em;
 
     select {
       width: auto;
@@ -1665,7 +1665,6 @@ dl.variation {
   .woocommerce-result-count {
     float: left;
     position: relative;
-    margin-bottom: 0;
     padding: .327em 0;
   }
 

@@ -3,18 +3,23 @@
 // yourself. This means that changes that should be small, such as tweaking the
 // coloring or the sizing, can be done in one place, not all over the stylesheet.
 
+
 $base-font:   'Helvetica Neue', Helvetica, sans-serif;
 $header-font: $base-font;
 
 
-// default colors
+// Font-Awesome Font Path
+$fa-font-path: 'fonts/font-awesome';
+
+
+// Default Colors
 $white:  #fff;
 $black:  #000;
 $silver: #c0c0c0;
 $yellow: #ff0;
 
 
-// custom colors http://name-of-color.com
+// Custom Colors http://name-of-color.com
 $alabaster:     #fcfcfc;
 $cinnabar:      #e34234;
 $concrete:      #f3f3f3;
@@ -31,7 +36,7 @@ $shark:         #2c2d33;
 $shuttle-gray:  #60646c;
 $strikemaster:  #96588a;
 
-// base color scheme
+// Base Color Scheme
 $header-background:    $shark;
 $header-color:         $manatee;
 $body-background:      $alabaster;
@@ -42,9 +47,7 @@ $error:                $cinnabar;
 $success:              $salem;
 $info:                 $shakespeare;
 $vspacing:             1.618em;
-$footer-background:    $concrete;
-$footer-text-color:    darken($concrete, 100% / 3);
-$footer-heading-color: darken($concrete, 25%);
+$footer-background:    $edelweiss;
 
 $susy: (
   columns: 12,

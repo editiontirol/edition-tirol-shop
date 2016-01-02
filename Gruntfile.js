@@ -2,6 +2,9 @@ module.exports = function(grunt) {
 
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
+    copy: {
+      'font-awesome': { expand: true, flatten: true, src: [ 'node_modules/font-awesome/fonts/*' ], dest: 'fonts/font-awesome' }
+    },
     cssbeautifier : {
       files : ['*.css'],
       options : {
@@ -40,7 +43,10 @@ module.exports = function(grunt) {
     },
     sass: {
       options: {
-        require: ['bourbon'],
+        loadPath: [
+          'node_modules/support-for/sass',
+          'node_modules/bourbon/app/assets/stylesheets'
+        ],
         style: 'expanded'
       },
       dist: {
@@ -88,6 +94,7 @@ module.exports = function(grunt) {
     }
   });
 
+  grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-contrib-watch');
@@ -98,7 +105,8 @@ module.exports = function(grunt) {
 
   grunt.registerTask('default', [
     'css',
-    'js'
+    'js',
+    'copy'
   ]);
 
   grunt.registerTask('css', [

@@ -4,10 +4,6 @@
   box-sizing: border-box;
 }
 
-body {
-  background-color: $body-background;
-}
-
 .clearfix {
   @extend %clearfix;
 }
@@ -104,8 +100,9 @@ body {
 // Footer
 
 .site-footer {
-  background-color: $footer-background;
-  color: $footer-text-color;
+  background-color: $edelweiss;
+  border-top: 1px solid desaturate(darken($edelweiss, 5%), 75%);
+  color: desaturate(darken($edelweiss, 40%), 75%);
   padding: 1.618em 0;
 
   h1,
@@ -114,7 +111,7 @@ body {
   h4,
   h5,
   h6 {
-    color: $footer-heading-color;
+    color: desaturate(darken($edelweiss, 30%), 75%);
   }
 
   a:not(.button) {

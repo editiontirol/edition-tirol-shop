@@ -114,10 +114,8 @@
     }
   }
 
-  .et_shop-full-width-content {
-    .content-area {
-      @include span(full);
-    }
+  .content-area.full-width {
+    @include span(full);
   }
 
   .content-area,

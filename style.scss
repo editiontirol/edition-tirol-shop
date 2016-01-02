@@ -38,7 +38,8 @@
 
 // Vendors
 // External libraries and frameworks
-@import 'sass/vendors/normalize';
+@import 'node_modules/normalize-scss/sass/normalize'; @include normalize();
+@import 'node_modules/font-awesome/scss/font-awesome';
 
 // Base
 // Holds what we might call the boilerplate code for the project.

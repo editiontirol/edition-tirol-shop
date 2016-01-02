@@ -1,7 +1,7 @@
 {
 "version": 3,
 "mappings": "AAAA;;GAEG;AAEH;;GAEG;AAMH,oCAAqC;EAI/B;gDAAO;IACL,aAAa,EAAE,OAAO;IACtB,gBAAgB,EAAE,oBAAiB;IACnC,OAAO,EAAE,mBAAmB;IAC5B,MAAM,EAAE,CAAC;;EAKX;kEAA0B;IAExB,UAAU,EAAE,IAAI;;ECRtB;yEAAS;IACP,KAAK,EAAE,IAAI;IACX,OAAO,EAAE,EAAE;IACX,OAAO,EAAE,KAAK;;EDOV;;;uFACqB;IACnB,KAAK,EAAE,IAAI;IACX,KAAK,EAAE,IAAI;;EAIX;yFAAI;IACF,KAAK,EAAE,IAAI;;EAIf;mFAAiB;IACf,aAAa,EAAE,6BAA0B;;EAG3C;uEAAK;IACH,WAAW,EAAE,GAAG",
-"sources": ["photography.scss","../../../../../../../../../../../../../../usr/local/lib/ruby/gems/2.3.0/gems/bourbon-4.2.6/app/assets/stylesheets/addons/_clearfix.scss"],
+"sources": ["photography.scss","../../../node_modules/bourbon/app/assets/stylesheets/addons/_clearfix.scss"],
 "names": [],
 "file": "photography.css"
 }
