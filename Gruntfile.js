@@ -44,7 +44,7 @@ module.exports = function(grunt) {
         style: 'expanded'
       },
       dist: {
-      	files: [{
+        files: [{
           'style.css' : 'style.scss'
         },
         {
@@ -74,8 +74,8 @@ module.exports = function(grunt) {
         tasks: ['css', 'js']
       },
       css: {
-      	files: ['Gruntfile.js', '<%= cssbeautifier.files %>', '<%= scsslint.options.config %>', '<%= scsslint.files %>'],
-      	tasks: ['css']
+        files: ['Gruntfile.js', '<%= cssbeautifier.files %>', '<%= scsslint.options.config %>', '<%= scsslint.files %>'],
+        tasks: ['css']
       },
       js: {
         files: ['<%= jshint.files %>'],

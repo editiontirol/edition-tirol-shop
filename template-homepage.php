@@ -14,20 +14,20 @@
 
 get_header(); ?>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+  <div id="primary" class="content-area">
+    <main id="main" class="site-main" role="main">
 
-			<?php
-			/**
-			 * @hooked et_shop_homepage_content - 10
-			 * @hooked et_shop_product_categories - 20
-			 * @hooked et_shop_recent_products - 30
-			 * @hooked et_shop_featured_products - 40
-			 * @hooked et_shop_popular_products - 50
-			 * @hooked et_shop_on_sale_products - 60
-			 */
-			do_action( 'homepage' ); ?>
+      <?php
+      /**
+       * @hooked et_shop_homepage_content - 10
+       * @hooked et_shop_product_categories - 20
+       * @hooked et_shop_recent_products - 30
+       * @hooked et_shop_featured_products - 40
+       * @hooked et_shop_popular_products - 50
+       * @hooked et_shop_on_sale_products - 60
+       */
+      do_action( 'homepage' ); ?>
 
-		</main><!-- #main -->
-	</div><!-- #primary -->
+    </main><!-- #main -->
+  </div><!-- #primary -->
 <?php get_footer(); ?>

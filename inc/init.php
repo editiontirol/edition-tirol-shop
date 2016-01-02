@@ -37,8 +37,8 @@ require get_template_directory() . '/inc/jetpack/jetpack.php';
  * Load WooCommerce compatibility files.
  */
 if ( is_woocommerce_activated() ) {
-	require get_template_directory() . '/inc/woocommerce/hooks.php';
-	require get_template_directory() . '/inc/woocommerce/functions.php';
-	require get_template_directory() . '/inc/woocommerce/template-tags.php';
-	require get_template_directory() . '/inc/woocommerce/integrations.php';
+  require get_template_directory() . '/inc/woocommerce/hooks.php';
+  require get_template_directory() . '/inc/woocommerce/functions.php';
+  require get_template_directory() . '/inc/woocommerce/template-tags.php';
+  require get_template_directory() . '/inc/woocommerce/integrations.php';
 }

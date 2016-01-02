@@ -8,25 +8,18 @@
  */
 ?>
 
-		</div><!-- .col-full -->
-	</div><!-- #content -->
+    </div><!-- .col-full -->
+  </div><!-- #content -->
 
-	<?php do_action( 'et_shop_before_footer' ); ?>
+  <?php do_action('et_shop_before_footer'); ?>
 
-	<footer id="colophon" class="site-footer" role="contentinfo">
-		<div class="col-full">
+  <footer id="colophon" class="site-footer" role="contentinfo">
+    <div class="col-full">
+    <?php do_action('et_shop_footer'); ?>
+    </div><!-- .col-full -->
+  </footer><!-- #colophon -->
 
-			<?php
-			/**
-			 * @hooked et_shop_footer_widgets - 10
-			 * @hooked et_shop_credit - 20
-			 */
-			do_action( 'et_shop_footer' ); ?>
-
-		</div><!-- .col-full -->
-	</footer><!-- #colophon -->
-
-	<?php do_action( 'et_shop_after_footer' ); ?>
+  <?php do_action('et_shop_after_footer'); ?>
 
 </div><!-- #page -->
 

@@ -10,37 +10,37 @@
 @import '../../../sass/utils/mixins';
 
 .variations-table {
-	.swatch-wrapper {
-		padding: 0;
-		border: 0;
-		opacity: 0.5;
-		margin-right: .53em;
+  .swatch-wrapper {
+    padding: 0;
+    border: 0;
+    opacity: 0.5;
+    margin-right: .53em;
 
-		.swatch-anchor {
+    .swatch-anchor {
 
-			&:focus {
-				outline: none;
-			}
-		}
+      &:focus {
+        outline: none;
+      }
+    }
 
-		&.selected,
-		&:hover {
-			padding: 0;
-			border: 0;
-			opacity: 1;
-		}
+    &.selected,
+    &:hover {
+      padding: 0;
+      border: 0;
+      opacity: 1;
+    }
 
-		&.selected {
-			box-shadow: 0 0 0 1px rgba(#000,0.25);
+    &.selected {
+      box-shadow: 0 0 0 1px rgba(#000,0.25);
 
-			.swatch-anchor {
-				border: 2px solid #fff;
-			}
-		}
-	}
+      .swatch-anchor {
+        border: 2px solid #fff;
+      }
+    }
+  }
 }
 
 #variations_clear {
-	display: block;
-	margin-bottom: 1em;
+  display: block;
+  margin-bottom: 1em;
 }

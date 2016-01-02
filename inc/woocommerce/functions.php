@@ -12,12 +12,12 @@
  * @return  void
  */
 if ( ! function_exists( 'et_shop_before_content' ) ) {
-	function et_shop_before_content() {
-		?>
-		<div id="primary" class="content-area">
-			<main id="main" class="site-main" role="main">
-	    	<?php
-	}
+  function et_shop_before_content() {
+    ?>
+    <div id="primary" class="content-area">
+      <main id="main" class="site-main" role="main">
+        <?php
+  }
 }
 
 /**
@@ -27,13 +27,13 @@ if ( ! function_exists( 'et_shop_before_content' ) ) {
  * @return  void
  */
 if ( ! function_exists( 'et_shop_after_content' ) ) {
-	function et_shop_after_content() {
-		?>
-			</main><!-- #main -->
-		</div><!-- #primary -->
+  function et_shop_after_content() {
+    ?>
+      </main><!-- #main -->
+    </div><!-- #primary -->
 
-		<?php do_action( 'et_shop_sidebar' );
-	}
+    <?php do_action( 'et_shop_sidebar' );
+  }
 }
 
 /**
@@ -42,7 +42,7 @@ if ( ! function_exists( 'et_shop_after_content' ) ) {
  * @since  1.0.0
  */
 function et_shop_loop_columns() {
-	return apply_filters( 'et_shop_loop_columns', 3 ); // 3 products per row
+  return apply_filters( 'et_shop_loop_columns', 3 ); // 3 products per row
 }
 
 /**
@@ -51,11 +51,11 @@ function et_shop_loop_columns() {
  * @return array $classes modified to include 'woocommerce-active' class
  */
 function et_shop_woocommerce_body_class( $classes ) {
-	if ( is_woocommerce_activated() ) {
-		$classes[] = 'woocommerce-active';
-	}
+  if ( is_woocommerce_activated() ) {
+    $classes[] = 'woocommerce-active';
+  }
 
-	return $classes;
+  return $classes;
 }
 
 /**
@@ -65,17 +65,17 @@ function et_shop_woocommerce_body_class( $classes ) {
  * @return array            Fragments to refresh via AJAX
  */
 if ( ! function_exists( 'et_shop_cart_link_fragment' ) ) {
-	function et_shop_cart_link_fragment( $fragments ) {
-		global $woocommerce;
+  function et_shop_cart_link_fragment( $fragments ) {
+    global $woocommerce;
 
-		ob_start();
+    ob_start();
 
-		et_shop_cart_link();
+    et_shop_cart_link();
 
-		$fragments['a.cart-contents'] = ob_get_clean();
+    $fragments['a.cart-contents'] = ob_get_clean();
 
-		return $fragments;
-	}
+    return $fragments;
+  }
 }
 
 /**
@@ -83,9 +83,9 @@ if ( ! function_exists( 'et_shop_cart_link_fragment' ) ) {
  * @since 1.0.0
  */
 function et_shop_woocommerce_scripts() {
-	global $et_shop_version;
+  global $et_shop_version;
 
-	wp_enqueue_style( 'et_shop-woocommerce-style', get_template_directory_uri() . '/inc/woocommerce/css/woocommerce.css', $et_shop_version );
+  wp_enqueue_style( 'et_shop-woocommerce-style', get_template_directory_uri() . '/inc/woocommerce/css/woocommerce.css', $et_shop_version );
 }
 
 /**
@@ -95,12 +95,12 @@ function et_shop_woocommerce_scripts() {
  * @return  array $args related products args
  */
 function et_shop_related_products_args( $args ) {
-	$args = apply_filters( 'et_shop_related_products_args', array(
-		'posts_per_page' => 3,
-		'columns'        => 3,
-	) );
+  $args = apply_filters( 'et_shop_related_products_args', array(
+    'posts_per_page' => 3,
+    'columns'        => 3,
+  ) );
 
-	return $args;
+  return $args;
 }
 
 /**
@@ -109,7 +109,7 @@ function et_shop_related_products_args( $args ) {
  * @since  1.0.0
  */
 function et_shop_thumbnail_columns() {
-	return intval( apply_filters( 'et_shop_product_thumbnail_columns', 4 ) );
+  return intval( apply_filters( 'et_shop_product_thumbnail_columns', 4 ) );
 }
 
 /**
@@ -118,7 +118,7 @@ function et_shop_thumbnail_columns() {
  * @since  1.0.0
  */
 function et_shop_products_per_page() {
-	return intval( apply_filters( 'et_shop_products_per_page', 12 ) );
+  return intval( apply_filters( 'et_shop_products_per_page', 12 ) );
 }
 
 /**
@@ -127,5 +127,5 @@ function et_shop_products_per_page() {
  * @return boolean
  */
 function is_woocommerce_extension_activated( $extension = 'WC_Bookings' ) {
-	return class_exists( $extension ) ? true : false;
+  return class_exists( $extension ) ? true : false;
 }
