@@ -43,7 +43,7 @@
 }
 .woocommerce #reviews .form-contribution #review_rating_field fieldset label.checkbox:before,
 .woocommerce-page #reviews .form-contribution #review_rating_field fieldset label.checkbox:before {
-  font-size: .857em;
+  font-size: .875em;
 }
 .woocommerce #reviews .form-contribution #review_rating_field fieldset .star-label,
 .woocommerce-page #reviews .form-contribution #review_rating_field fieldset .star-label {
@@ -155,7 +155,7 @@
 
 #tiptip_content,
 .chart-tooltip {
-  font-size: .857em;
+  font-size: .875em;
   padding: .618em 1em;
   background-color: rgba(0, 0, 0, 0.8);
 }

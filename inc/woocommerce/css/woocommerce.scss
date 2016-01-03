@@ -84,20 +84,20 @@
 }
 
 .site-search {
-  font-size: .857em;
+  font-size: .875em;
   clear: both;
 
   .widget_product_search {
     input[type=text],
     input[type=search] {
-      padding: 1.387em 1.618em;
+      padding: 1.375em 1.618em;
       line-height: 1;
       padding-left: 3.631em;
     }
 
     form {
       &:before {
-        top: 1.387em;
+        top: 1.375em;
         left: 1.618em;
       }
     }
@@ -199,7 +199,7 @@ table.shop_table_responsive {
     }
 
     .star-rating {
-      font-size: .857em;
+      font-size: .875em;
     }
 
     img {
@@ -326,7 +326,7 @@ table.shop_table_responsive {
       margin-top: -.618em;
 
       a {
-        font-size: .857em;
+        font-size: .875em;
       }
 
       .star-rating {
@@ -335,7 +335,7 @@ table.shop_table_responsive {
     }
 
     .product_meta {
-      font-size: .857em;
+      font-size: .875em;
 
       .sku_wrapper,
       .posted_in,
@@ -433,7 +433,7 @@ a.reset_variations {
  */
 .woocommerce-breadcrumb {
   margin-bottom: 4.236em;
-  font-size: .857em;
+  font-size: .875em;
   padding: 1em 0;
   border-bottom: 1px solid rgba(0,0,0,0.05);
 
@@ -556,8 +556,8 @@ a.reset_variations {
     p.total,
     p.buttons,
     li {
-      padding-left: 1.387em;
-      padding-right: 1.387em;
+      padding-left: 1.375em;
+      padding-right: 1.375em;
       background-color: rgba(0, 0, 0, 0.025);
     }
   }
@@ -729,7 +729,7 @@ table.cart {
     margin-bottom: 1em;
 
     &.checkout-button {
-      font-size: 1.387em;
+      font-size: 1.375em;
     }
   }
 }
@@ -790,7 +790,7 @@ form.checkout {
 
     li {
       list-style: none !important;
-      padding: 1.387em !important;
+      padding: 1.375em !important;
       border-bottom: 1px dotted $color_border;
       margin-left: 0;
 
@@ -818,8 +818,8 @@ form.checkout {
       }
 
       .payment_box {
-        padding: 1.387em;
-        margin: 1.387em -1.387em -1.387em -1.387em;
+        padding: 1.375em;
+        margin: 1.375em -1.375em -1.375em -1.375em;
         background: rgba(0,0,0,0.035);
         border-top: 1px dotted $color_border;
 
@@ -827,7 +827,7 @@ form.checkout {
           border: 0;
           margin: 0;
           padding: 1em 0 0 0;
-          font-size: .857em;
+          font-size: .875em;
 
           label {
             width: auto;
@@ -876,18 +876,18 @@ form.checkout {
       display: inline-block;
       width: auto;
       float: left;
-      margin: .327em .53em 0 0;
+      margin: .375em .53em 0 0;
     }
   }
 
   .place-order {
-    padding: 1.387em;
+    padding: 1.375em;
     margin-bottom: 0;
     float: none;
     width: 100%;
 
     .button {
-      font-size: 1.387em;
+      font-size: 1.375em;
       width: 100%;
       white-space: pre-wrap;
     }
@@ -902,7 +902,7 @@ form.checkout {
   font-weight: 600;
   padding: .53em 0;
   text-align: right;
-  font-size: .857em;
+  font-size: .875em;
 
   &:after {
     content: "\f119";
@@ -959,7 +959,7 @@ form.checkout {
 
     strong {
       display: block;
-      font-size: 1.387em;
+      font-size: 1.375em;
       text-transform: none;
     }
   }
@@ -985,7 +985,7 @@ form.checkout {
 .my_account_orders {
   .button {
     padding: .53em 1em;
-    font-size: .857em;
+    font-size: .875em;
     margin-right: .236em;
   }
 }
@@ -1052,7 +1052,7 @@ form.checkout {
   bottom: 0;
   right: 0;
   margin: 0;
-  padding: 1em 1.387em;
+  padding: 1em 1.375em;
   background-color: $info;
   color: #fff;
 
@@ -1161,7 +1161,7 @@ p.stars {
   border-color: $color_body;
   color: $color_body;
   padding: .202em .618em;
-  font-size: .857em;
+  font-size: .875em;
   text-transform: uppercase;
   font-weight: 700;
   display: inline-block;
@@ -1177,7 +1177,7 @@ p.stars {
 
 .et_shop-sorting {
   background-color: $color-border;
-  font-size: .857em;
+  font-size: .875em;
   margin-bottom: 2.618em;
   padding: 2em;
 }
@@ -1313,7 +1313,7 @@ p.no-comments {
 }
 
 dl.variation {
-  font-size: .857em;
+  font-size: .875em;
 
   dd {
     margin: 0 0 1em;
@@ -1381,13 +1381,13 @@ dl.variation {
       }
 
       .amount {
-        margin-right: .327em;
+        margin-right: .375em;
       }
 
       .count {
         font-weight: 400;
         opacity: 0.5;
-        font-size: .857em;
+        font-size: .875em;
       }
 
       span {
@@ -1400,7 +1400,7 @@ dl.variation {
       top: 100%;
       width: 100%;
       z-index: 999999;
-      font-size: .857em;
+      font-size: .875em;
       left: -999em;
       display: block;
 
@@ -1433,7 +1433,7 @@ dl.variation {
       clear: none;
       width: 100%;
       float: left;
-      font-size: .857em;
+      font-size: .875em;
 
       &.first {
         clear: both !important;
@@ -1665,14 +1665,14 @@ dl.variation {
   .woocommerce-result-count {
     float: left;
     position: relative;
-    padding: .327em 0;
+    padding: .375em 0;
   }
 
   .woocommerce-ordering {
     float: left;
     margin-right: 1em;
     margin-bottom: 0;
-    padding: .327em 0;
+    padding: .375em 0;
   }
 
   .woocommerce-pagination {
@@ -1694,7 +1694,7 @@ dl.variation {
         img {
           max-width: 3.631em;
           height: auto;
-          border: .327em solid #fff;
+          border: .375em solid #fff;
         }
       }
 
@@ -1703,7 +1703,7 @@ dl.variation {
         text-indent: 0;
 
         th {
-          padding: .857em 1.387em;
+          padding: .875em 1.375em;
         }
       }
     }
@@ -1712,11 +1712,11 @@ dl.variation {
   table.cart {
     th,
     td {
-      padding: .857em 1.387em;
+      padding: .875em 1.375em;
     }
 
     .qty {
-      padding: .857em;
+      padding: .875em;
       max-width: 3.632em;
     }
 
@@ -1871,7 +1871,7 @@ dl.variation {
       .button#place_order {
         display: block;
         width: 100%;
-        font-size: 1.387em;
+        font-size: 1.375em;
       }
     }
   }
@@ -1903,7 +1903,7 @@ dl.variation {
     }
 
     #order_review {
-      font-size: .857em;
+      font-size: .875em;
     }
   }
 

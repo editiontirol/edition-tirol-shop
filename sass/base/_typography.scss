@@ -1,6 +1,5 @@
 body {
-  font-size: .938em;
-  -ms-word-wrap: break-word;
+  font-size: 16px;
   word-wrap: break-word;
 }
 
@@ -37,7 +36,6 @@ h1,
 .alpha {
   font-size: 2.244em;
   font-weight: 300;
-  letter-spacing: -1px;
   line-height: 1.214;
 
   a {
@@ -48,12 +46,11 @@ h1,
 h2,
 .beta {
   font-size: 1.618em;
-  letter-spacing: -1px;
 }
 
 h3,
 .gamma {
-  font-size: 1.387em;
+  font-size: 1.375em;
 }
 
 h4,

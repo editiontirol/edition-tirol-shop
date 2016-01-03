@@ -33,7 +33,7 @@
       float: none !important;
 
       > a {
-        padding: 1em 1.387em;
+        padding: 1em 1.375em;
         border: 0 !important;
         margin: 0 !important;
         @include border-top-radius(0);
@@ -50,10 +50,10 @@
 
   .wl-table {
     td {
-      padding: .857em 1.387em !important;
+      padding: .875em 1.375em !important;
 
       &:first-child {
-        padding-left: 1.387em !important;
+        padding-left: 1.375em !important;
       }
     }
 

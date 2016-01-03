@@ -3231,7 +3231,7 @@ th {
 }
 .site-branding .site-description {
   display: none;
-  font-size: .857em;
+  font-size: .875em;
 }
 
 .site-main {
@@ -3315,7 +3315,7 @@ table caption {
 }
 table td,
 table th {
-  padding: .857em 1.387em;
+  padding: .875em 1.375em;
   text-align: left;
   vertical-align: top;
 }
@@ -3325,7 +3325,7 @@ table th p:last-child {
 }
 table thead th {
   border-bottom: 2px solid rgba(0, 0, 0, 0.1);
-  padding: 1.387em;
+  padding: 1.375em;
   text-transform: uppercase;
   vertical-align: middle;
 }
@@ -3358,7 +3358,7 @@ table tfoot td {
 }
 
 body {
-  font-size: .938em;
+  font-size: 16px;
   word-wrap: break-word;
 }
 
@@ -3393,7 +3393,6 @@ h1,
 .alpha {
   font-size: 2.244em;
   font-weight: 300;
-  letter-spacing: -1px;
   line-height: 1.214;
 }
 h1 a,
@@ -3404,12 +3403,11 @@ h1 a,
 h2,
 .beta {
   font-size: 1.618em;
-  letter-spacing: -1px;
 }
 
 h3,
 .gamma {
-  font-size: 1.387em;
+  font-size: 1.375em;
 }
 
 h4,
@@ -3757,8 +3755,8 @@ a:focus {
 }
 @media screen and (max-width: 568px) {
   .col-full {
-    margin-left: 1.387em;
-    margin-right: 1.387em;
+    margin-left: 1.375em;
+    margin-right: 1.375em;
   }
 }
 form {
@@ -3878,8 +3876,8 @@ button.small,
 [type='submit'].small,
 .button.small,
 .added_to_cart.small {
-  font-size: .857em;
-  padding: .53em .857em;
+  font-size: .875em;
+  padding: .53em .875em;
 }
 button.disabled, button:disabled,
 [type='button'].disabled,
@@ -3962,7 +3960,7 @@ textarea:focus,
 
 textarea {
   overflow: auto;
-  padding-left: .857em;
+  padding-left: .875em;
   vertical-align: top;
   width: 100%;
 }
@@ -3998,11 +3996,11 @@ fieldset legend {
 }
 .main-navigation ul ul {
   display: block;
-  margin-left: 1.387em;
+  margin-left: 1.375em;
 }
 .main-navigation ul li a {
   display: block;
-  padding: .857em 1.387em;
+  padding: .875em 1.375em;
 }
 .main-navigation ul li a:before {
   content: '\f0f6';
@@ -4166,7 +4164,7 @@ fieldset legend {
   }
   .main-navigation .menu ul li a,
   .main-navigation .nav-menu ul li a {
-    padding: .857em 1em;
+    padding: .875em 1em;
   }
   .main-navigation .menu ul li:last-child,
   .main-navigation .nav-menu ul li:last-child {
@@ -4203,7 +4201,7 @@ fieldset legend {
   }
   .secondary-navigation .menu {
     float: right;
-    font-size: .857em;
+    font-size: .875em;
     width: auto;
   }
   .secondary-navigation .menu > li:hover > a {
@@ -4230,7 +4228,7 @@ fieldset legend {
   }
   .secondary-navigation .menu ul a {
     background: rgba(0, 0, 0, 0.05);
-    padding: .326em .857em;
+    padding: .326em .875em;
   }
   .secondary-navigation .menu ul li:first-child a {
     padding-top: 1em;
@@ -4244,7 +4242,7 @@ fieldset legend {
   .secondary-navigation .menu a {
     color: #93979f;
     font-weight: 400;
-    padding: 1.387em .857em;
+    padding: 1.375em .875em;
   }
   .secondary-navigation .menu a:hover {
     text-decoration: none;
@@ -4276,7 +4274,7 @@ fieldset legend {
 }
 .hentry .entry-header .posted-on,
 .hentry .entry-header .byline {
-  font-size: .857em;
+  font-size: .875em;
 }
 .hentry .entry-meta a {
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
@@ -4340,7 +4338,7 @@ fieldset legend {
     width: 17.64706%;
     float: left;
     margin-right: 5.88235%;
-    font-size: .857em;
+    font-size: .875em;
   }
   .hentry.type-post .entry-content {
     width: 76.47059%;
@@ -4441,7 +4439,7 @@ video {
   border-left-width: 0;
   color: #60646c;
   display: inline-block;
-  padding: .327em .857em;
+  padding: .375em .875em;
 }
 .pagination .page-numbers li .page-numbers.current,
 .woocommerce-pagination .page-numbers li .page-numbers.current {
@@ -4489,7 +4487,7 @@ video {
   max-width: 32px;
 }
 .comment-list .comment-meta .comment-date {
-  font-size: .857em;
+  font-size: .875em;
   opacity: .8;
 }
 .comment-list .comment-meta .comment-date:hover {
@@ -4507,7 +4505,7 @@ video {
   margin-left: .53em;
 }
 .comment-list .reply {
-  font-size: .857em;
+  font-size: .875em;
   margin-bottom: 1.618em;
 }
 .comment-list .reply .comment-edit-link {
@@ -4679,7 +4677,7 @@ video {
 .widget .widget-title,
 .widget .widgettitle {
   border-bottom: 3px solid #60646c;
-  font-size: 1.387em;
+  font-size: 1.375em;
   font-weight: 700;
   letter-spacing: 0;
   margin-bottom: 1em;
@@ -4694,10 +4692,10 @@ video {
 }
 
 .widget-area .widget {
-  font-size: .857em;
+  font-size: .875em;
 }
 .widget-area .widget .widget-title {
-  font-size: 1.387em;
+  font-size: 1.375em;
 }
 .widget-area .widget a {
   color: #60646c;
@@ -4715,7 +4713,7 @@ video {
 }
 
 .header-widget-region .widget {
-  font-size: .857em;
+  font-size: .875em;
   margin: 0;
   padding: 1em 0;
 }
@@ -4802,7 +4800,7 @@ video {
 }
 .widget_recent_entries ul .children,
 .widget_pages ul .children {
-  margin: .618em 0 0 1.387em;
+  margin: .618em 0 0 1.375em;
 }
 
 .widget_categories ul li:before {

@@ -31,7 +31,7 @@
     }
 
     .comment-date {
-      font-size: .857em;
+      font-size: .875em;
       opacity: .8;
 
       &:hover {
@@ -59,7 +59,7 @@
 
   .reply {
     @extend %clearfix;
-    font-size: .857em;
+    font-size: .875em;
     margin-bottom: 1.618em;
 
     .comment-edit-link {

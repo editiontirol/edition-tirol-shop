@@ -14,7 +14,7 @@
   .widget-title,
   .widgettitle {
     border-bottom: 3px solid $color-body;
-    font-size: 1.387em;
+    font-size: 1.375em;
     font-weight: 700;
     letter-spacing: 0;
     margin-bottom: 1em;
@@ -33,10 +33,10 @@
 
 .widget-area {
   .widget {
-    font-size: .857em;
+    font-size: .875em;
 
     .widget-title {
-      font-size: 1.387em;
+      font-size: 1.375em;
     }
 
     a {
@@ -63,7 +63,7 @@
   @extend %clearfix;
 
   .widget {
-    font-size: .857em;
+    font-size: .875em;
     margin: 0;
     padding: 1em 0;
   }
@@ -147,7 +147,7 @@
     }
 
     .children {
-      margin: .618em 0 0 1.387em;
+      margin: .618em 0 0 1.375em;
     }
   }
 }

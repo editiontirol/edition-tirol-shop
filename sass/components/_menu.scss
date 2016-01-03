@@ -11,13 +11,13 @@
 
     ul {
       display: block;
-      margin-left: 1.387em;
+      margin-left: 1.375em;
     }
 
     li {
       a {
         display: block;
-        padding: .857em 1.387em;
+        padding: .875em 1.375em;
 
         &:before {
           content: '\f0f6';
@@ -218,7 +218,7 @@
           background-color: rgba(0, 0, 0, .025);
 
           a {
-            padding: .857em 1em;
+            padding: .875em 1em;
           }
 
           &:last-child {
@@ -266,7 +266,7 @@
 
     .menu {
       float: right;
-      font-size: .857em;
+      font-size: .875em;
       width: auto;
 
       > li:hover > a {
@@ -297,7 +297,7 @@
 
         a {
           background: rgba($black, .05);
-          padding: .326em .857em;
+          padding: .326em .875em;
         }
 
         li:first-child a {
@@ -316,7 +316,7 @@
       a {
         color: lighten($color-body, 20%);
         font-weight: 400;
-        padding: 1.387em .857em;
+        padding: 1.375em .875em;
 
         &:hover {
           text-decoration: none;
