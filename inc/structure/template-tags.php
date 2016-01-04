@@ -88,32 +88,40 @@ if (! function_exists('et_shop_featured_products')) {
 
     if (is_woocommerce_activated()) {
 
-      $args = apply_filters( 'et_shop_featured_products_args', array(
-        'limit'       => 4,
-        'columns'       => 4,
-        'orderby'      => 'date',
-        'order'        => 'desc',
-        'title'        => __('Featured Products', 'et_shop'),
-        ) );
+      $featured_query = new WP_Query(array(
+          'post_type' => 'product',
+          'meta_key' => '_featured',
+          'meta_value' => 'yes'
+      ));
 
-      echo '<section class="et_shop-product-section et_shop-featured-products">';
+      if ($featured_query->have_posts()) {
 
-        do_action('et_shop_homepage_before_featured_products');
+        $args = apply_filters( 'et_shop_featured_products_args', array(
+          'limit'   => 4,
+          'columns' => 4,
+          'orderby' => 'date',
+          'order'   => 'desc',
+          'title'   => __('Featured Products', 'et_shop'),
+        ));
 
-        echo '<h2 class="section-title">' . wp_kses_post($args['title']) . '</h2>';
+        echo '<section class="et_shop-product-section et_shop-featured-products">';
 
-        echo et_shop_do_shortcode( 'featured_products',
-          array(
+          do_action('et_shop_homepage_before_featured_products');
+
+          echo '<h2 class="section-title">'.wp_kses_post($args['title']).'</h2>';
+
+          echo et_shop_do_shortcode( 'featured_products', array(
             'per_page'   => intval($args['limit']),
             'columns'  => intval($args['columns']),
             'orderby'  => esc_attr($args['orderby']),
             'order'    => esc_attr($args['order']),
-            ) );
+          ));
 
-        do_action('et_shop_homepage_after_featured_products');
+          do_action('et_shop_homepage_after_featured_products');
 
-      echo '</section>';
+        echo '</section>';
 
+      }
     }
   }
 }
