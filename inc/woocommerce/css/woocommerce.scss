@@ -1,10 +1,7 @@
-/**
- * WooCommerce
- */
+// WooCommerce
 
-/**
- * Imports
- */
+// Imports
+
 @import 'bourbon';
 @import '../../../sass/utils/variables';
 @import '../../../sass/utils/mixins';
@@ -22,9 +19,8 @@
   font-style: normal;
 }
 
-/**
- * Header Elements
- */
+// Header Elements
+
 .woocommerce-active {
   .site-header {
     .col-full {
@@ -108,9 +104,8 @@
   }
 }
 
-/**
- * Shop tables
- */
+// Shop tables
+
 table.shop_table_responsive {
   thead {
     display: none;
@@ -490,7 +485,7 @@ a.reset_variations {
       padding-left: 2em;
       position: relative;
 
-      a.remove {
+      .remove {
         position: absolute;
         top: 1em;
         left: 0;
@@ -697,7 +692,6 @@ table.cart {
 
   .qty {
     padding: .236em;
-    max-width: 1.618em;
   }
 
   td.actions {
@@ -734,19 +728,17 @@ table.cart {
   }
 }
 
-ul#shipping_method {
+#shipping_method {
   margin: 0;
   list-style: none;
 }
 
-a.remove {
+.remove {
   display: block;
-  width: 1.618em;
-  height: 1.618em;
-  line-height: 1.618;
   font-weight: 400;
   text-indent: -9999px;
   position: relative;
+  width: 1em;
 
   &:before {
     content: "\f057";
@@ -754,10 +746,7 @@ a.remove {
     position: absolute;
     top: 0;
     left: 0;
-    right: 0;
-    bottom: 0;
     color: $error;
-    line-height: 1.618;
     text-indent: 0;
     text-align: center;
     font-weight: 400;
@@ -1170,7 +1159,6 @@ p.stars {
 
 .quantity {
   .qty {
-    max-width: 3.631em;
     text-align: center;
   }
 }
@@ -1334,6 +1322,14 @@ dl.variation {
   }
 }
 
+.product-price,
+.product-quantity,
+.product-subtotal,
+.cart_totals td {
+  text-align: right;
+}
+
+
 @media screen and (min-width: 768px) {
 
   // Responsive tables
@@ -1357,6 +1353,10 @@ dl.variation {
         }
       }
     }
+  }
+
+  .remove {
+    width: auto;
   }
 
   // Header Elements
@@ -1408,10 +1408,11 @@ dl.variation {
         display: none;
       }
 
-      .product_list_widget li a.remove {
+      .product_list_widget li .remove {
         position: relative;
         float: left;
         top: auto;
+        width: 1.25em;
 
         &:before {
           text-align: left;
@@ -1692,9 +1693,10 @@ dl.variation {
         display: table-cell;
 
         img {
-          max-width: 3.631em;
-          height: auto;
           border: .375em solid #fff;
+          height: auto;
+          margin-bottom: 0;
+          max-width: 3.631em;
         }
       }
 
@@ -1717,7 +1719,6 @@ dl.variation {
 
     .qty {
       padding: .875em;
-      max-width: 3.632em;
     }
 
     .product-remove {
@@ -1773,9 +1774,9 @@ dl.variation {
 
     .cart_totals,
     .shipping_calculator {
-      @include span(last 5 of 9);
-        margin: 0;
-        clear: right;
+      float: right;
+      margin: 0;
+      clear: right;
     }
 
     .shipping_calculator {
@@ -1797,7 +1798,7 @@ dl.variation {
 
       .cart_totals,
       .shipping_calculator {
-        @include span(last 6 of 12);
+        float: right;
       }
     }
   }
