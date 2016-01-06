@@ -36,9 +36,12 @@
 }
 
 .site-header-cart {
-  list-style-type: none;
   margin-left: 0;
   padding: 0;
+
+  li {
+    list-style-type: none;
+  }
 
   .cart-contents {
     color: $edelgelb;
@@ -1364,20 +1367,20 @@ dl.variation {
     position: relative;
 
     .cart-contents {
-      padding: 0 1em 2.244em;
       display: block;
       position: relative;
       background-color: transparent;
       height: auto;
       width: auto;
       text-indent: 0;
+      padding-right: 3em;
 
       &:after {
-        right: 1.618em;
-        line-height: 1;
-        height: 1em;
+        line-height: 1em;
+        margin-top: -.5em;
+        right: 1em;
+        top: 50%;
         width: 1em;
-        top: .3em;
       }
 
       .amount {
@@ -1396,13 +1399,14 @@ dl.variation {
     }
 
     .widget_shopping_cart {
+      display: none;
+      font-size: .875em;
+      min-width: 20em;
       position: absolute;
+      right: 0;
       top: 100%;
       width: 100%;
       z-index: 999999;
-      font-size: .875em;
-      left: -999em;
-      display: block;
 
       h2.widgettitle {
         display: none;
@@ -1420,11 +1424,8 @@ dl.variation {
       }
     }
 
-    &:hover,
-    &.focus {
-      .widget_shopping_cart {
-        left: 0;
-      }
+    li:hover > ul {
+      display: block;
     }
   }
 

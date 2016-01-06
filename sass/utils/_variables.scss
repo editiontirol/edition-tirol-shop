@@ -18,23 +18,39 @@ $black:  #000;
 $silver: #c0c0c0;
 $yellow: #ff0;
 
-
 // Color Palette: http://paletton.com/#uid=31j0u0kw0vKjDCNoYxNydoBDtjk
+$color-primary-0:     #fdc800; $supernova:      $color-primary-0;
+$color-primary-1:     #ffde63; $jonquil:        $color-primary-1;
+$color-primary-2:     #ffd638; $bright-sun:     $color-primary-2;
+$color-primary-3:     #c49b00; $buddha-gold:    $color-primary-3;
+$color-primary-4:     #9a7a00; $buttered-rum:   $color-primary-4;
+$color-secondary-1-0: #610caa; $purple:         $color-secondary-1-0;
+$color-secondary-1-1: #8D52c0; $deep-lilac:     $color-secondary-1-1;
+$color-secondary-1-2: #7530B0; $purple-heart:   $color-secondary-1-2;
+$color-secondary-1-3: #4B0984; $pigment-indigo: $color-secondary-1-3;
+$color-secondary-1-4: #3A0568; $christalle:     $color-secondary-1-4;
+$color-secondary-2-0: #0E4EA6; $tory-blue:      $color-secondary-2-0;
+$color-secondary-2-1: #5380BD; $glaucous:       $color-secondary-2-1;
+$color-secondary-2-2: #3265ad; $azure:          $color-secondary-2-2;
+$color-secondary-2-3: #0A3C81; $dark-cerulean:  $color-secondary-2-3;
+$color-secondary-2-4: #062E65; $cool-black:     $color-secondary-2-4;
+
 // Color Names:   http://name-of-color.com
 $alabaster:     #fcfcfc;
 $cinnabar:      #e34234;
 $concrete:      #f3f3f3;
-$edelgelb:      #fdc800;
-$edelweiss:     #fffced;
 $manatee:       #9aa0a7;
 $mercury:       #e5e5e5;
-$purple:        #610caa;
 $salem:         #0f834d;
 $seashell:      #f1f1f1;
 $shakespeare:   #3d9cd2;
 $shalimar:      #fff9c0;
 $shark:         #2c2d33;
 $shuttle-gray:  #60646c;
+
+$edelgelb:      $supernova;
+$edelweiss:     change-color($supernova, $lightness: 97.5%, $saturation: 97.5%);
+
 
 // Base Color Scheme
 $header-background:    $shark;

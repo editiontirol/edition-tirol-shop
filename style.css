@@ -3247,18 +3247,18 @@ th {
 }
 
 .site-footer {
-  background-color: #fffced;
-  border-top: 1px solid #efede4;
-  color: #aca374;
+  background-color: #fffcf2;
+  border-top: 1px solid #f8edc6;
   padding: 1.618em 0;
 }
+.site-footer,
 .site-footer h1,
 .site-footer h2,
 .site-footer h3,
 .site-footer h4,
 .site-footer h5,
 .site-footer h6 {
-  color: #bfb894;
+  color: #85806d;
 }
 .site-footer a:not(.button) {
   color: #9e76c0;
@@ -3592,17 +3592,15 @@ a:focus {
     clear: none;
   }
   .woocommerce-active .site-header .main-navigation {
-    width: 73.91304%;
     float: left;
-    margin-right: 4.34783%;
     clear: both;
+    margin-top: 1em;
+    width: auto;
   }
   .woocommerce-active .site-header .site-header-cart {
-    width: 21.73913%;
     float: right;
-    margin-right: 0;
     margin-bottom: 0;
-    padding-top: 1.618em;
+    margin-top: 1em;
   }
 
   .site-branding .site-description {
@@ -4011,8 +4009,7 @@ fieldset legend {
 .main-navigation ul li a:hover {
   color: #e5e5e5;
 }
-.main-navigation.toggled .handheld-navigation,
-.main-navigation.toggled .menu > ul:not(.nav-menu) {
+.main-navigation.toggled .handheld-navigation {
   display: block;
 }
 
@@ -4054,8 +4051,7 @@ fieldset legend {
 @media screen and (min-width: 768px) {
   .menu-toggle,
   .handheld-navigation,
-  .main-navigation.toggled .handheld-navigation,
-  .main-navigation.toggled .menu {
+  .main-navigation.toggled .handheld-navigation {
     display: none;
   }
 
@@ -4124,16 +4120,31 @@ fieldset legend {
     width: 200px;
   }
 
-  .menu li.current-menu-item > a {
-    color: #60646c;
+  .main-navigation a {
+    color: #e6e6e6;
   }
 
-  .main-navigation {
-    padding-top: 1.618em;
-  }
   .main-navigation .menu > li > a,
-  .main-navigation .nav-menu > li > a {
-    padding: 0 1em 2.244em;
+  .main-naviagtion .nav-menu > li > a,
+  .site-header-cart > li > a {
+    padding: 1em;
+  }
+
+  .main-navigation .menu li:hover > a,
+  .main-navigation .menu li a:hover,
+  .main-navigation .nav-menu li:hover > a,
+  .main-navigation .nav-menu li a:hover,
+  .site-header-cart > li:hover > a,
+  .site-header-cart .current-menu-item > a,
+  .current-menu-item > a,
+  .current-menu-ancestor > a,
+  .current-menu-parent > a {
+    background: #fff;
+    color: #000;
+  }
+
+  .main-navigation .sub-menu {
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
   }
   .main-navigation .menu > li:first-child,
   .main-navigation .nav-menu > li:first-child {
@@ -4151,7 +4162,7 @@ fieldset legend {
     font-family: FontAwesome;
     font-weight: inherit;
     line-height: 1;
-    margin-left: 1em;
+    margin-left: .75em;
   }
   .main-navigation .menu ul,
   .main-navigation .nav-menu ul {
@@ -4176,18 +4187,6 @@ fieldset legend {
     content: '\f105';
     float: right;
     font-family: FontAwesome;
-  }
-  .main-navigation .menu ul ul,
-  .main-navigation .nav-menu ul ul {
-    border-top-color: rgba(0, 0, 0, 0.1);
-    box-shadow: none;
-    margin-left: 0;
-  }
-  .main-navigation .menu ul a:hover,
-  .main-navigation .menu ul li:hover > a,
-  .main-navigation .nav-menu ul a:hover,
-  .main-navigation .nav-menu ul li:hover > a {
-    background-color: rgba(0, 0, 0, 0.025);
   }
   .main-navigation a {
     padding: 0 1em 2.244em;

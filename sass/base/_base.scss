@@ -101,17 +101,17 @@
 
 .site-footer {
   background-color: $edelweiss;
-  border-top: 1px solid desaturate(darken($edelweiss, 5%), 75%);
-  color: desaturate(darken($edelweiss, 40%), 75%);
+  border-top: 1px solid darken(desaturate($edelweiss, 20%), 10%);
   padding: 1.618em 0;
 
+  &,
   h1,
   h2,
   h3,
   h4,
   h5,
   h6 {
-    color: desaturate(darken($edelweiss, 30%), 75%);
+    color: darken(change-color($edelweiss, $saturation: 10%), 50%);
   }
 
   a:not(.button) {

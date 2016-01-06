@@ -57,9 +57,11 @@ if (! function_exists('et_shop_header_cart')) {
     <ul class="site-header-cart menu">
       <li class="<?php echo esc_attr($class); ?>">
         <?php et_shop_cart_link(); ?>
-      </li>
-      <li>
-        <?php the_widget('WC_Widget_Cart', 'title='); ?>
+        <ul>
+          <li>
+            <?php the_widget('WC_Widget_Cart', 'title='); ?>
+          </li>
+        </ul>
       </li>
     </ul>
     <?php
@@ -126,7 +128,7 @@ if (! function_exists('et_shop_woocommerce_pagination')) {
 
 /**
  * Featured and On-Sale Products
- * Check for featured products then on-sale products and use the appropiate shortcode. 
+ * Check for featured products then on-sale products and use the appropiate shortcode.
  * If neither exist, it can fallback to show recently added products.
  * @since  1.5.1
  * @uses  is_woocommerce_activated()
@@ -137,7 +139,7 @@ if (! function_exists('et_shop_woocommerce_pagination')) {
  */
 if (! function_exists('et_shop_promoted_products')) {
   function et_shop_promoted_products($per_page = '2', $columns = '2', $recent_fallback = true) {
-    if (is_woocommerce_activated()) { 
+    if (is_woocommerce_activated()) {
 
       if (wc_get_featured_product_ids()) {
 

@@ -34,8 +34,7 @@
   }
 
   &.toggled {
-    .handheld-navigation,
-    .menu > ul:not(.nav-menu) {
+    .handheld-navigation {
       display: block;
     }
   }
@@ -81,8 +80,7 @@
 @media screen and (min-width: 768px) {
   .menu-toggle,
   .handheld-navigation,
-  .main-navigation.toggled .handheld-navigation,
-  .main-navigation.toggled .menu {
+  .main-navigation.toggled .handheld-navigation {
     display: none;
   }
 
@@ -161,29 +159,42 @@
 
   }
 
-  .menu {
-    li {
-      &.current-menu-item {
-        > a {
-          color: $color-body;
-        }
-      }
+  .main-navigation {
+    a {
+      color: darken($white, 10%);
     }
   }
+
+  .main-navigation .menu > li > a,
+  .main-naviagtion .nav-menu > li > a,
+  .site-header-cart > li > a {
+    padding: 1em;
+  }
+
+  .main-navigation .menu li:hover > a,
+  .main-navigation .menu li a:hover,
+  .main-navigation .nav-menu li:hover > a,
+  .main-navigation .nav-menu li a:hover,
+  .site-header-cart > li:hover > a,
+  .site-header-cart .current-menu-item > a,
+  .current-menu-item > a,
+  .current-menu-ancestor > a,
+  .current-menu-parent > a {
+    background: $white;
+    color: $black;
+  }
+
 
   // Primary Navigation
 
   .main-navigation {
-    padding-top: 1.618em;
+    .sub-menu {
+      box-shadow: 0 0 2px rgba(0, 0, 0, .2);
+    }
 
     .menu,
     .nav-menu {
       > li {
-        // The first level menu item
-        > a {
-          padding: 0 1em 2.244em;
-        }
-
         &:first-child {
           margin-left: -1em;
         }
@@ -203,7 +214,7 @@
               font-family: FontAwesome;
               font-weight: inherit;
               line-height: 1;
-              margin-left: 1em;
+              margin-left: .75em;
             }
           }
         }
@@ -237,19 +248,10 @@
             }
           }
         }
-
-        ul {
-          border-top-color: $color-border;
-          box-shadow: none;
-          margin-left: 0;
-        }
-
-        a:hover,
-        li:hover > a {
-          background-color: rgba(0, 0, 0, .025);
-        }
       }
     }
+
+
 
     a {
       padding: 0 1em 2.244em;
