@@ -65,6 +65,11 @@ $info:                 $shakespeare;
 $vspacing:             1.618em;
 $footer-background:    $edelweiss;
 
+
+// Media Queries
+
+$on-desktop: 768px;
+
 $susy: (
   columns: 12,
   gutters: 1,

@@ -43,6 +43,10 @@
     list-style-type: none;
   }
 
+  > li > ul {
+    display: none;
+  }
+
   .cart-contents {
     color: $edelgelb;
     display: block;
@@ -72,7 +76,6 @@
   }
 
   .widget_shopping_cart {
-    display: none;
     background-color: #2c2d33;
 
     .product_list_widget {
@@ -1399,7 +1402,6 @@ dl.variation {
     }
 
     .widget_shopping_cart {
-      display: none;
       font-size: .875em;
       min-width: 20em;
       position: absolute;
@@ -2016,3 +2018,157 @@ dl.variation {
     }
   }
 }
+
+
+
+/* START Make the cart table responsive */
+/* http://css-tricks.com/responsive-data-tables/ */
+
+/* Force table to not be like tables anymore */
+.woocommerce {
+  .cart_totals table {
+    $line-height: 1.5em;
+    line-height: $line-height;
+
+    form {
+      p {
+        margin-bottom: 1em;
+      }
+
+      &,
+      > p,
+      p:last-of-type {
+        margin-bottom: 0;
+      }
+
+      > p + section {
+        margin-top: 1em;
+      }
+    }
+
+    .shipping [type='radio'] {
+      float: left;
+      margin-right: .5em;
+      height: $line-height;
+    }
+
+    .cart-subtotal,
+    .order-total {
+      th {
+        float: left;
+
+        @include media-query($on-desktop) {
+          float: none;
+        }
+      }
+    }
+  }
+
+  .cart_totals table,
+  .shop_table {
+    &,
+    tbody,
+    td,
+    th,
+    tr {
+    	display: block;
+    }
+
+    td {
+      background: none;
+    }
+
+    &,
+    tr:nth-child(odd) {
+      background-color: rgba(0, 0, 0, .025);
+    }
+
+    tr {
+      @extend %clearfix;
+    }
+
+    @include media-query($on-desktop) {
+      display: table;
+
+      tbody {
+        display: table-row-group;
+      }
+
+      tr {
+        display: table-row;
+      }
+
+      td, th {
+        display: table-cell;
+      }
+    }
+  }
+
+  .shop_table {
+    padding: 0;
+
+    thead tr, .product-thumbnail {
+    	position: absolute;
+    	top: -9999px;
+    	left: -9999px;
+
+      @include media-query($on-desktop) {
+        position: initial;
+        top: initial;
+        left: initial;
+      }
+    }
+
+    .product-remove {
+      float: right;
+    }
+
+    .product-price,
+    .product-quantity,
+    .product-subtotal {
+      float: left;
+    }
+
+    .product-quantity {
+      padding-left: 0;
+      padding-right: 0;
+
+      [type='number'] {
+        width: auto;
+        max-width: 100%;
+      }
+
+      [size='4'] {
+        max-width: 4em;
+      }
+    }
+
+    .product-price::after {
+      content: ' ×';
+    }
+
+    .product-subtotal::before {
+      content: '= ';
+    }
+
+    @include media-query($on-desktop) {
+      .product-price::after,
+      .product-subtotal::before {
+        content: initial;
+      }
+
+      .product-remove,
+      .product-price,
+      .product-quantity,
+      .product-subtotal {
+        float: none;
+      }
+
+      .product-quantity {
+        padding-left: 1em;
+        padding-right: 1em;
+      }
+    }
+  }
+}
+

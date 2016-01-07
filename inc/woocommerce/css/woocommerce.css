@@ -1,3 +1,15 @@
+@charset "UTF-8";
+.woocommerce .cart_totals table tr:before,
+.woocommerce .shop_table tr:before, .woocommerce .cart_totals table tr:after,
+.woocommerce .shop_table tr:after {
+  content: '';
+  display: table;
+}
+.woocommerce .cart_totals table tr:after,
+.woocommerce .shop_table tr:after {
+  clear: both;
+}
+
 .site-search .widget_product_search #searchsubmit {
   clip: rect(1px, 1px, 1px, 1px);
   position: absolute !important;
@@ -26,6 +38,9 @@
 .site-header-cart li {
   list-style-type: none;
 }
+.site-header-cart > li > ul {
+  display: none;
+}
 .site-header-cart .cart-contents {
   color: #fdc800;
   display: block;
@@ -52,7 +67,6 @@
   display: none;
 }
 .site-header-cart .widget_shopping_cart {
-  display: none;
   background-color: #2c2d33;
 }
 .site-header-cart .widget_shopping_cart .product_list_widget {
@@ -1176,7 +1190,6 @@ dl.variation dd {
     display: inline;
   }
   .site-header-cart .widget_shopping_cart {
-    display: none;
     font-size: .875em;
     min-width: 20em;
     position: absolute;
@@ -1717,6 +1730,135 @@ dl.variation dd {
     float: right;
     margin-right: 0;
     margin-top: 0;
+  }
+}
+/* START Make the cart table responsive */
+/* http://css-tricks.com/responsive-data-tables/ */
+/* Force table to not be like tables anymore */
+.woocommerce .cart_totals table {
+  line-height: 1.5em;
+}
+.woocommerce .cart_totals table form p {
+  margin-bottom: 1em;
+}
+.woocommerce .cart_totals table form,
+.woocommerce .cart_totals table form > p,
+.woocommerce .cart_totals table form p:last-of-type {
+  margin-bottom: 0;
+}
+.woocommerce .cart_totals table form > p + section {
+  margin-top: 1em;
+}
+.woocommerce .cart_totals table .shipping [type='radio'] {
+  float: left;
+  margin-right: .5em;
+  height: 1.5em;
+}
+.woocommerce .cart_totals table .cart-subtotal th,
+.woocommerce .cart_totals table .order-total th {
+  float: left;
+}
+@media screen and (min-width: 768px) {
+  .woocommerce .cart_totals table .cart-subtotal th,
+  .woocommerce .cart_totals table .order-total th {
+    float: none;
+  }
+}
+.woocommerce .cart_totals table,
+.woocommerce .cart_totals table tbody,
+.woocommerce .cart_totals table td,
+.woocommerce .cart_totals table th,
+.woocommerce .cart_totals table tr,
+.woocommerce .shop_table,
+.woocommerce .shop_table tbody,
+.woocommerce .shop_table td,
+.woocommerce .shop_table th,
+.woocommerce .shop_table tr {
+  display: block;
+}
+.woocommerce .cart_totals table td,
+.woocommerce .shop_table td {
+  background: none;
+}
+.woocommerce .cart_totals table,
+.woocommerce .cart_totals table tr:nth-child(odd),
+.woocommerce .shop_table,
+.woocommerce .shop_table tr:nth-child(odd) {
+  background-color: rgba(0, 0, 0, 0.025);
+}
+@media screen and (min-width: 768px) {
+  .woocommerce .cart_totals table,
+  .woocommerce .shop_table {
+    display: table;
+  }
+  .woocommerce .cart_totals table tbody,
+  .woocommerce .shop_table tbody {
+    display: table-row-group;
+  }
+  .woocommerce .cart_totals table tr,
+  .woocommerce .shop_table tr {
+    display: table-row;
+  }
+  .woocommerce .cart_totals table td, .woocommerce .cart_totals table th,
+  .woocommerce .shop_table td,
+  .woocommerce .shop_table th {
+    display: table-cell;
+  }
+}
+.woocommerce .shop_table {
+  padding: 0;
+}
+.woocommerce .shop_table thead tr, .woocommerce .shop_table .product-thumbnail {
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+}
+@media screen and (min-width: 768px) {
+  .woocommerce .shop_table thead tr, .woocommerce .shop_table .product-thumbnail {
+    position: initial;
+    top: initial;
+    left: initial;
+  }
+}
+.woocommerce .shop_table .product-remove {
+  float: right;
+}
+.woocommerce .shop_table .product-price,
+.woocommerce .shop_table .product-quantity,
+.woocommerce .shop_table .product-subtotal {
+  float: left;
+}
+.woocommerce .shop_table .product-quantity {
+  padding-left: 0;
+  padding-right: 0;
+}
+.woocommerce .shop_table .product-quantity [type='number'] {
+  width: auto;
+  max-width: 100%;
+}
+.woocommerce .shop_table .product-quantity [size='4'] {
+  max-width: 4em;
+}
+.woocommerce .shop_table .product-price::after {
+  content: ' ×';
+}
+.woocommerce .shop_table .product-subtotal::before {
+  content: '= ';
+}
+@media screen and (min-width: 768px) {
+  .woocommerce .shop_table .product-price::after,
+  .woocommerce .shop_table .product-subtotal::before {
+    content: initial;
+  }
+  .woocommerce .shop_table .product-remove,
+  .woocommerce .shop_table .product-price,
+  .woocommerce .shop_table .product-quantity,
+  .woocommerce .shop_table .product-subtotal {
+    float: none;
+  }
+  .woocommerce .shop_table .product-quantity {
+    padding-left: 1em;
+    padding-right: 1em;
   }
 }
 

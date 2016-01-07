@@ -10,6 +10,12 @@
   }
 }
 
+@mixin media-query($device) {
+  @media screen and (min-width: $device) {
+    @content;
+  }
+}
+
 @mixin hover-active-focus() {
   &:hover,
   &:active,
