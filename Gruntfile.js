@@ -72,9 +72,16 @@ module.exports = function(grunt) {
     shell: {
       'update-caniuse-db': {
         command: 'npm update caniuse-db'
+      },
+      'upload': {
+        command: 'source ../site/config; rsync --archive --compress --exclude-from .gitignore --exclude .tm_properties --exclude .git --exclude .DS_Store --delete-excluded "$PWD/" "$SSH_USER@$SSH_HOST:$REMOTE_DIR/www/wp-content/themes/edition-tirol-shop/"'
       }
     },
     watch: {
+      dev: {
+        files: ['<%= watch.build.files %>', '**/*.php'],
+        tasks: ['css', 'js', 'shell:upload']
+      },
       build: {
         files: ['<%= watch.css.files %>', '<%= watch.js.files %>'],
         tasks: ['css', 'js']
