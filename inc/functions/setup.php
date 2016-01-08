@@ -75,17 +75,6 @@ if (! function_exists('et_shop_setup')) :
       'widgets',
     ) );
 
-    add_theme_support('custom-header', array(
-      'default-image' => '',
-      'uploads'       => true,
-    ));
-
-    // Setup the WordPress core custom background feature.
-    add_theme_support( 'custom-background', apply_filters( 'et_shop_custom_background_args', array(
-      'default-color' => apply_filters('et_shop_default_background_color', 'fcfcfc'),
-      'default-image' => '',
-    ) ) );
-
     // Declare WooCommerce support
     add_theme_support('woocommerce');
 
