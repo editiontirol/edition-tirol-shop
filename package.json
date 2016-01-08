@@ -31,6 +31,6 @@
     "postcss-gradientfixer": "^0.0.4",
     "postcss-remove-prefixes": "^1.1.0",
     "postcss-unprefix": "git://github.com/yisibl/postcss-unprefix.git",
-    "susy": "^2.2.9"
+    "susy": "^2.2.10"
   }
 }
