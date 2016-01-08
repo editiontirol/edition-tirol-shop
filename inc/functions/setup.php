@@ -86,11 +86,6 @@ if (! function_exists('et_shop_setup')) :
       'default-image' => '',
     ) ) );
 
-    // Add support for the Site Logo plugin and the site logo functionality in JetPack
-    // https://github.com/automattic/site-logo
-    // http://jetpack.me/
-    add_theme_support('site-logo', array('size' => 'full'));
-
     // Declare WooCommerce support
     add_theme_support('woocommerce');
 
