@@ -70,9 +70,6 @@ module.exports = function(grunt) {
       files: ['*.scss', '*/**/*.scss']
     },
     shell: {
-      'update-caniuse-db': {
-        command: 'npm update caniuse-db'
-      },
       'upload': {
         command: 'source ../site/config; rsync --archive --compress --exclude-from .gitignore --exclude .tm_properties --exclude .git --exclude .DS_Store --delete-excluded "$PWD/" "$SSH_USER@$SSH_HOST:$REMOTE_DIR/www/wp-content/themes/edition-tirol-shop/"'
       }
@@ -118,7 +115,6 @@ module.exports = function(grunt) {
 
   grunt.registerTask('css', [
     'sass',
-    'shell:update-caniuse-db',
     'postcss:dist',
     'cssbeautifier'
   ]);

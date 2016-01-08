@@ -11,7 +11,7 @@
   "main": "Gruntfile.js",
   "scripts": {
     "preinstall": "type grunt &>/dev/null || npm -g update && npm -g install grunt-cli; type bundle &>/dev/null || gem update --system && gem install bundler",
-    "install": "type bundle &>/dev/null && bundle install"
+    "install": "type bundle &>/dev/null && bundle install; npm update caniuse-db"
   },
   "devDependencies": {
     "autoprefixer": "^6.2.3",
