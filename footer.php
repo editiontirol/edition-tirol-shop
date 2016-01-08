@@ -1,13 +1,3 @@
-<?php
-/**
- * The template for displaying the footer.
- *
- * Contains the closing of the #content div and all content after
- *
- * @package et_shop
- */
-?>
-
     </div><!-- .col-full -->
   </div><!-- #content -->
 

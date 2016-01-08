@@ -1,11 +1,4 @@
-<?php
-/**
- * The template for displaying 404 pages (not found).
- *
- * @package et_shop
- */
-
-get_header(); ?>
+<?php get_header(); ?>
 
   <div id="primary" class="content-area">
 
