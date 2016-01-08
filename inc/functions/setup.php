@@ -15,8 +15,7 @@ if (! isset($content_width)) {
 /**
  * Assign the Edition Tirol Shopdesign version to a var
  */
-$theme           = wp_get_theme('et_shop');
-$et_shop_version = $theme['Version'];
+$et_shop_version =  wp_get_theme()['Version'];
 
 if (! function_exists('et_shop_setup')) :
   /**
@@ -83,11 +82,7 @@ if (! function_exists('et_shop_setup')) :
   }
 endif; // et_shop_setup
 
-/**
- * Register widget area.
- *
- * @link http://codex.wordpress.org/Function_Reference/register_sidebar
- */
+// Register widget area.
 function et_shop_widgets_init() {
   register_sidebar( array(
     'name'          => __('Sidebar', 'et_shop'),
@@ -132,11 +127,11 @@ function et_shop_widgets_init() {
 function et_shop_scripts() {
   global $et_shop_version;
 
-  wp_enqueue_style('et_shop-style', get_template_directory_uri() . '/style.css', '', $et_shop_version);
+  wp_enqueue_style('et_shop-style', get_template_directory_uri() . '/style.css', none, $et_shop_version);
 
-  wp_enqueue_script('et_shop-navigation', get_template_directory_uri() . '/js/navigation.min.js', array('jquery'), '20120206', true);
+  wp_enqueue_script('et_shop-navigation', get_template_directory_uri() . '/js/navigation.min.js', array('jquery'), $et_shop_version, true);
 
-  wp_enqueue_script('et_shop-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.min.js', array(), '20130115', true);
+  wp_enqueue_script('et_shop-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.min.js', none, $et_shop_version, true);
 
   if (is_singular() && comments_open() && get_option('thread_comments')) {
     wp_enqueue_script('comment-reply');
