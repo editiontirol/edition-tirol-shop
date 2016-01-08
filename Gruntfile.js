@@ -29,7 +29,7 @@ module.exports = function(grunt) {
         map: true,
         processors: [
           require('postcss-flexboxfixer')(),
-          require('postcss-gradientfixer'),
+          require('postcss-gradientfixer')(),
           require('postcss-unprefix')(),
           require('postcss-remove-prefixes')(),
           require('autoprefixer')({
