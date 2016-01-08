@@ -4,20 +4,14 @@
   </header><!-- .page-header -->
 
   <div class="page-content">
-    <?php if (is_home() && current_user_can('publish_posts')) : ?>
-
-      <p><?php printf(esc_html__('Ready to publish your first post? <a href="%1$s">Get started here</a>.', 'et_shop' ), esc_url(admin_url( 'post-new.php'))); ?></p>
-
-    <?php elseif (is_search()) : ?>
-
-      <p><?php esc_html_e('Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'et_shop'); ?></p>
-      <?php get_search_form(); ?>
-
-    <?php else : ?>
-
-      <p><?php esc_html_e('It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help.', 'et_shop'); ?></p>
-      <?php get_search_form(); ?>
-
-    <?php endif; ?>
+    <?php if(is_home() && current_user_can('publish_posts')) {
+      printf('<p>'.esc_html__('Ready to publish your first post? <a href="%1$s">Get started here</a>.', 'et_shop').'</p>', esc_url(admin_url('post-new.php')));
+    } elseif(is_search()) {
+      echo '<p>'.esc_html__('Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'et_shop').'</p>';
+      get_search_form();
+    } else {
+      echo '<p>'.esc_html__('It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help.', 'et_shop').'</p>';
+      get_search_form();
+    } ?>
   </div><!-- .page-content -->
 </section><!-- .no-results -->
