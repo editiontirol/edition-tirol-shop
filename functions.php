@@ -8,11 +8,11 @@ function woocommerce_template_loop_product_thumbnail() {
   echo '<div class="product-image">'.woocommerce_get_product_thumbnail().'</div>';
 }
 
-function get_the_ID_and_post_classes($classes) {
+function get_the_ID_and_post_classes($classes = '') {
   return 'id="post-'.get_the_ID().'" class="'.implode(' ', get_post_class($classes)).'"';
 }
 
-function the_ID_and_post_classes($classes) {
+function the_ID_and_post_classes($classes = '') {
   echo get_the_ID_and_post_classes($classes);
 }
 
