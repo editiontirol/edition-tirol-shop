@@ -1,8 +1,8 @@
 <?php
 
-if (! function_exists('et_shop_header_widget_region')) {
+if(! function_exists('et_shop_header_widget_region')) {
   function et_shop_header_widget_region() {
-    if (is_active_sidebar('header-1')) {
+    if(is_active_sidebar('header-1')) {
     ?>
     <div class="header-widget-region" role="complementary">
       <div class="col-full">
@@ -14,11 +14,11 @@ if (! function_exists('et_shop_header_widget_region')) {
   }
 }
 
-if (! function_exists('et_shop_site_branding')) {
+if(! function_exists('et_shop_site_branding')) {
   function et_shop_site_branding() { ?>
     <div class="site-branding">
       <h1 class="site-title"><a href="<?php echo esc_url(home_url('/' )); ?>" rel="home"><?php bloginfo( 'name'); ?></a></h1>
-      <?php if ('' != get_bloginfo('description')) { ?>
+      <?php if('' != get_bloginfo('description')) { ?>
         <p class="site-description"><?php echo bloginfo('description'); ?></p>
       <?php } ?>
     </div><?php
@@ -27,7 +27,7 @@ if (! function_exists('et_shop_site_branding')) {
 
 // Display Primary Navigation
 function et_shop_primary_navigation() {
-  if (has_nav_menu('primary')) { ?>
+  if(has_nav_menu('primary')) { ?>
   <nav id="site-navigation" class="main-navigation" role="navigation" aria-label="<?php esc_html_e('Primary Navigation', 'et_shop'); ?>">
   <button class="menu-toggle" aria-controls="primary-navigation" aria-expanded="false"><?php echo esc_attr(apply_filters('et_shop_menu_toggle_text', __('Navigation', 'et_shop'))); ?></button>
     <?php
@@ -54,7 +54,7 @@ function et_shop_primary_navigation() {
 
  // Display Secondary Navigation
 function et_shop_secondary_navigation() {
-  if (has_nav_menu('secondary')) { ?>
+  if(has_nav_menu('secondary')) { ?>
   <nav class="secondary-navigation" role="navigation" aria-label="<?php _e('Secondary Navigation', 'et_shop'); ?>">
     <?php
       wp_nav_menu(
@@ -69,7 +69,7 @@ function et_shop_secondary_navigation() {
   }
 }
 
-if (! function_exists('et_shop_skip_links')) {
+if(! function_exists('et_shop_skip_links')) {
   /**
    * Skip links
    * @since  1.4.1

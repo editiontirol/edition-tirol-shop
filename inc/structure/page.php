@@ -1,6 +1,6 @@
 <?php
 
-if (! function_exists('et_shop_page_header')) {
+if(! function_exists('et_shop_page_header')) {
   // Display the post header with a link to the single post
   function et_shop_page_header() {
     ?>
@@ -14,7 +14,7 @@ if (! function_exists('et_shop_page_header')) {
   }
 }
 
-if (! function_exists('et_shop_page_content')) {
+if(! function_exists('et_shop_page_content')) {
   // Display the post content with a link to the single post
   function et_shop_page_content() {
     ?>

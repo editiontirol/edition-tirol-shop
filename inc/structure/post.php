@@ -5,7 +5,7 @@
  * @package et_shop
  */
 
-if (! function_exists('et_shop_post_header')) {
+if(! function_exists('et_shop_post_header')) {
   /**
    * Display the post header with a link to the single post
    * @since 1.0.0
@@ -13,11 +13,11 @@ if (! function_exists('et_shop_post_header')) {
   function et_shop_post_header() { ?>
     <header class="entry-header">
     <?php
-    if (is_single()) {
+    if(is_single()) {
       et_shop_posted_on();
       the_title('<h1 class="entry-title" itemprop="name headline">', '</h1>');
     } else {
-      if ('post' == get_post_type()) {
+      if('post' == get_post_type()) {
         et_shop_posted_on();
       }
 
@@ -29,7 +29,7 @@ if (! function_exists('et_shop_post_header')) {
   }
 }
 
-if (! function_exists('et_shop_post_content')) {
+if(! function_exists('et_shop_post_content')) {
   /**
    * Display the post content with a link to the single post
    * @since 1.0.0
@@ -57,7 +57,7 @@ if (! function_exists('et_shop_post_content')) {
   }
 }
 
-if (! function_exists('et_shop_post_meta')) {
+if(! function_exists('et_shop_post_meta')) {
   /**
    * Display the post meta
    * @since 1.0.0
@@ -65,13 +65,13 @@ if (! function_exists('et_shop_post_meta')) {
   function et_shop_post_meta() {
     ?>
     <aside class="entry-meta">
-      <?php if ('post' == get_post_type()) : // Hide category and tag text for pages on Search ?>
+      <?php if('post' == get_post_type()) : // Hide category and tag text for pages on Search ?>
 
       <?php
       /* translators: used between list items, there is a space after the comma */
       $categories_list = get_the_category_list(__(', ', 'et_shop'));
 
-      if ($categories_list && et_shop_categorized_blog()) : ?>
+      if($categories_list && is_categorized_blog()) : ?>
         <span class="cat-links">
           <?php
           echo '<span class="screen-reader-text">' . esc_attr(__('Categories: ', 'et_shop')) . '</span>';
@@ -84,7 +84,7 @@ if (! function_exists('et_shop_post_meta')) {
       /* translators: used between list items, there is a space after the comma */
       $tags_list = get_the_tag_list('', __(', ', 'et_shop'));
 
-      if ($tags_list) : ?>
+      if($tags_list) : ?>
         <span class="tags-links">
           <?php
           echo '<span class="screen-reader-text">'.esc_attr(__('Tags: ', 'et_shop')).'</span>';
@@ -95,7 +95,7 @@ if (! function_exists('et_shop_post_meta')) {
 
       <?php endif; // End if 'post' == get_post_type() ?>
 
-      <?php if (! post_password_required() && (comments_open() || '0' != get_comments_number())) : ?>
+      <?php if(! post_password_required() && (comments_open() || '0' != get_comments_number())) : ?>
         <span class="comments-link"><?php comments_popup_link(__('Leave a comment', 'et_shop' ), __('1 Comment', 'et_shop'), __( '% Comments', 'et_shop')); ?></span>
       <?php endif; ?>
     </aside>
@@ -103,7 +103,7 @@ if (! function_exists('et_shop_post_meta')) {
   }
 }
 
-if (! function_exists('et_shop_paging_nav')) {
+if(! function_exists('et_shop_paging_nav')) {
   /**
    * Display navigation to next/previous set of posts when applicable.
    */
@@ -120,7 +120,7 @@ if (! function_exists('et_shop_paging_nav')) {
   }
 }
 
-if (! function_exists('et_shop_post_nav')) {
+if(! function_exists('et_shop_post_nav')) {
   /**
    * Display navigation to next/previous post when applicable.
    */
@@ -133,13 +133,13 @@ if (! function_exists('et_shop_post_nav')) {
   }
 }
 
-if (! function_exists('et_shop_posted_on')) {
+if(! function_exists('et_shop_posted_on')) {
   /**
    * Prints HTML with meta information for the current post-date/time and author.
    */
   function et_shop_posted_on() {
     $time_string = '<time class="entry-date published updated" datetime="%1$s" itemprop="datePublished">%2$s</time>';
-    if (get_the_time('U' ) !== get_the_modified_time( 'U')) {
+    if(get_the_time('U' ) !== get_the_modified_time( 'U')) {
       $time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time><time class="updated" datetime="%3$s" itemprop="datePublished">%4$s</time>';
     }
 

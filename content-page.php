@@ -1,9 +1,3 @@
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-  <?php
-  /**
-   * @hooked et_shop_page_header - 10
-   * @hooked et_shop_page_content - 20
-   */
-  do_action('et_shop_page');
-  ?>
-</article><!-- #post-## -->
+<section <?php the_ID_and_post_classes(); ?>>
+  <?php do_action('et_shop_page'); ?>
+</section>

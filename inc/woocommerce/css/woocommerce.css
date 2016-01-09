@@ -969,7 +969,7 @@ p.stars.selected a:not(.active):before {
   text-align: center;
 }
 
-.et_shop-sorting {
+.woocommerce-sorting {
   background-color: rgba(0, 0, 0, 0.1);
   font-size: .875em;
   margin-bottom: 2.618em;
@@ -1378,16 +1378,16 @@ dl.variation dd {
     margin-bottom: 1.618em;
   }
 
-  .et_shop-sorting {
+  .woocommerce-sorting {
     margin-bottom: 2.618em;
     padding: 1em 2em;
   }
-  .et_shop-sorting::after {
+  .woocommerce-sorting::after {
     clear: both;
     content: "";
     display: table;
   }
-  .et_shop-sorting select {
+  .woocommerce-sorting select {
     width: auto;
   }
 

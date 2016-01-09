@@ -1,6 +1,6 @@
 <?php
 
-if (! function_exists('et_shop_product_categories')) {
+if(! function_exists('et_shop_product_categories')) {
   /**
    * Display Product Categories
    * Hooked into the `homepage` action in the homepage template
@@ -9,7 +9,7 @@ if (! function_exists('et_shop_product_categories')) {
    */
   function et_shop_product_categories($args) {
 
-    if (is_woocommerce_activated()) {
+    if(is_woocommerce_activated()) {
 
       $args = apply_filters( 'et_shop_product_categories_args', array(
         'limit'       => 3,
@@ -41,7 +41,7 @@ if (! function_exists('et_shop_product_categories')) {
   }
 }
 
-if (! function_exists('et_shop_recent_products')) {
+if(! function_exists('et_shop_recent_products')) {
   /**
    * Display Recent Products
    * Hooked into the `homepage` action in the homepage template
@@ -50,7 +50,7 @@ if (! function_exists('et_shop_recent_products')) {
    */
   function et_shop_recent_products($args) {
 
-    if (is_woocommerce_activated()) {
+    if(is_woocommerce_activated()) {
 
       $args = apply_filters( 'et_shop_recent_products_args', array(
         'limit'       => 4,
@@ -77,7 +77,7 @@ if (! function_exists('et_shop_recent_products')) {
   }
 }
 
-if (! function_exists('et_shop_featured_products')) {
+if(! function_exists('et_shop_featured_products')) {
   /**
    * Display Featured Products
    * Hooked into the `homepage` action in the homepage template
@@ -86,7 +86,7 @@ if (! function_exists('et_shop_featured_products')) {
    */
   function et_shop_featured_products($args) {
 
-    if (is_woocommerce_activated()) {
+    if(is_woocommerce_activated()) {
 
       $featured_query = new WP_Query(array(
           'post_type' => 'product',
@@ -94,7 +94,7 @@ if (! function_exists('et_shop_featured_products')) {
           'meta_value' => 'yes'
       ));
 
-      if ($featured_query->have_posts()) {
+      if($featured_query->have_posts()) {
 
         $args = apply_filters( 'et_shop_featured_products_args', array(
           'limit'   => 4,
@@ -126,7 +126,7 @@ if (! function_exists('et_shop_featured_products')) {
   }
 }
 
-if (! function_exists('et_shop_popular_products')) {
+if(! function_exists('et_shop_popular_products')) {
   /**
    * Display Popular Products
    * Hooked into the `homepage` action in the homepage template
@@ -135,7 +135,7 @@ if (! function_exists('et_shop_popular_products')) {
    */
   function et_shop_popular_products($args) {
 
-    if (is_woocommerce_activated()) {
+    if(is_woocommerce_activated()) {
 
       $args = apply_filters( 'et_shop_popular_products_args', array(
         'limit'       => 4,
@@ -163,13 +163,13 @@ if (! function_exists('et_shop_popular_products')) {
   }
 }
 
-if (! function_exists('et_shop_on_sale_products')) {
+if(! function_exists('et_shop_on_sale_products')) {
 
   // Display On Sale Products
   // Hooked into the `homepage` action in the homepage template
   function et_shop_on_sale_products($args) {
 
-    if (is_woocommerce_activated()) {
+    if(is_woocommerce_activated()) {
 
       $args = apply_filters( 'et_shop_on_sale_products_args', array(
         'limit'       => 4,
@@ -197,7 +197,7 @@ if (! function_exists('et_shop_on_sale_products')) {
   }
 }
 
-if (! function_exists('et_shop_homepage_content')) {
+if(! function_exists('et_shop_homepage_content')) {
   /**
    * Display homepage content
    * Hooked into the `homepage` action in the homepage template
@@ -205,7 +205,7 @@ if (! function_exists('et_shop_homepage_content')) {
    * @return  void
    */
   function et_shop_homepage_content() {
-    while (have_posts()) : the_post();
+    while(have_posts()) : the_post();
 
       get_template_part('content', 'page');
 
@@ -213,7 +213,7 @@ if (! function_exists('et_shop_homepage_content')) {
   }
 }
 
-if (! function_exists('et_shop_social_icons')) {
+if(! function_exists('et_shop_social_icons')) {
   /**
    * Display social icons
    * If the subscribe and connect plugin is active, display the icons.
@@ -221,7 +221,7 @@ if (! function_exists('et_shop_social_icons')) {
    * @since 1.0.0
    */
   function et_shop_social_icons() {
-    if (class_exists('Subscribe_And_Connect')) {
+    if(class_exists('Subscribe_And_Connect')) {
       echo '<div class="subscribe-and-connect-connect">';
       subscribe_and_connect_connect();
       echo '</div>';
@@ -236,7 +236,7 @@ function et_shop_get_sidebar() {
 }
 
 
-if (! function_exists('et_shop_post_thumbnail')) {
+if(! function_exists('et_shop_post_thumbnail')) {
   /**
    * Display post thumbnail
    * @var $size thumbnail size. thumbnail|medium|large|full|$custom
@@ -246,7 +246,7 @@ if (! function_exists('et_shop_post_thumbnail')) {
    * @since 1.5.0
    */
   function et_shop_post_thumbnail($size) {
-    if (has_post_thumbnail()) {
+    if(has_post_thumbnail()) {
       the_post_thumbnail($size, array('itemprop' => 'image'));
     }
   }

@@ -1169,7 +1169,7 @@ p.stars {
   }
 }
 
-.et_shop-sorting {
+.woocommerce-sorting {
   background-color: $color-border;
   font-size: .875em;
   margin-bottom: 2.618em;
@@ -1656,7 +1656,7 @@ dl.variation {
     margin-bottom: 1.618em;
   }
 
-  .et_shop-sorting {
+  .woocommerce-sorting {
     @include clearfix;
     margin-bottom: 2.618em;
     padding: 1em 2em;

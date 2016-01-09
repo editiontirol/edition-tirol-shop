@@ -1,24 +1,24 @@
 <?php
 
 // Setup: Enqueue styles, register widget regions, etc.
-require get_template_directory().'/inc/functions/setup.php';
+require_once('functions/setup.php');
 
 // Template functions used throughout the theme.
-require get_template_directory().'/inc/structure/hooks.php';
-require get_template_directory().'/inc/structure/post.php';
-require get_template_directory().'/inc/structure/page.php';
-require get_template_directory().'/inc/structure/header.php';
-require get_template_directory().'/inc/structure/footer.php';
-require get_template_directory().'/inc/structure/comments.php';
-require get_template_directory().'/inc/structure/template-tags.php';
+require_once('structure/hooks.php');
+require_once('structure/post.php');
+require_once('structure/page.php');
+require_once('structure/header.php');
+require_once('structure/footer.php');
+require_once('structure/comments.php');
+require_once('structure/template-tags.php');
 
 // Custom functions that act independently of the theme templates.
-require get_template_directory().'/inc/functions/extras.php';
+require_once('functions/extras.php');
 
 // Load WooCommerce compatibility files.
 if(is_woocommerce_activated()) {
-  require get_template_directory().'/inc/woocommerce/hooks.php';
-  require get_template_directory().'/inc/woocommerce/functions.php';
-  require get_template_directory().'/inc/woocommerce/template-tags.php';
-  require get_template_directory().'/inc/woocommerce/integrations.php';
+  require_once('woocommerce/hooks.php');
+  require_once('woocommerce/functions.php');
+  require_once('woocommerce/template-tags.php');
+  require_once('woocommerce/integrations.php');
 }
