@@ -5,8 +5,8 @@
         <div class="page-content">
           <header class="page-header">
             <h1 class="page-title"><?php esc_html_e('Oops! That page can&rsquo;t be found.', 'et_shop'); ?></h1>
-          </header><?php
-          echo '<p>'.esc_html__('Nothing was found at this location. Try searching, or check out the links below.', 'et_shop').'</p>';
+          </header>
+          <?php echo '<p>'.esc_html__('Nothing was found at this location. Try searching, or check out the links below.', 'et_shop').'</p>';
 
           if(is_woocommerce_activated()) {
             the_widget('WC_Widget_Product_Search'); ?>

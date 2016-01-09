@@ -13,5 +13,5 @@
       echo '<p>'.esc_html__('It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help.', 'et_shop').'</p>';
       get_search_form();
     } ?>
-  </div><!-- .page-content -->
-</section><!-- .no-results -->
+  </div>
+</section>

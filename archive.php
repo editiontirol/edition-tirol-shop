@@ -5,8 +5,8 @@
         <header class="page-header">
           <h1 class="page-title"><?php the_archive_title(); ?></h1>
           <?php the_archive_description(); ?>
-        </header><?php
-        get_template_part('loop');
+        </header>
+        <?php get_template_part('loop');
       } else {
         get_template_part('content', 'none');
       } ?>

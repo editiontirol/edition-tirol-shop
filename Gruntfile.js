@@ -68,7 +68,7 @@ module.exports = function(grunt) {
     },
     shell: {
       'upload': {
-        command: 'source ../site/config; rsync --archive --compress --exclude-from .gitignore --exclude .tm_properties --exclude .git --exclude .DS_Store --delete-excluded "$PWD/" "$SSH_USER@$SSH_HOST:$REMOTE_DIR/www/wp-content/themes/edition-tirol-shop/"'
+        command: 'source ../site/config; rsync --archive --compress --exclude-from .gitignore --exclude .tm_properties --exclude .git --exclude .DS_Store --delete-excluded "$PWD/" "$SSH_USER@$SSH_HOST:$REMOTE_DIR/www/wp-content/themes/edition-tirol-shop/" && terminal-notifier -message Uploaded. -sound Pop'
       }
     },
     watch: {
