@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Edition Tirol Shopdesign 1.5.3\n"
 "Report-Msgid-Bugs-To: https://github.com/woothemes/et_shop/issues\n"
-"POT-Creation-Date: 2016-01-02 06:14+0100\n"
-"PO-Revision-Date: 2016-01-02 06:17+0100\n"
+"POT-Creation-Date: 2016-01-09 10:28+0100\n"
+"PO-Revision-Date: 2016-01-09 10:29+0100\n"
 "Last-Translator: \n"
 "Language-Team: EMAIL@ADDRESS\n"
 "Language: de_DE\n"
@@ -15,11 +15,11 @@ msgstr ""
 "X-Generator: Poedit 1.8.5\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: 404.php:19
+#: 404.php:7
 msgid "Oops! That page can&rsquo;t be found."
 msgstr "Upps ... die Seite konnte leider nicht gefunden werden."
 
-#: 404.php:22
+#: 404.php:9
 msgid ""
 "Nothing was found at this location. Try searching, or check out the links "
 "below."
@@ -27,15 +27,15 @@ msgstr ""
 "Keine Einträge gefunden. Bitte nutzen Sie die Suche oder besuchen Sie die "
 "unten stehenden Links."
 
-#: 404.php:45 inc/structure/template-tags.php:26
+#: 404.php:19 inc/structure/template-tags.php:19
 msgid "Product Categories"
 msgstr "Produktkategorien"
 
-#: 404.php:54
+#: 404.php:24
 msgid "Popular Products"
 msgstr "Beliebte Artikel"
 
-#: comments.php:26
+#: comments.php:13
 #, php-format
 msgctxt "comments title"
 msgid "One thought on &ldquo;%2$s&rdquo;"
@@ -43,27 +43,27 @@ msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
 msgstr[0] "Ein Gedanke zu &ldquo;%2$s&rdquo;"
 msgstr[1] "%1$s Gedanken zu &ldquo;%2$s&rdquo;"
 
-#: comments.php:33 comments.php:51
+#: comments.php:20 comments.php:38
 msgid "Comment navigation"
 msgstr "Kommentarnavigation"
 
-#: comments.php:34 comments.php:52
+#: comments.php:21 comments.php:39
 msgid "&larr; Older Comments"
 msgstr "&larr; Ältere Kommentare"
 
-#: comments.php:35 comments.php:53
+#: comments.php:22 comments.php:40
 msgid "Newer Comments &rarr;"
 msgstr "Neuere Kommentare &rarr;"
 
-#: comments.php:60
+#: comments.php:47
 msgid "Comments are closed."
 msgstr "Die Kommentarfunktion ist deaktiviert."
 
-#: content-none.php:13
+#: content-none.php:3
 msgid "Nothing Found"
 msgstr "Es wurde nichts gefunden."
 
-#: content-none.php:19
+#: content-none.php:8
 #, php-format
 msgid ""
 "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
@@ -71,7 +71,7 @@ msgstr ""
 "Bereit, Ihren ersten Artikel zu veröffentlichen? <a href=„%1$s“>Starten Sie "
 "hier</a>."
 
-#: content-none.php:23
+#: content-none.php:10
 msgid ""
 "Sorry, but nothing matched your search terms. Please try again with some "
 "different keywords."
@@ -79,7 +79,7 @@ msgstr ""
 "Leider keine Übereinstimmung mit Ihrem Suchbegriff. Versuchen Sie es noch "
 "einmal mit einem anderen Suchwort."
 
-#: content-none.php:28
+#: content-none.php:13
 msgid ""
 "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
 "searching can help."
@@ -87,32 +87,32 @@ msgstr ""
 "Upps … die Seite konnte leider nicht gefunden werden. Versuchen Sie es noch "
 "einmal mit einem anderen Suchbegriff."
 
-#: inc/functions/setup.php:60
+#: inc/functions/setup.php:34
 msgid "Primary Menu"
 msgstr "Hauptmenü"
 
-#: inc/functions/setup.php:61
+#: inc/functions/setup.php:35
 msgid "Secondary Menu"
 msgstr "Sekundäres Menü"
 
-#: inc/functions/setup.php:62
+#: inc/functions/setup.php:36
 msgid "Handheld Menu"
 msgstr "Mobilmenü"
 
-#: inc/functions/setup.php:104
+#: inc/functions/setup.php:62
 msgid "Sidebar"
 msgstr "Seitenleiste"
 
-#: inc/functions/setup.php:114
+#: inc/functions/setup.php:72
 msgid "Header"
 msgstr "Header-Gruppe (Titel und Untertitel)"
 
-#: inc/functions/setup.php:127
+#: inc/functions/setup.php:85
 #, php-format
 msgid "Footer %d"
 msgstr "Footer %d"
 
-#: inc/functions/setup.php:129
+#: inc/functions/setup.php:87
 #, php-format
 msgid "Widgetized Footer Region %d."
 msgstr "Footerbereich mit Widgets %d."
@@ -130,27 +130,27 @@ msgstr "Bearbeiten"
 msgid "%1$s designed by %2$s."
 msgstr "%1$s entwickelt von %2$s."
 
-#: inc/structure/header.php:54
+#: inc/structure/header.php:31
 msgid "Primary Navigation"
 msgstr "Hauptnavigation"
 
-#: inc/structure/header.php:55
+#: inc/structure/header.php:32
 msgid "Navigation"
 msgstr "Navigation"
 
-#: inc/structure/header.php:84
+#: inc/structure/header.php:58
 msgid "Secondary Navigation"
 msgstr "Sekundärnavigation"
 
-#: inc/structure/header.php:106
+#: inc/structure/header.php:80
 msgid "Skip to navigation"
 msgstr "Weiter zur Navigation"
 
-#: inc/structure/header.php:107
+#: inc/structure/header.php:81
 msgid "Skip to content"
 msgstr "Zum Inhalt springen"
 
-#: inc/structure/page.php:36 inc/structure/post.php:51
+#: inc/structure/page.php:25 inc/structure/post.php:51
 msgid "Pages:"
 msgstr "Seiten:"
 
@@ -205,42 +205,42 @@ msgctxt "post author"
 msgid "by %s"
 msgstr "von %s"
 
-#: inc/structure/template-tags.php:65
+#: inc/structure/template-tags.php:58
 msgid "Recent Products"
 msgstr "Aktuelle Produkte"
 
-#: inc/structure/template-tags.php:103 inc/woocommerce/template-tags.php:144
+#: inc/structure/template-tags.php:104 inc/woocommerce/template-tags.php:78
 msgid "Featured Products"
 msgstr "Empfohlene Produkte"
 
-#: inc/structure/template-tags.php:142
+#: inc/structure/template-tags.php:143
 msgid "Top Rated Products"
 msgstr "Bestbewertete Produkte"
 
-#: inc/structure/template-tags.php:179
+#: inc/structure/template-tags.php:177
 msgid "On Sale"
 msgstr "Im Angebot"
 
-#: inc/woocommerce/template-tags.php:18
+#: inc/woocommerce/template-tags.php:6
 msgid "View your shopping cart"
 msgstr "Warenkorb anzeigen"
 
-#: inc/woocommerce/template-tags.php:19
+#: inc/woocommerce/template-tags.php:8
 #, php-format
 msgid "%d item"
 msgid_plural "%d items"
 msgstr[0] "%d Artikel"
 msgstr[1] "%d Artikel"
 
-#: inc/woocommerce/template-tags.php:152
+#: inc/woocommerce/template-tags.php:85
 msgid "On Sale Now"
 msgstr "Jetzt reduziert"
 
-#: inc/woocommerce/template-tags.php:160
+#: inc/woocommerce/template-tags.php:92
 msgid "New In Store"
 msgstr "Neu im Shop"
 
-#: search.php:16
+#: search.php:6
 #, php-format
 msgid "Search Results for: %s"
 msgstr "Suchergebnisse für: %s"
