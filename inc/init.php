@@ -21,5 +21,4 @@ if(is_woocommerce_activated()) {
   require_once('woocommerce/hooks.php');
   require_once('woocommerce/functions.php');
   require_once('woocommerce/template-tags.php');
-  require_once('woocommerce/integrations.php');
 }

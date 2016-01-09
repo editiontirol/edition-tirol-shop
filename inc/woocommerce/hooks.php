@@ -50,7 +50,3 @@ add_filter('loop_shop_per_page', 'et_shop_products_per_page');
 add_filter('loop_shop_columns', 'et_shop_loop_columns');
 
 add_filter('woocommerce_add_to_cart_fragments', 'et_shop_cart_link_fragment');
-
-
-// Integrations
-add_action('wp_enqueue_scripts',             'et_shop_woocommerce_integrations_scripts');
