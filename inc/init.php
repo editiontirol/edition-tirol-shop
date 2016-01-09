@@ -13,6 +13,7 @@ require_once('structure/comments.php');
 require_once('structure/template-tags.php');
 
 // Custom functions that act independently of the theme templates.
+require_once('functions/filters.php');
 require_once('functions/extras.php');
 
 // Load WooCommerce compatibility files.
