@@ -11,7 +11,7 @@
   <div id="page" class="hfeed site">
     <?php do_action('et_shop_before_header'); ?>
 
-    <header class="site-header" role="banner">
+    <header class="site-header">
       <div class="col-full">
         <?php do_action('et_shop_header'); ?>
       </div>

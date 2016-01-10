@@ -1,6 +1,6 @@
 <?php get_header(); ?>
   <section id="primary" class="content-area full-width">
-    <main id="main" class="site-main" role="main">
+    <main id="main" class="site-main">
       <?php woocommerce_content(); ?>
     </main>
   </section>

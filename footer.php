@@ -3,7 +3,7 @@
 
   <?php do_action('et_shop_before_footer'); ?>
 
-  <footer class="site-footer" role="contentinfo">
+  <footer class="site-footer">
     <div class="col-full">
       <?php do_action('et_shop_footer'); ?>
     </div>

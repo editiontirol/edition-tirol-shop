@@ -1,6 +1,6 @@
 <?php get_header(); ?>
   <div id="primary" class="content-area">
-    <main id="main" class="site-main" role="main">
+    <main id="main" class="site-main">
       <section class="error-404 not-found">
         <div class="page-content">
           <header class="page-header">

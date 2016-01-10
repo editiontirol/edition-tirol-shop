@@ -8,25 +8,16 @@ function et_shop_setup() {
    * Note: the first-loaded translation file overrides any following ones if the same translation is present.
    */
 
-  // wp-content/languages/themes/et_shop-it_IT.mo
+  // wp-content/languages/themes/et_shop-de_DE.mo
   load_theme_textdomain('et_shop', trailingslashit(WP_LANG_DIR) . 'themes/');
 
-  // wp-content/themes/child-theme-name/languages/it_IT.mo
-  load_theme_textdomain('et_shop', get_stylesheet_directory() . '/languages');
-
-  // wp-content/themes/et_shop/languages/it_IT.mo
+  // wp-content/themes/et_shop/languages/de_DE.mo
   load_theme_textdomain('et_shop', get_template_directory() . '/languages');
 
-  /**
-   * Add default posts and comments RSS feed links to head.
-   */
+  // Add default posts and comments RSS feed links to head.
   add_theme_support('automatic-feed-links');
 
-  /*
-   * Enable support for Post Thumbnails on posts and pages.
-   *
-   * @link http://codex.wordpress.org/Function_Reference/add_theme_support#Post_Thumbnails
-   */
+  // Enable support for Post Thumbnails on posts and pages.
   add_theme_support('post-thumbnails');
 
   // This theme uses wp_nav_menu() in two locations.
@@ -36,10 +27,7 @@ function et_shop_setup() {
     'handheld'    => __('Handheld Menu', 'et_shop'),
   ) );
 
-  /*
-   * Switch default core markup for search form, comment form, comments, galleries, captions and widgets
-   * to output valid HTML5.
-   */
+  // Switch default core markup to HTML 5 for search form, comment form, comments, galleries, captions and widgets.
   add_theme_support( 'html5', array(
     'search-form',
     'comment-form',
@@ -47,7 +35,7 @@ function et_shop_setup() {
     'gallery',
     'caption',
     'widgets',
-  ) );
+  ));
 
   // Declare WooCommerce support
   add_theme_support('woocommerce');

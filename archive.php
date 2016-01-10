@@ -1,6 +1,6 @@
 <?php get_header(); ?>
   <section id="primary" class="content-area">
-    <main id="main" class="site-main" role="main"><?php
+    <main id="main" class="site-main"><?php
       if(have_posts()) { ?>
         <header class="page-header">
           <h1 class="page-title"><?php the_archive_title(); ?></h1>
