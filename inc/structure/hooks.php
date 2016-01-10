@@ -5,14 +5,13 @@ add_action('after_setup_theme',       'et_shop_setup');
 add_action('widgets_init',            'et_shop_widgets_init');
 add_action('wp_enqueue_scripts',      'et_shop_scripts',              10);
 add_action('wp_enqueue_scripts',      'et_shop_child_scripts',        30); // After WooCommerce
-add_action('et_shop_before_content',  'et_shop_header_widget_region', 10);
 add_action('et_shop_sidebar',         'et_shop_get_sidebar',          10);
 
 // Header
 add_action('et_shop_header', 'et_shop_skip_links',            0);
 add_action('et_shop_header', 'et_shop_site_branding',        20);
 add_action('et_shop_header', 'et_shop_secondary_navigation', 30);
-add_action('et_shop_header', 'et_shop_primary_navigation',   50);
+add_action('et_shop_header_nav', 'et_shop_primary_navigation',   50);
 
 // Footer
 add_action('et_shop_footer', 'et_shop_footer_widgets', 10);

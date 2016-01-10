@@ -1,61 +1,14 @@
 // General Layout
 
 @media screen and (min-width: 768px) {
-  .site-header {
-    .site-branding,
-    .site-logo-anchor,
-    .site-logo-link {
-      @include span(3 of 12);
-      clear: both;
-      display: block;
-
-      img {
-        height: auto;
-        max-height: none;
-        max-width: 100%;
-      }
-    }
-  }
 
   .woocommerce-active {
     .site-header {
-      .secondary-navigation {
-        @include span(6 of 12);
-      }
-
-      .site-search {
-        @include span(last 3 of 12);
-        clear: none;
-      }
-
-      .main-navigation {
-        float: left;
-        clear: both;
-        margin-top: 1em;
-        width: auto;
-      }
-
       .site-header-cart {
         float: right;
         margin-bottom: 0;
-        margin-top: 1em;
       }
     }
-  }
-
-  .site-branding {
-    .site-description {
-      display: block;
-      margin-bottom: 0;
-    }
-  }
-
-  .site-branding,
-  .site-search,
-  .site-header-cart,
-  .site-logo-anchor,
-  .site-logo-link {
-    margin-bottom: 1em;
   }
 
   .site-header {

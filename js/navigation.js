@@ -43,7 +43,7 @@
   };
 
   // Add focus class to li
-  jQuery( '.main-navigation, .secondary-navigation' ).find( 'a' ).on( 'focus.et_shop blur.et_shop', function() {
+  jQuery( '.main-navigation' ).find( 'a' ).on( 'focus.et_shop blur.et_shop', function() {
     jQuery( this ).parents().toggleClass( 'focus' );
   });
 

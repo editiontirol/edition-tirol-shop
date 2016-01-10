@@ -1,0 +1,62 @@
+.site-description {
+  display: none;
+}
+
+.site-title {
+  font-size: 1em;
+  line-height: 1;
+  margin: 2em auto 1em;
+  text-align: center;
+}
+
+.site-title-text {
+  @extend %screen-reader-text;
+}
+
+.site-search form {
+  margin-bottom: 0;
+}
+
+.site-logo {
+  display: block;
+
+  svg {
+    height: 80px;
+    max-height: 100%;
+    max-width: 100%;
+  }
+}
+
+@include media-query($on-desktop) {
+  .site-logo svg {
+    height: 120px;
+  }
+
+  .site-title,
+  .site-description {
+    float: left;
+    margin: 0;
+  }
+
+  .site-description {
+    display: block;
+    font-size: 1.25em;
+    line-height: 120px;
+    margin-left: 2em;
+  }
+
+  .site-search {
+    clear: none;
+    float: right;
+    padding: 2em 0;
+
+    [placeholder^='Nach']{
+      min-width: 18em;
+      max-width: 100%;
+
+      &::-webkit-input-placeholder  {
+        text-overflow: ellipsis !important;
+      }
+    }
+  }
+}

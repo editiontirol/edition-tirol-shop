@@ -21,11 +21,9 @@ function et_shop_setup() {
   add_theme_support('post-thumbnails');
 
   // This theme uses wp_nav_menu() in two locations.
-  register_nav_menus( array(
-    'primary'    => __('Primary Menu', 'et_shop'),
-    'secondary'    => __('Secondary Menu', 'et_shop'),
-    'handheld'    => __('Handheld Menu', 'et_shop'),
-  ) );
+  register_nav_menus(array(
+    'primary' => __('Primary Menu', 'et_shop'),
+  ));
 
   // Switch default core markup to HTML 5 for search form, comment form, comments, galleries, captions and widgets.
   add_theme_support( 'html5', array(
@@ -49,16 +47,6 @@ function et_shop_widgets_init() {
   register_sidebar( array(
     'name'          => __('Sidebar', 'et_shop'),
     'id'            => 'sidebar-1',
-    'description'   => '',
-    'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-    'after_widget'  => '</aside>',
-    'before_title'  => '<h3 class="widget-title">',
-    'after_title'   => '</h3>',
-  ) );
-
-  register_sidebar( array(
-    'name'          => __('Header', 'et_shop'),
-    'id'            => 'header-1',
     'description'   => '',
     'before_widget' => '<aside id="%1$s" class="widget %2$s">',
     'after_widget'  => '</aside>',

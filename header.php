@@ -12,6 +12,11 @@
     <?php do_action('et_shop_before_header'); ?>
 
     <header class="site-header">
+      <div class="header-nav">
+        <nav id="site-navigation" class="main-navigation col-full" aria-label="<?php esc_html_e('Header Navigation', 'et_shop'); ?>">
+          <?php do_action('et_shop_header_nav'); ?>
+        </nav>
+      </div>
       <div class="col-full">
         <?php do_action('et_shop_header'); ?>
       </div>

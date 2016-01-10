@@ -3,9 +3,9 @@
 // Cart Link
 // Displayed a link to the cart including the number of items present and the cart total
 function et_shop_cart_link() { ?>
-  <a class="cart-contents" href="<?=(esc_url(WC()->cart->get_cart_url()));?>" title="<?=(__( 'View your shopping cart', 'et_shop'));?>">
-    <span class="amount"><?=(wp_kses_data(WC()->cart->get_cart_subtotal()));?></span>
-    <span class="count"><?=(wp_kses_data(sprintf(_n( '%d item', '%d items', WC()->cart->get_cart_contents_count(), 'et_shop'), WC()->cart->get_cart_contents_count())));?></span>
+  <a class="cart-contents" href="<?=esc_url(WC()->cart->get_cart_url());?>" title="<?=__( 'View your shopping cart', 'et_shop');?>">
+    <span class="amount"><?=wp_kses_data(WC()->cart->get_cart_subtotal());?></span>
+    <span class="count"><?=wp_kses_data(sprintf(_n( '%d item', '%d items', WC()->cart->get_cart_contents_count(), 'et_shop'), WC()->cart->get_cart_contents_count()));?></span>
   </a><?php
 }
 
@@ -26,10 +26,8 @@ function et_shop_header_cart() {
       <li<?=(is_cart() ? ' class="current-menu-item"' : '');?>><?php
         et_shop_cart_link();
 
-        if(!is_cart()) { ?>
-          <ul class="sub-menu">
-            <li><?php the_widget('WC_Widget_Cart', 'title='); ?></li>
-          </ul><?php
+        if(!is_cart()) {
+          the_widget('WC_Widget_Cart', 'title=');
         } ?>
       </li>
     </ul>

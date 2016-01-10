@@ -11,28 +11,11 @@
 // Header
 
 .site-header {
-  background-color: $header-background;
-  background-position: center center;
+  background-color: $gainsboro;
   color: $header-color;
-  padding-top: 2.618em;
+  padding-bottom: 2em;
   position: relative;
   z-index: 999;
-
-  .site-logo-anchor,
-  .site-logo-link {
-    display: block;
-
-    img {
-      max-height: 2.618em;
-      width: auto;
-    }
-  }
-
-  .site-branding,
-  .site-logo-anchor,
-  .site-logo-link {
-    margin-bottom: 1.618em;
-  }
 
   .widget {
     margin-bottom: 0;
@@ -62,23 +45,6 @@
 .header-widget-region {
   position: relative;
   z-index: 99;
-}
-
-.site-branding {
-  h1 {
-    font-size: 1.618em;
-    letter-spacing: -1px;
-    margin: 0;
-
-    a {
-      font-weight: 700;
-    }
-  }
-
-  .site-description {
-    display: none;
-    font-size: .875em;
-  }
 }
 
 // Main content area
