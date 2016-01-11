@@ -27,8 +27,8 @@
     "grunt-scss-lint": "^0.3.8",
     "grunt-shell": "^1.1.2",
     "normalize-scss": "^4.0.3",
-    "postcss-flexboxfixer": "^0.0.3",
-    "postcss-gradientfixer": "^0.0.4",
+    "postcss-flexboxfixer": "^0.0.4",
+    "postcss-gradientfixer": "0.0.5",
     "postcss-remove-prefixes": "^1.1.0",
     "postcss-unprefix": "git://github.com/yisibl/postcss-unprefix.git",
     "susy": "^2.2.10"
