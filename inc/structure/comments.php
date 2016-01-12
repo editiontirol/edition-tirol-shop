@@ -17,7 +17,7 @@ function et_shop_comment($comment, $args, $depth) {
     $tag = 'li';
     $add_below = 'div-comment';
   } ?>
-  <<?php echo esc_attr($tag ); ?> <?php comment_class(empty($args['has_children']) ? '' : 'parent') ?> id="comment-<?php comment_ID() ?>">
+  <<?= esc_attr($tag).' '.comment_class(empty($args['has_children']) ? '' : 'parent') ?> id="comment-<?php comment_ID(); ?>">
   <div class="comment-body">
   <aside class="comment-meta commentmetadata">
     <div class="comment-author vcard">
@@ -25,14 +25,14 @@ function et_shop_comment($comment, $args, $depth) {
       <?php printf('<cite class="fn">%s</cite>', get_comment_author_link()); ?>
     </div>
     <?php if('0' == $comment->comment_approved) { ?>
-      <i class="comment-awaiting-moderation"><?php _e('Your comment is awaiting moderation.', 'et_shop'); ?></i>
+      <i class="comment-awaiting-moderation"><?= __('Your comment is awaiting moderation.', 'et_shop'); ?></i>
       <br />
     <?php } ?>
 
-    <a href="<?php echo esc_url(htmlspecialchars(get_comment_link($comment->comment_ID))); ?>" class="comment-date"><?php echo '<time>'.get_comment_date().'</time>'; ?></a>
+    <a href="<?= esc_url(htmlspecialchars(get_comment_link($comment->comment_ID))); ?>" class="comment-date"><time><?= get_comment_date(); ?></time></a>
   </aside>
   <?php if('div' != $args['style']) { ?>
-    <div id="div-comment-<?php comment_ID() ?>" class="comment-content">
+    <div id="div-comment-<?php comment_ID(); ?>" class="comment-content">
   <?php } ?>
 
   <?php comment_text(); ?>

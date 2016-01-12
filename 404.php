@@ -4,9 +4,9 @@
       <section class="error-404 not-found">
         <div class="page-content">
           <header class="page-header">
-            <h1 class="page-title"><?php esc_html_e('Oops! That page can&rsquo;t be found.', 'et_shop'); ?></h1>
+            <h1 class="page-title"><?= esc_html__('Oops! That page can&rsquo;t be found.', 'et_shop'); ?></h1>
           </header>
-          <?php echo '<p>'.esc_html__('Nothing was found at this location. Try searching, or check out the links below.', 'et_shop').'</p>';
+          <p><?= esc_html__('Nothing was found at this location. Try searching, or check out the links below.', 'et_shop'); ?></p><?php
 
           if(is_woocommerce_activated()) {
             the_widget('WC_Widget_Product_Search'); ?>
@@ -16,13 +16,13 @@
                 <?php et_shop_promoted_products(); ?>
               </aside>
               <nav class="col-2">
-                <h2><?php esc_html_e('Product Categories', 'et_shop'); ?></h2>
+                <h2><?= esc_html__('Product Categories', 'et_shop'); ?></h2>
                 <?php the_widget('WC_Widget_Product_Categories', array('count' => 1)); ?>
               </nav>
             </div>
             <aside>
-              <h2><?php esc_html_e('Popular Products', 'et_shop'); ?></h2>
-              <?php echo et_shop_do_shortcode('best_selling_products', array('per_page' => 4, 'columns' => 4)); ?>
+              <h2><?= esc_html__('Popular Products', 'et_shop'); ?></h2>
+              <?= et_shop_do_shortcode('best_selling_products', array('per_page' => 4, 'columns' => 4)); ?>
             </aside><?php
           } else {
             get_search_form();
