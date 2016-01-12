@@ -3233,7 +3233,7 @@ th {
   color: #85806d;
 }
 .site-footer a:not(.button) {
-  color: #9e76c0;
+  color: #3265ad;
 }
 
 .site-info {
@@ -3522,12 +3522,12 @@ img {
 }
 
 a {
-  color: #9e76c0;
+  color: #3265ad;
   font-weight: 700;
   text-decoration: none;
 }
 a:focus {
-  outline: 1px solid #9e76c0;
+  outline: 1px solid #3265ad;
 }
 
 .et_shop-cute * {
@@ -3772,7 +3772,7 @@ button:focus,
 [type='submit']:focus,
 .button:focus,
 .added_to_cart:focus {
-  outline: 2px solid #9e76c0;
+  outline: 2px solid #3265ad;
 }
 button.added:after,
 [type='button'].added:after,
@@ -4388,8 +4388,8 @@ video {
 }
 .pagination .page-numbers li .page-numbers.current,
 .woocommerce-pagination .page-numbers li .page-numbers.current {
-  background-color: #9e76c0;
-  border-color: #9e76c0;
+  background-color: #3265ad;
+  border-color: #3265ad;
   color: #fff;
   font-weight: 700;
 }
@@ -4654,7 +4654,7 @@ video {
   color: #fff;
 }
 .widget-area .widget a:hover {
-  color: #9e76c0;
+  color: #3265ad;
 }
 
 .header-widget-region .widget {
