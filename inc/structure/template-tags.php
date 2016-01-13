@@ -76,17 +76,27 @@ function et_shop_popular_products() {
 // Display On Sale Products
 // Hooked into the `homepage` action in the homepage template
 function et_shop_on_sale_products($args) {
+  if(is_woocommerce_activated()) {
 
-  if(is_woocommerce_activated()) { ?>
-    <section class="et_shop-product-section et_shop-on-sale-products">
-      <?php do_action('et_shop_homepage_before_on_sale_products') ?>
-      <h2 class="section-title"><?= wp_kses_post(__('On Sale', 'et_shop')); ?></h2>
-      <?= et_shop_do_shortcode('sale_products', array(
-        'per_page' => 4,
-        'columns'  => 4,
-      )); ?>
-      <?php do_action('et_shop_homepage_after_on_sale_products'); ?>
-    </section><?php
+    $on_sale_query = new WP_Query(array(
+      'post_type'  => 'product',
+      'meta_query' => array(array(
+        'key'     => '_sale_price',
+        'value'   => 0,
+        'compare' => '>',
+        'type'    => 'numeric'
+      ))
+    ));
+
+    if($on_sale_query->have_posts()) { ?>
+      <section class="et_shop-product-section et_shop-on-sale-products">
+        <h2 class="section-title"><?= wp_kses_post(__('On Sale', 'et_shop')); ?></h2>
+        <?= et_shop_do_shortcode('sale_products', array(
+          'per_page' => 4,
+          'columns'  => 4,
+        )); ?>
+      </section><?php
+    }
   }
 }
 
