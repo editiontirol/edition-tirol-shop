@@ -50,11 +50,11 @@
     float: right;
     padding: 2em 0;
 
-    [placeholder^='Nach']{
-      min-width: 18em;
+    [placeholder^='Nach'] {
       max-width: 100%;
+      min-width: 18em;
 
-      &::-webkit-input-placeholder  {
+      &::-webkit-input-placeholder {
         text-overflow: ellipsis !important;
       }
     }
