@@ -125,7 +125,6 @@
   }
 
   .widget_shopping_cart {
-    background-color: change-color($dark-cerulean, $saturation: 15%);
     display: none;
 
     .product_list_widget {
@@ -148,7 +147,7 @@
 
   .nav-menu a,
   .site-header-cart .cart-contents {
-    color: darken($gainsboro, 33.3%);
+    color: darken($gainsboro, 40%);
   }
 
   .menu-toggle {
@@ -236,47 +235,54 @@
     padding: .75em 1em;
   }
 
-  .main-navigation .nav-menu li:hover > a,
-  .main-navigation .nav-menu .current-menu-item > a,
-  .main-navigation .nav-menu .current-menu-ancestor > a,
-  .main-navigation .nav-menu .current-menu-parent > a,
-  .site-header-cart > li:hover > a,
-  .site-header-cart > .current-menu-item > a {
-    background: darken($white, 5%);
-    color: $black;
+  .main-navigation .nav-menu li:hover,
+  .main-navigation .nav-menu .current-menu-item,
+  .main-navigation .nav-menu .current-menu-ancestor,
+  .main-navigation .nav-menu .current-menu-parent,
+  .site-header-cart > li:hover,
+  .site-header-cart > .current-menu-item {
+    > a {
+      background: darken($white, 5%);
+      color: $black;
+    }
+  }
+
+  .main-navigation .sub-menu,
+  .widget_shopping_cart {
+    background-color: change-color($dark-cerulean, $saturation: 15%);
+    box-shadow: 0 0 2px rgba($black, .2);
   }
 
   .main-navigation {
-    .sub-menu {
-      background-color: $header-background;
-      box-shadow: 0 0 2px rgba(0, 0, 0, .2);
-      margin-left: 0;
-
-      li {
-        background-color: rgba(0, 0, 0, .025);
-
-        a {
-          padding: .875em 1em;
+    .menu,
+    .nav-menu {
+      > .menu-item-has-children,
+      > .page_item_has_children {
+        > a::after {
+          content: '\f107'; // dropdown indicator: ▼
+          font-family: FontAwesome;
+          font-weight: inherit;
+          line-height: 1;
+          margin-left: .5em;
         }
-      }
-
-      .menu-item-has-children > a::after,
-      .page_item_has_children > a::after, {
-        content: '\f105'; // dropdown indicator: ▶
-        float: right;
-        font-family: FontAwesome;
       }
     }
 
-    .menu,
-    .nav-menu {
-      > .menu-item-has-children > a::after,
-      > .page_item_has_children > a::after {
-        content: '\f107'; // dropdown indicator: ▼
-        font-family: FontAwesome;
-        font-weight: inherit;
-        line-height: 1;
-        margin-left: .5em;
+    .sub-menu {
+      margin-left: 0;
+
+      a {
+        color: $gainsboro;
+        padding: .875em 1em;
+      }
+
+      .menu-item-has-children,
+      .page_item_has_children {
+        > a::after, {
+          content: '\f105'; // dropdown indicator: ▶
+          float: right;
+          font-family: FontAwesome;
+        }
       }
     }
   }

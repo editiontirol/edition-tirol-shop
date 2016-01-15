@@ -12,22 +12,19 @@
 }
 
 .hentry {
-  border-bottom: 6px solid rgba(0, 0, 0, .05);
-  margin: 0 0 4.236em;
-  padding-bottom: 3.631em;
+  margin: 0 0 4em;
+  padding-bottom: 2em;
 
   .wp-post-image {
-    margin-bottom: 1.618em;
+    margin-bottom: 1.5em;
   }
 
   .entry-header {
-    border-bottom: 3px solid $color-body;
-    margin-bottom: 3.631em;
+    border-bottom: .25em solid rgba($black, .025);
+    margin-bottom: 2em;
 
     h1 {
-      border-bottom: 1px solid $color-border;
-      margin-bottom: 3px;
-      padding-bottom: .618em;
+      margin-bottom: .25em;
     }
 
     .posted-on,

@@ -73,9 +73,8 @@
     @include span(full);
   }
 
-  .content-area,
   .widget-area {
-    margin-bottom: 2.618em;
+    margin-bottom: 2.5em;
   }
 
   // Full width & homepage template
@@ -91,7 +90,7 @@
 
   .footer-widgets {
     @include clearfix;
-    border-bottom: 3px solid rgba(0, 0, 0, .05);
+    border-bottom: 3px solid darken(desaturate($edelweiss, 20%), 5%);
     padding-top: 4.236em;
 
     &.col-2 {

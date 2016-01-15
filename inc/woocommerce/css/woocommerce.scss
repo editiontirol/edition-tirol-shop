@@ -698,7 +698,7 @@
   margin-bottom: 2.618em;
 }
 
-.checkout {
+.woocommerce-checkout {
   @include clearfix;
 }
 
@@ -1098,7 +1098,7 @@
 }
 
 .woocommerce-sorting {
-  background-color: $color-border;
+  background-color: rgba($black, .025);
   font-size: .875em;
   margin-bottom: 2.618em;
   padding: 2em;
@@ -1319,7 +1319,7 @@
       .count {
         font-size: .875em;
         font-weight: 400;
-        opacity: .5;
+        opacity: .75;
       }
 
       span {
