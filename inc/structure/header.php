@@ -30,5 +30,3 @@ function et_shop_skip_links() { ?>
   <a class="skip-link screen-reader-text" href="#site-navigation"><?= __('Skip to navigation', 'et_shop'); ?></a>
   <a class="skip-link screen-reader-text" href="#content"><?= __('Skip to content', 'et_shop'); ?></a><?php
 }
-
-
