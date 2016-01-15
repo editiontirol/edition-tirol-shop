@@ -3,16 +3,20 @@
 // Display Product Categories
 // Hooked into the `homepage` action in the homepage template
 function et_shop_product_categories() {
-  if(is_woocommerce_activated()) { ?>
-    <section class="et_shop-product-section et_shop-product-categories">
-      <h2 class="section-title"><?= wp_kses_post(__('Product Categories', 'et_shop')); ?></h2>
-      <?= et_shop_do_shortcode('product_categories', array(
-        'number'   => 3,
-        'columns'  => 3,
-        'orderby'  => esc_attr('name'),
-        'parent'  => esc_attr(0),
-      )); ?>
-    </section><?php
+  if(is_woocommerce_activated()) {
+    $product_cagetories_count = count(et_shop_do_shortcode('product_categories', array('number' => 3)));
+
+    if($product_cagetories_count > 0) { ?>
+      <section class="et_shop-product-section et_shop-product-categories">
+        <h2 class="section-title"><?= wp_kses_post(__('Product Categories', 'et_shop')); ?></h2>
+        <?= et_shop_do_shortcode('product_categories', array(
+          'number'   => $product_cagetories_count,
+          'columns'  => $product_cagetories_count,
+          'orderby'  => esc_attr('name'),
+          'parent'  => esc_attr(0),
+        )); ?>
+      </section><?php
+    }
   }
 }
 
@@ -66,7 +70,7 @@ function et_shop_popular_products() {
       <h2 class="section-title"><?= wp_kses_post(__('Top Rated Products', 'et_shop')); ?></h2>
       <?= et_shop_do_shortcode('top_rated_products', array(
         'per_page' => 4,
-        'columns'  => 4,
+        'columns'  => 4
       )); ?>
     </section><?php
   }
@@ -93,7 +97,7 @@ function et_shop_on_sale_products($args) {
         <h2 class="section-title"><?= wp_kses_post(__('On Sale', 'et_shop')); ?></h2>
         <?= et_shop_do_shortcode('sale_products', array(
           'per_page' => 4,
-          'columns'  => 4,
+          'columns'  => 4
         )); ?>
       </section><?php
     }

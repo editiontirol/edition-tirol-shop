@@ -1684,6 +1684,26 @@
 .woocommerce .shop_table tr:nth-child(odd) {
   background-color: rgba(0, 0, 0, 0.025);
 }
+@media screen and (min-width: 768px) {
+  .woocommerce .cart_totals table,
+  .woocommerce .shop_table {
+    display: table;
+  }
+  .woocommerce .cart_totals table tbody,
+  .woocommerce .shop_table tbody {
+    display: table-row-group;
+  }
+  .woocommerce .cart_totals table tr,
+  .woocommerce .shop_table tr {
+    display: table-row;
+  }
+  .woocommerce .cart_totals table td,
+  .woocommerce .cart_totals table th,
+  .woocommerce .shop_table td,
+  .woocommerce .shop_table th {
+    display: table-cell;
+  }
+}
 .woocommerce .shop_table {
   padding: 0;
 }
@@ -1719,24 +1739,6 @@
   content: '= ';
 }
 @media screen and (min-width: 768px) {
-  .woocommerce .cart_totals table,
-  .woocommerce .shop_table {
-    display: table;
-  }
-  .woocommerce .cart_totals table tbody,
-  .woocommerce .shop_table tbody {
-    display: table-row-group;
-  }
-  .woocommerce .cart_totals table tr,
-  .woocommerce .shop_table tr {
-    display: table-row;
-  }
-  .woocommerce .cart_totals table td,
-  .woocommerce .cart_totals table th,
-  .woocommerce .shop_table td,
-  .woocommerce .shop_table th {
-    display: table-cell;
-  }
   .woocommerce .shop_table .product-price::after,
   .woocommerce .shop_table .product-subtotal::before {
     content: initial;
