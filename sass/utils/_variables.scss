@@ -71,7 +71,8 @@ $footer-background:    $edelweiss;
 
 // Media Queries
 
-$on-desktop: 768px;
+$desktop: 'screen and (min-width: 768px)';
+
 
 $susy: (
   columns: 12,

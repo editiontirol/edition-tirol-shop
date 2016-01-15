@@ -27,7 +27,7 @@
   }
 }
 
-@include media-query($on-desktop) {
+@media #{$desktop} {
   .site-logo svg {
     height: 120px;
   }

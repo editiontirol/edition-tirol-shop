@@ -1662,19 +1662,11 @@
 }
 
 .cart_totals table,
-.shop_table {
-  display: block;
-}
-@media screen and (min-width: 768px) {
-  .cart_totals table,
-  .shop_table {
-    display: table;
-  }
-}
 .cart_totals table tbody,
 .cart_totals table td,
 .cart_totals table th,
 .cart_totals table tr,
+.shop_table,
 .shop_table tbody,
 .shop_table td,
 .shop_table th,
@@ -1709,6 +1701,12 @@
   .shop_table td,
   .shop_table th {
     display: table-cell;
+  }
+}
+@media screen and (min-width: 768px) {
+  .cart_totals table,
+  .shop_table {
+    display: table;
   }
 }
 

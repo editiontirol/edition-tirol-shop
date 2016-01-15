@@ -1256,7 +1256,7 @@
 }
 
 
-@include media-query($on-desktop) {
+@media #{$desktop} {
 
   // Responsive tables
   .shop_table_responsive {
@@ -1965,7 +1965,7 @@
     th {
       float: left;
 
-      @include media-query($on-desktop) {
+      @media #{$desktop} {
         float: none;
       }
     }
@@ -1974,12 +1974,7 @@
 
 .cart_totals table,
 .shop_table {
-  display: block;
-
-  @include media-query($on-desktop) {
-    display: table;
-  }
-
+  &,
   tbody,
   td,
   th,
@@ -1988,7 +1983,7 @@
   }
 
   tbody {
-    @include media-query($on-desktop) {
+    @media #{$desktop} {
       display: table-row-group;
     }
   }
@@ -1996,7 +1991,7 @@
   tr {
     @extend %clearfix;
 
-    @include media-query($on-desktop) {
+    @media #{$desktop} {
       display: table-row;
     }
   }
@@ -2012,11 +2007,14 @@
 
   td,
   th {
-    @include media-query($on-desktop) {
+    @media #{$desktop} {
       display: table-cell;
     }
   }
 
+  @media #{$desktop} {
+    display: table;
+  }
 }
 
 .shop_table {
@@ -2079,7 +2077,7 @@
   max-width: 4em;
 }
 
-@include media-query($on-desktop) {
+@media #{$desktop} {
   .shop_table {
     .product-price::after,
     .product-subtotal::before {
