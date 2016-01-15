@@ -609,7 +609,7 @@
 
 // Cart
 .cart {
-  margin-bottom: 3.631em;
+  margin-bottom: 3.5em;
 
   thead {
     text-indent: -999em;
@@ -625,13 +625,8 @@
     display: none;
   }
 
-  td,
-  th {
-    padding: .53em;
-  }
-
   .qty {
-    padding: .236em;
+    padding: .25em;
   }
 
   .actions {
@@ -1100,7 +1095,7 @@
 .woocommerce-sorting {
   background-color: rgba($black, .025);
   font-size: .875em;
-  margin-bottom: 2.618em;
+  margin-bottom: 2.5em;
   padding: 2em;
 }
 
@@ -1657,7 +1652,9 @@
 
     .quantity {
       .qty {
-        padding: .618em;
+        height: 2em;
+        line-height: 1em;
+        padding: .5em;
       }
     }
 
@@ -1936,163 +1933,179 @@
 
 
 
-// START Make the cart table responsive
-// http://css-tricks.com/responsive-data-tables/
-
 // Force table to not be like tables anymore
-.woocommerce {
-  .cart_totals table {
-    $line-height: 1.5em;
-    line-height: $line-height;
+.cart_totals table {
+  $line-height: 1.5em;
+  line-height: $line-height;
 
-    form {
-      p {
-        margin-bottom: 1em;
-      }
-
-      &,
-      > p,
-      p:last-of-type {
-        margin-bottom: 0;
-      }
-
-      > p + section {
-        margin-top: 1em;
-      }
+  form {
+    p {
+      margin-bottom: 1em;
     }
 
-    .shipping [type='radio'] {
+    &,
+    > p,
+    p:last-of-type {
+      margin-bottom: 0;
+    }
+
+    > p + section {
+      margin-top: 1em;
+    }
+  }
+
+  .shipping [type='radio'] {
+    float: left;
+    height: $line-height;
+    margin-right: .5em;
+  }
+
+  .cart-subtotal,
+  .order-total {
+    th {
       float: left;
-      height: $line-height;
-      margin-right: .5em;
-    }
 
-    .cart-subtotal,
-    .order-total {
-      th {
-        float: left;
-
-        @include media-query($on-desktop) {
-          float: none;
-        }
+      @include media-query($on-desktop) {
+        float: none;
       }
     }
   }
+}
 
-  .cart_totals table,
-  .shop_table {
-    &,
-    tbody,
-    td,
-    th,
-    tr {
-      display: block;
-    }
-
-    tr {
-      @extend %clearfix;
-    }
-
-    td {
-      background: none;
-    }
-
-    &,
-    tr:nth-child(odd) {
-      background-color: rgba($black, .025);
-    }
-  }
+.cart_totals table,
+.shop_table {
+  display: block;
 
   @include media-query($on-desktop) {
-    .cart_totals table,
-    .shop_table {
-      display: table;
+    display: table;
+  }
 
-      tbody {
-        display: table-row-group;
-      }
+  tbody,
+  td,
+  th,
+  tr {
+    display: block;
+  }
 
-      tr {
-        display: table-row;
-      }
-
-      td,
-      th {
-        display: table-cell;
-      }
+  tbody {
+    @include media-query($on-desktop) {
+      display: table-row-group;
     }
   }
 
-  .shop_table {
-    padding: 0;
+  tr {
+    @extend %clearfix;
 
-    thead tr,
-    .product-thumbnail {
-      left: -9999px;
-      position: absolute;
-      top: -9999px;
+    @include media-query($on-desktop) {
+      display: table-row;
+    }
+  }
+
+  td {
+    background: none;
+  }
+
+  &,
+  tr:nth-child(odd) {
+    background-color: rgba($black, .025);
+  }
+
+  td,
+  th {
+    @include media-query($on-desktop) {
+      display: table-cell;
+    }
+  }
+
+}
+
+.shop_table {
+  padding: 0;
+
+  [type='number'] {
+    background-color: $white;
+  }
+
+  tbody tr:nth-child(2n) td {
+    background: none;
+  }
+
+  thead tr,
+  .product-thumbnail {
+    left: -9999px;
+    position: absolute;
+    top: -9999px;
+  }
+
+  .product-remove {
+    float: right;
+  }
+
+  .product-price,
+  .product-quantity,
+  .product-subtotal {
+    float: left;
+    padding-top: 0;
+  }
+
+  .product-price {
+    padding-right: .25em;
+  }
+
+  .product-quantity {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .product-subtotal {
+    padding-left: .25em;
+  }
+
+  .product-price::after {
+    content: ' ×';
+  }
+
+  .product-subtotal::before {
+    content: '= ';
+  }
+}
+
+[type='number'] {
+  max-width: 100%;
+  width: auto;
+}
+
+[size='4'] {
+  max-width: 4em;
+}
+
+@include media-query($on-desktop) {
+  .shop_table {
+    .product-price::after,
+    .product-subtotal::before {
+      content: initial;
     }
 
-    .product-remove {
-      float: right;
+    .product-remove,
+    .product-price,
+    .product-quantity,
+    .product-subtotal {
+      float: none;
     }
 
     .product-price,
     .product-quantity,
     .product-subtotal {
-      float: left;
+      padding: 1em;
     }
 
-    .product-quantity {
-      padding-left: 0;
-      padding-right: 0;
-
-      [type='number'] {
-        max-width: 100%;
-        width: auto;
-      }
-
-      [size='4'] {
-        max-width: 4em;
-      }
-    }
-
-    .product-price::after {
-      content: ' ×';
-    }
-
-    .product-subtotal::before {
-      content: '= ';
+    thead tr,
+    .product-thumbnail {
+      left: initial;
+      position: initial;
+      top: initial;
     }
   }
-
-  @include media-query($on-desktop) {
-    .shop_table {
-      .product-price::after,
-      .product-subtotal::before {
-        content: initial;
-      }
-
-      .product-remove,
-      .product-price,
-      .product-quantity,
-      .product-subtotal {
-        float: none;
-      }
-
-      .product-quantity {
-        padding-left: 1em;
-        padding-right: 1em;
-      }
-
-      thead tr,
-      .product-thumbnail {
-        left: initial;
-        position: initial;
-        top: initial;
-      }
-    }
-  }
-
 }
+
 

@@ -3173,10 +3173,6 @@ th {
   content: "";
 }
 
-* {
-  box-sizing: border-box;
-}
-
 .site-header {
   background-color: #dcdcdf;
   color: #9aa0a7;
@@ -3681,17 +3677,7 @@ a:focus {
   }
 }
 form {
-  margin-bottom: 1.618em;
-}
-
-button,
-input,
-select,
-textarea {
-  *vertical-align: middle;
-  font-size: 100%;
-  margin: 0;
-  vertical-align: baseline;
+  margin-bottom: 1.5em;
 }
 
 button,
@@ -3700,8 +3686,6 @@ button,
 [type='submit'],
 .button,
 .added_to_cart {
-  -webkit-transition: 250ms ease-in-out;
-  transition: 250ms ease-in-out;
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
@@ -3715,9 +3699,11 @@ button,
   font-weight: 700;
   line-height: 1;
   outline: none;
-  padding: .618em 1em;
+  padding: .5em 1em;
   text-decoration: none;
   text-shadow: none;
+  -webkit-transition: 250ms ease-in-out;
+  transition: 250ms ease-in-out;
 }
 button.cta, button.add_to_cart_button,
 [type='button'].cta,
@@ -3814,7 +3800,7 @@ button.small,
 .button.small,
 .added_to_cart.small {
   font-size: .875em;
-  padding: .53em .875em;
+  padding: .5em .875em;
 }
 button.disabled, button:disabled,
 [type='button'].disabled,
@@ -3873,16 +3859,15 @@ textarea,
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
-  background-color: #efefef;
+  background-color: #f0f0f1;
   border: none;
-  border-radius: 0;
-  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.125);
+  border-radius: .25em;
   box-sizing: border-box;
   color: #60646c;
   font-weight: normal;
   line-height: 1;
   outline: none;
-  padding: .618em;
+  padding: .5em;
 }
 input[type='text']:focus,
 input[type='email']:focus,
@@ -3891,8 +3876,11 @@ input[type='password']:focus,
 input[type='search']:focus,
 textarea:focus,
 .input-text:focus {
-  background-color: #e3e3e3;
-  color: #484b51;
+  color: #000;
+}
+
+.site-search [type='search'] {
+  background-color: #fff;
 }
 
 textarea {

@@ -1,17 +1,7 @@
 // Forms
 
 form {
-  margin-bottom: 1.618em;
-}
-
-button,
-input,
-select,
-textarea {
-  *vertical-align: middle; // Improves appearance and consistency in all browsers
-  font-size: 100%; // Corrects font size not being inherited in all browsers
-  margin: 0; // Addresses margins set differently in IE6/7, F3/4, S5, Chrome
-  vertical-align: baseline; // Improves appearance and consistency in all browsers
+  margin-bottom: 1.5em;
 }
 
 button,
@@ -20,7 +10,6 @@ button,
 [type='submit'],
 .button,
 .added_to_cart {
-  transition: 250ms ease-in-out;
   -webkit-appearance: none;
   background: none;
   background-color: $color-body;
@@ -33,9 +22,10 @@ button,
   font-weight: 700;
   line-height: 1;
   outline: none;
-  padding: .618em 1em;
+  padding: .5em 1em;
   text-decoration: none;
   text-shadow: none;
+  transition: 250ms ease-in-out;
 
   &.cta,
   &.add_to_cart_button {
@@ -80,7 +70,7 @@ button,
 
   &.small {
     font-size: .875em;
-    padding: .53em .875em;
+    padding: .5em .875em;
   }
 
   &.disabled,
@@ -120,21 +110,23 @@ input[type='search'],
 textarea,
 .input-text {
   -webkit-appearance: none;
-  background-color: darken($body-background, 5%);
+  background-color: lighten($gainsboro, 7.5%);
   border: none;
-  border-radius: 0;
-  box-shadow: inset 0 1px 2px rgba(0, 0, 0, .125);
+  border-radius: .25em;
   box-sizing: border-box;
   color: $color-body;
   font-weight: normal;
   line-height: 1;
   outline: none;
-  padding: .618em;
+  padding: .5em;
 
   &:focus {
-    background-color: darken($body-background, 10%);
-    color: darken($color-body, 10%);
+    color: $black;
   }
+}
+
+.site-search [type='search'] {
+  background-color: $white;
 }
 
 textarea {
