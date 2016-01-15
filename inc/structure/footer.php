@@ -32,10 +32,7 @@ function et_shop_footer_widgets() {
 function et_shop_credit() {
   ?>
   <div class="site-info"><?php
-    echo esc_html('© '.get_bloginfo('name').date(' Y'));
-
-    if(apply_filters('et_shop_credit_link', true)) {
-      printf('<br />'.esc_html__('%1$s designed by %2$s.', 'et_shop' ), 'Edition Tirol Shopdesign', '<a href="http://reitermark.us">Markus Reiter</a>');
-    } ?>
+    echo esc_html('©'.date(' Y ').get_bloginfo('name'));
+    // printf('<br />'.esc_html__('%1$s designed by %2$s.', 'et_shop' ), THEME_NAME, THEME_AUTHOR); ?>
   </div><?php
 }
