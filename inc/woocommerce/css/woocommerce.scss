@@ -936,15 +936,13 @@
     }
   }
 
-  &.woocommerce-validated {
-    .input-text {
-      box-shadow: inset 2px 0 0 $success;
-    }
-  }
-
   &.woocommerce-invalid {
-    .input-text {
-      box-shadow: inset 2px 0 0 $error;
+    label {
+      color: $error;
+    }
+
+    input {
+      background-color: change-color($error, $lightness: lightness(lighten($gainsboro, 7.5%)));
     }
   }
 }
@@ -1959,6 +1957,12 @@
     float: left;
     height: $line-height;
     margin-right: .5em;
+
+    @media #{$desktop} {
+      float: none;
+      height: auto;
+      margin-right: auto;
+    }
   }
 
   .cart-subtotal,

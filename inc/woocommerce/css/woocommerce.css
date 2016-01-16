@@ -762,11 +762,11 @@
 .form-row.create-account label {
   display: inline-block;
 }
-.form-row.woocommerce-validated .input-text {
-  box-shadow: inset 2px 0 0 #0f834d;
+.form-row.woocommerce-invalid label {
+  color: #e34234;
 }
-.form-row.woocommerce-invalid .input-text {
-  box-shadow: inset 2px 0 0 #e34234;
+.form-row.woocommerce-invalid input {
+  background-color: #fce7e6;
 }
 
 .form-row-last {
@@ -1651,6 +1651,13 @@
   float: left;
   height: 1.5em;
   margin-right: .5em;
+}
+@media screen and (min-width: 768px) {
+  .cart_totals table .shipping [type='radio'] {
+    float: none;
+    height: auto;
+    margin-right: auto;
+  }
 }
 .cart_totals table .cart-subtotal th,
 .cart_totals table .order-total th {

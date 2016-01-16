@@ -3173,6 +3173,10 @@ th {
   content: "";
 }
 
+* {
+  box-sizing: border-box;
+}
+
 .site-header {
   background-color: #dcdcdf;
   color: #9aa0a7;
