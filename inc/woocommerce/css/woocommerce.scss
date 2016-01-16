@@ -1285,6 +1285,11 @@
     width: auto;
   }
 
+  .no-js .site-header-cart > li:hover > .widget_shopping_cart,
+  .site-header-cart > .focus > .widget_shopping_cart {
+    display: block;
+  }
+
   // Header Elements
   .site-header-cart {
     position: relative;
@@ -1345,10 +1350,6 @@
           text-align: left;
         }
       }
-    }
-
-    > li:hover > .widget_shopping_cart {
-      display: block;
     }
   }
 

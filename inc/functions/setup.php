@@ -76,8 +76,8 @@ function et_shop_scripts() {
   wp_enqueue_style('et_shop-style', get_template_directory_uri() . '/style.css', none, THEME_VERSION);
 
   wp_enqueue_script('modernizr', '//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js', none, '');
-  wp_enqueue_script('et_shop-navigation', get_template_directory_uri() . '/js/navigation.min.js', array('jquery'), THEME_VERSION, true);
-  wp_enqueue_script('et_shop-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.min.js', none, THEME_VERSION, true);
+  wp_enqueue_script('et_shop-navigation', get_template_directory_uri() . '/js/navigation.js', array('jquery'), THEME_VERSION, true);
+  wp_enqueue_script('et_shop-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', none, THEME_VERSION, true);
 
 
   if(is_singular() && comments_open() && get_option('thread_comments')) {

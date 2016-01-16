@@ -1072,6 +1072,11 @@
     width: auto;
   }
 
+  .no-js .site-header-cart > li:hover > .widget_shopping_cart,
+  .site-header-cart > .focus > .widget_shopping_cart {
+    display: block;
+  }
+
   .site-header-cart {
     position: relative;
   }
@@ -1122,9 +1127,6 @@
   }
   .site-header-cart .widget_shopping_cart .product_list_widget li .remove:before {
     text-align: left;
-  }
-  .site-header-cart > li:hover > .widget_shopping_cart {
-    display: block;
   }
 
   .products .product {

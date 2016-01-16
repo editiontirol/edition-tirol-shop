@@ -3974,23 +3974,24 @@ fieldset legend {
   margin-left: 0;
 }
 
-.main-navigation .nav-menu {
-  display: none;
-}
-.main-navigation.toggled .nav-menu {
+.main-navigation.toggled .primary-navigation {
   display: block;
 }
 
-.nav-menu .sub-menu {
+.sub-menu {
   margin-left: 1em;
 }
-.nav-menu .sub-menu > li:last-child > a {
+.sub-menu > li:last-child > a {
   border-bottom-width: 0;
 }
-.nav-menu .current-menu-item > a {
+
+.primary-navigation {
+  display: none;
+}
+.primary-navigation .current-menu-item > a {
   background-color: white;
 }
-.nav-menu a {
+.primary-navigation a {
   background-color: #f0f0f1;
   border-color: #cfcfd3;
   border-style: solid;
@@ -3998,32 +3999,33 @@ fieldset legend {
   color: #5a5a62;
 }
 @media screen and (min-width: 768px) {
-  .nav-menu a {
+  .primary-navigation a {
     background: none;
     border-width: 0;
   }
 }
-.nav-menu > li:first-child > a,
-.nav-menu .menu-item-has-children + li > a {
+.primary-navigation > li:first-child > a,
+.primary-navigation .menu-item-has-children + li > a {
   border-top-width: 1px;
 }
 @media screen and (min-width: 768px) {
-  .nav-menu > li:first-child > a,
-  .nav-menu .menu-item-has-children + li > a {
+  .primary-navigation > li:first-child > a,
+  .primary-navigation .menu-item-has-children + li > a {
     border-top-width: 0;
   }
 }
-.nav-menu li a {
+.primary-navigation li a {
   display: block;
   padding: .75em 1em;
 }
-.nav-menu li a:before {
+.primary-navigation li a:before {
   content: '\f0f6';
   font-family: FontAwesome;
   font-weight: 400;
   margin-right: .53em;
 }
-.nav-menu li a:hover {
+.primary-navigation li.focus > a,
+.primary-navigation li a:hover {
   background: #e9e9eb;
 }
 
@@ -4081,17 +4083,17 @@ fieldset legend {
   overflow-y: auto;
 }
 
-.primary-navigation {
-  display: none;
-}
-
 @media screen and (min-width: 768px) {
+  .sub-menu {
+    display: none;
+  }
+
   .header-nav {
     background: #fff;
     margin-bottom: 2em;
   }
 
-  .nav-menu a,
+  .primary-navigation a,
   .site-header-cart .cart-contents {
     color: #72727d;
   }
@@ -4100,101 +4102,99 @@ fieldset legend {
     display: none;
   }
 
-  .main-navigation .nav-menu {
+  .primary-navigation {
     display: block;
     list-style: none;
     margin: 0;
     padding-left: 0;
   }
-  .main-navigation .nav-menu li {
+  .primary-navigation li {
     display: block;
     float: left;
     position: relative;
   }
-  .main-navigation .nav-menu li a {
+  .primary-navigation li a {
     display: block;
   }
-  .main-navigation .nav-menu li a:before {
+  .primary-navigation li a:before {
     display: none;
+  }
+
+  .no-js .menu-item:hover > .sub-menu {
+    display: block;
   }
 
   .primary-navigation {
     display: block;
     float: left;
   }
-  .primary-navigation li ul {
-    display: none;
-  }
-  .primary-navigation li:hover > ul, .primary-navigation li.focus > ul {
-    display: block;
+  .primary-navigation .menu-item > .sub-menu {
     left: 0;
   }
-  .primary-navigation li:hover > ul li > ul, .primary-navigation li.focus > ul li > ul {
-    display: none;
-  }
-  .primary-navigation li:hover > ul li:hover > ul, .primary-navigation li:hover > ul li.focus > ul, .primary-navigation li.focus > ul li:hover > ul, .primary-navigation li.focus > ul li.focus > ul {
-    display: block;
+  .primary-navigation .menu-item > .sub-menu .menu-item > .sub-menu {
     left: 100%;
     top: 0;
   }
-  .primary-navigation ul {
+  .primary-navigation .menu-item.focus > .sub-menu {
+    display: block;
+  }
+  .primary-navigation .sub-menu {
     background-color: #2c2d33;
     float: left;
     position: absolute;
     top: 100%;
     z-index: 99999;
   }
-  .primary-navigation ul li a {
+  .primary-navigation .sub-menu li a {
     width: 16em;
   }
 
   .primary-navigation {
     float: left;
   }
-
-  .main-naviagtion .nav-menu > li > a,
-  .site-header-cart > li > a {
-    padding: .75em 1em;
-  }
-
-  .main-navigation .nav-menu li:hover > a,
-  .main-navigation .nav-menu .current-menu-item > a,
-  .main-navigation .nav-menu .current-menu-ancestor > a,
-  .main-navigation .nav-menu .current-menu-parent > a,
-  .site-header-cart > li:hover > a,
-  .site-header-cart > .current-menu-item > a {
-    background: #f2f2f2;
-    color: #000;
-  }
-
-  .main-navigation .sub-menu,
-  .widget_shopping_cart {
-    background-color: #3b4450;
-    box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
-  }
-
-  .main-navigation .menu > .menu-item-has-children > a::after,
-  .main-navigation .menu > .page_item_has_children > a::after,
-  .main-navigation .nav-menu > .menu-item-has-children > a::after,
-  .main-navigation .nav-menu > .page_item_has_children > a::after {
+  .primary-navigation > .menu-item-has-children > a::after,
+  .primary-navigation > .page_item_has_children > a::after {
     content: '\f107';
     font-family: FontAwesome;
     font-weight: inherit;
     line-height: 1;
     margin-left: .5em;
   }
-  .main-navigation .sub-menu {
+  .primary-navigation .sub-menu {
     margin-left: 0;
   }
-  .main-navigation .sub-menu a {
+  .primary-navigation .sub-menu a {
     color: #dcdcdf;
     padding: .875em 1em;
   }
-  .main-navigation .sub-menu .menu-item-has-children > a::after,
-  .main-navigation .sub-menu .page_item_has_children > a::after {
+  .primary-navigation .sub-menu .menu-item-has-children > a::after,
+  .primary-navigation .sub-menu .page_item_has_children > a::after {
     content: '\f105';
     float: right;
     font-family: FontAwesome;
+  }
+
+  .primary-navigation > li > a,
+  .site-header-cart > li > a {
+    padding: .75em 1em;
+  }
+
+  .primary-navigation li:hover > a,
+  .primary-navigation .focus > a,
+  .primary-navigation .current-menu-item > a,
+  .primary-navigation .current-menu-ancestor > a,
+  .primary-navigation .current-menu-parent > a,
+  .site-header-cart > li:hover > a,
+  .site-header-cart > .focus > a,
+  .site-header-cart > .current-menu-item > a {
+    background: #f2f2f2;
+    color: #000;
+  }
+
+  .primary-navigation .sub-menu,
+  .widget_shopping_cart {
+    background-color: #3b4450;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
   }
 }
 .sticky .entry-title:before {
