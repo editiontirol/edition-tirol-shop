@@ -91,7 +91,7 @@
   .footer-widgets {
     @include clearfix;
     border-bottom: 3px solid darken(desaturate($edelweiss, 20%), 5%);
-    padding-top: 4.236em;
+    margin-bottom: 2em;
 
     &.col-2 {
       .block {

@@ -61,8 +61,8 @@ function et_shop_widgets_init() {
       'name'         => sprintf(__('Footer %d', 'et_shop'), $i),
       'id'         => sprintf('footer-%d', $i),
       'description'     => sprintf(__('Widgetized Footer Region %d.', 'et_shop'), $i),
-      'before_widget'   => '<aside id="%1$s" class="widget %2$s">',
-      'after_widget'     => '</aside>',
+      'before_widget'   => '',
+      'after_widget'     => '',
       'before_title'     => '<h3>',
       'after_title'     => '</h3>',
       )

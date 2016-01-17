@@ -68,7 +68,7 @@
 .site-footer {
   background-color: $edelweiss;
   border-top: 1px solid darken(desaturate($edelweiss, 20%), 10%);
-  padding: 1.618em 0;
+  padding: 4em 0;
 
   &,
   h1,
@@ -83,10 +83,6 @@
   a:not(.button) {
     color: $color-links;
   }
-}
-
-.site-info {
-  padding: 2.618em 0;
 }
 
 // Alignment

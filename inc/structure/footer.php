@@ -12,19 +12,19 @@ function et_shop_footer_widgets() {
   }
 
   if($widget_columns) { ?>
-    <section class="footer-widgets col-<?php echo intval($widget_columns); ?> fix"><?php
+    <div class="footer-widgets col-<?= intval($widget_columns); ?> fix"><?php
 
       $widget_num = 1;
 
       for($i = 1; $i <= $max_widgets; $i++) {
         if(is_active_sidebar('footer-'.$i)) { ?>
-          <section class="block footer-widget-<?php echo intval($widget_num++); ?>">
+          <aside class="block footer-widget-<?= intval($widget_num++); ?> widget">
             <?php dynamic_sidebar('footer-'.intval($i)); ?>
-          </section><?php
+          </aside><?php
         }
       }
       ?>
-    </section><?php
+    </div><?php
   }
 }
 

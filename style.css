@@ -3221,7 +3221,7 @@ th {
 .site-footer {
   background-color: #fffcf2;
   border-top: 1px solid #f8edc6;
-  padding: 1.618em 0;
+  padding: 4em 0;
 }
 .site-footer,
 .site-footer h1,
@@ -3234,10 +3234,6 @@ th {
 }
 .site-footer a:not(.button) {
   color: #3265ad;
-}
-
-.site-info {
-  padding: 2.618em 0;
 }
 
 .alignleft {
@@ -3633,7 +3629,7 @@ a:focus {
 
   .footer-widgets {
     border-bottom: 3px solid #fbf4dd;
-    padding-top: 4.236em;
+    margin-bottom: 2em;
   }
   .footer-widgets::after {
     clear: both;
@@ -4619,7 +4615,7 @@ video {
   }
 }
 .widget {
-  margin: 0 0 3.631em;
+  margin-bottom: 2em;
 }
 .widget select {
   max-width: 100%;
