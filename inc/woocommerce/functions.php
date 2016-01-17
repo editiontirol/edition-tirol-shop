@@ -2,23 +2,19 @@
 
 // Before Content
 // Wraps all WooCommerce content in wrappers which match the theme markup
-if(! function_exists('et_shop_before_content')) {
-  function et_shop_before_content() { ?>
-    <div id="primary" class="content-area">
-      <main id="main" class="site-main">
-        <?php
-  }
+function et_shop_before_content() { ?>
+  <div id="primary" class="content-area">
+    <main id="main" class="site-main">
+      <?php
 }
 
 // After Content
 // Closes the wrapping divs
-if(! function_exists('et_shop_after_content')) {
-  function et_shop_after_content() { ?>
-      </main>
-    </div>
+function et_shop_after_content() { ?>
+    </main>
+  </div>
 
-    <?php do_action('et_shop_sidebar');
-  }
+  <?php do_action('et_shop_sidebar');
 }
 
 // Default loop columns on product archives
