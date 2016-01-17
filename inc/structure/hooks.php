@@ -10,7 +10,6 @@ add_action('et_shop_sidebar',         'et_shop_get_sidebar',          10);
 // Header
 add_action('et_shop_header', 'et_shop_skip_links',            0);
 add_action('et_shop_header', 'et_shop_site_branding',        20);
-add_action('et_shop_header', 'et_shop_secondary_navigation', 30);
 add_action('et_shop_header_nav', 'et_shop_primary_navigation',   50);
 
 // Footer
