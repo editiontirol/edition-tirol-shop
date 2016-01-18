@@ -697,6 +697,11 @@
   @include clearfix;
 }
 
+.about_paypal {
+  float: right;
+  margin-right: 1em;
+}
+
 #payment {
   @include clearfix;
   border-top: 3px solid $color-border;
@@ -1979,25 +1984,38 @@
 
 .cart_totals table,
 .shop_table {
-  &,
-  tbody,
-  td,
-  th,
-  tr {
-    display: block;
-  }
-
-  tbody {
-    @media #{$desktop} {
-      display: table-row-group;
+  &.cart {
+    &,
+    tbody,
+    td,
+    th,
+    tr {
+      display: block;
     }
-  }
 
-  tr {
-    @extend %clearfix;
+    tbody {
+      @media #{$desktop} {
+        display: table-row-group;
+      }
+    }
+
+    tr {
+      @extend %clearfix;
+
+      @media #{$desktop} {
+        display: table-row;
+      }
+    }
+
+    td,
+    th {
+      @media #{$desktop} {
+        display: table-cell;
+      }
+    }
 
     @media #{$desktop} {
-      display: table-row;
+      display: table;
     }
   }
 
@@ -2008,17 +2026,6 @@
   &,
   tr:nth-child(odd) {
     background-color: rgba($black, .025);
-  }
-
-  td,
-  th {
-    @media #{$desktop} {
-      display: table-cell;
-    }
-  }
-
-  @media #{$desktop} {
-    display: table;
   }
 }
 
@@ -2033,43 +2040,45 @@
     background: none;
   }
 
-  thead tr,
-  .product-thumbnail {
-    left: -9999px;
-    position: absolute;
-    top: -9999px;
-  }
+  &.cart {
+    thead tr,
+    .product-thumbnail {
+      left: -9999px;
+      position: absolute;
+      top: -9999px;
+    }
 
-  .product-remove {
-    float: right;
-  }
+    .product-remove {
+      float: right;
+    }
 
-  .product-price,
-  .product-quantity,
-  .product-subtotal {
-    float: left;
-    padding-top: 0;
-  }
+    .product-price,
+    .product-quantity,
+    .product-subtotal {
+      float: left;
+      padding-top: 0;
+    }
 
-  .product-price {
-    padding-right: .25em;
-  }
+    .product-price {
+      padding-right: .25em;
+    }
 
-  .product-quantity {
-    padding-left: 0;
-    padding-right: 0;
-  }
+    .product-quantity {
+      padding-left: 0;
+      padding-right: 0;
+    }
 
-  .product-subtotal {
-    padding-left: .25em;
-  }
+    .product-subtotal {
+      padding-left: .25em;
+    }
 
-  .product-price::after {
-    content: ' ×';
-  }
+    .product-price::after {
+      content: ' ×';
+    }
 
-  .product-subtotal::before {
-    content: '= ';
+    .product-subtotal::before {
+      content: '= ';
+    }
   }
 }
 
