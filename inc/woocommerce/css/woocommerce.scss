@@ -1639,6 +1639,7 @@
     th,
     td {
       padding: .875em 1.375em;
+      line-height: 2em;
     }
 
     .qty {
@@ -1958,18 +1959,6 @@
     }
   }
 
-  .shipping [type='radio'] {
-    float: left;
-    height: $line-height;
-    margin-right: .5em;
-
-    @media #{$desktop} {
-      float: none;
-      height: auto;
-      margin-right: auto;
-    }
-  }
-
   .cart-subtotal,
   .order-total {
     th {
@@ -2050,34 +2039,6 @@
 
     .product-remove {
       float: right;
-    }
-
-    .product-price,
-    .product-quantity,
-    .product-subtotal {
-      float: left;
-      padding-top: 0;
-    }
-
-    .product-price {
-      padding-right: .25em;
-    }
-
-    .product-quantity {
-      padding-left: 0;
-      padding-right: 0;
-    }
-
-    .product-subtotal {
-      padding-left: .25em;
-    }
-
-    .product-price::after {
-      content: ' ×';
-    }
-
-    .product-subtotal::before {
-      content: '= ';
     }
   }
 }

@@ -1,4 +1,3 @@
-@charset "UTF-8";
 .cart_totals table.cart tr:before,
 .shop_table.cart tr:before, .cart_totals table.cart tr:after,
 .shop_table.cart tr:after {
@@ -1349,6 +1348,7 @@
   .cart th,
   .cart td {
     padding: .875em 1.375em;
+    line-height: 2em;
   }
   .cart .qty {
     padding: .875em;
@@ -1652,18 +1652,6 @@
 .cart_totals table form > p + section {
   margin-top: 1em;
 }
-.cart_totals table .shipping [type='radio'] {
-  float: left;
-  height: 1.5em;
-  margin-right: .5em;
-}
-@media screen and (min-width: 768px) {
-  .cart_totals table .shipping [type='radio'] {
-    float: none;
-    height: auto;
-    margin-right: auto;
-  }
-}
 .cart_totals table .cart-subtotal th,
 .cart_totals table .order-total th {
   float: left;
@@ -1741,28 +1729,6 @@
 }
 .shop_table.cart .product-remove {
   float: right;
-}
-.shop_table.cart .product-price,
-.shop_table.cart .product-quantity,
-.shop_table.cart .product-subtotal {
-  float: left;
-  padding-top: 0;
-}
-.shop_table.cart .product-price {
-  padding-right: .25em;
-}
-.shop_table.cart .product-quantity {
-  padding-left: 0;
-  padding-right: 0;
-}
-.shop_table.cart .product-subtotal {
-  padding-left: .25em;
-}
-.shop_table.cart .product-price::after {
-  content: ' ×';
-}
-.shop_table.cart .product-subtotal::before {
-  content: '= ';
 }
 
 [type='number'] {
